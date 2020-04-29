@@ -10,11 +10,11 @@
 		0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */; };
 		0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B265D312458D145009C7C91 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D302458D145009C7C91 /* WelcomeScreenExport.png */; };
+		0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D32245942E7009C7C91 /* groupsViewController.swift */; };
 		0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */; };
 		0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E7549245762170035731D /* CreateAccountViewController.swift */; };
 		0B4E754C245762250035731D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754B245762250035731D /* LogInViewController.swift */; };
 		0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
-		0B4E75522458B70A0035731D /* groupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E75512458B70A0035731D /* groupTableViewController.swift */; };
 		124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0982446A1C000F14B0D /* AppDelegate.swift */; };
 		124DE09B2446A1C000F14B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE09A2446A1C000F14B0D /* SceneDelegate.swift */; };
 		124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE09C2446A1C000F14B0D /* ViewController.swift */; };
@@ -46,11 +46,11 @@
 		0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsfeedViewController.swift; sourceTree = "<group>"; };
 		0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleGroupViewController.swift; sourceTree = "<group>"; };
 		0B265D302458D145009C7C91 /* WelcomeScreenExport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WelcomeScreenExport.png; path = ../../WelcomeScreenExport.png; sourceTree = "<group>"; };
+		0B265D32245942E7009C7C91 /* groupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupsViewController.swift; sourceTree = "<group>"; };
 		0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		0B4E7549245762170035731D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0B4E754B245762250035731D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
-		0B4E75512458B70A0035731D /* groupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupTableViewController.swift; sourceTree = "<group>"; };
 		124DE0952446A1C000F14B0D /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0982446A1C000F14B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124DE09A2446A1C000F14B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 		124DE08C2446A1BF00F14B0D = {
 			isa = PBXGroup;
 			children = (
-				0B4E75512458B70A0035731D /* groupTableViewController.swift */,
 				124DE0972446A1C000F14B0D /* Circle */,
 				124DE0AE2446A1C600F14B0D /* CircleTests */,
 				124DE0B92446A1C600F14B0D /* CircleUITests */,
@@ -117,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				124DE0982446A1C000F14B0D /* AppDelegate.swift */,
+				0B265D32245942E7009C7C91 /* groupsViewController.swift */,
 				124DE09A2446A1C000F14B0D /* SceneDelegate.swift */,
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
 				124DE09E2446A1C000F14B0D /* Main.storyboard */,
@@ -284,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */,
 				0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */,
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
@@ -291,7 +292,6 @@
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
 				0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */,
-				0B4E75522458B70A0035731D /* groupTableViewController.swift in Sources */,
 				124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */,
 				124DE09B2446A1C000F14B0D /* SceneDelegate.swift in Sources */,
 			);
