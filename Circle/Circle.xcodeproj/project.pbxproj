@@ -11,9 +11,9 @@
 		0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B265D312458D145009C7C91 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D302458D145009C7C91 /* WelcomeScreenExport.png */; };
 		0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D32245942E7009C7C91 /* groupsViewController.swift */; };
-		0B265D3F2459FD18009C7C91 /* tabBarIcon2 - Groups.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D3C2459FD17009C7C91 /* tabBarIcon2 - Groups.png */; };
-		0B265D402459FD18009C7C91 /* tabBarIcon3 - Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D3D2459FD18009C7C91 /* tabBarIcon3 - Profile.png */; };
-		0B265D412459FD18009C7C91 /* tabBarIcon21 - Feed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D3E2459FD18009C7C91 /* tabBarIcon21 - Feed.png */; };
+		0B265D45245A6A9E009C7C91 /* tabBarIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D42245A6A9A009C7C91 /* tabBarIcon1.png */; };
+		0B265D46245A6A9E009C7C91 /* tabBarIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D43245A6A9E009C7C91 /* tabBarIcon2.png */; };
+		0B265D47245A6A9E009C7C91 /* tabBarIcon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B265D44245A6A9E009C7C91 /* tabBarIcon3.png */; };
 		0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */; };
 		0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E7549245762170035731D /* CreateAccountViewController.swift */; };
 		0B4E754C245762250035731D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754B245762250035731D /* LogInViewController.swift */; };
@@ -50,9 +50,9 @@
 		0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleGroupViewController.swift; sourceTree = "<group>"; };
 		0B265D302458D145009C7C91 /* WelcomeScreenExport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WelcomeScreenExport.png; path = ../../WelcomeScreenExport.png; sourceTree = "<group>"; };
 		0B265D32245942E7009C7C91 /* groupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupsViewController.swift; sourceTree = "<group>"; };
-		0B265D3C2459FD17009C7C91 /* tabBarIcon2 - Groups.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon2 - Groups.png"; sourceTree = "<group>"; };
-		0B265D3D2459FD18009C7C91 /* tabBarIcon3 - Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon3 - Profile.png"; sourceTree = "<group>"; };
-		0B265D3E2459FD18009C7C91 /* tabBarIcon21 - Feed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBarIcon21 - Feed.png"; sourceTree = "<group>"; };
+		0B265D42245A6A9A009C7C91 /* tabBarIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarIcon1.png; sourceTree = "<group>"; };
+		0B265D43245A6A9E009C7C91 /* tabBarIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarIcon2.png; sourceTree = "<group>"; };
+		0B265D44245A6A9E009C7C91 /* tabBarIcon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarIcon3.png; sourceTree = "<group>"; };
 		0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		0B4E7549245762170035731D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0B4E754B245762250035731D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 				124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */,
 				124DE0A62446A1C600F14B0D /* Info.plist */,
 				0B265D302458D145009C7C91 /* WelcomeScreenExport.png */,
-				0B265D3C2459FD17009C7C91 /* tabBarIcon2 - Groups.png */,
-				0B265D3D2459FD18009C7C91 /* tabBarIcon3 - Profile.png */,
-				0B265D3E2459FD18009C7C91 /* tabBarIcon21 - Feed.png */,
+				0B265D42245A6A9A009C7C91 /* tabBarIcon1.png */,
+				0B265D43245A6A9E009C7C91 /* tabBarIcon2.png */,
+				0B265D44245A6A9E009C7C91 /* tabBarIcon3.png */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -265,12 +265,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B265D3F2459FD18009C7C91 /* tabBarIcon2 - Groups.png in Resources */,
+				0B265D47245A6A9E009C7C91 /* tabBarIcon3.png in Resources */,
+				0B265D45245A6A9E009C7C91 /* tabBarIcon1.png in Resources */,
 				0B265D312458D145009C7C91 /* WelcomeScreenExport.png in Resources */,
+				0B265D46245A6A9E009C7C91 /* tabBarIcon2.png in Resources */,
 				124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */,
 				124DE0A22446A1C600F14B0D /* Assets.xcassets in Resources */,
-				0B265D402459FD18009C7C91 /* tabBarIcon3 - Profile.png in Resources */,
-				0B265D412459FD18009C7C91 /* tabBarIcon21 - Feed.png in Resources */,
 				124DE0A02446A1C000F14B0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

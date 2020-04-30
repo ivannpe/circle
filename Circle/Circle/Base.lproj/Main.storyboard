@@ -118,14 +118,14 @@
                                     <action selector="singleGroupNavBarSelect:" destination="csj-Dp-PEe" eventType="valueChanged" id="Ae0-cF-irs"/>
                                 </connections>
                             </segmentedControl>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02I-qx-bMg">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ll8-i3-WvS">
+                                <rect key="frame" x="0.0" y="803" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="Feed" id="6In-Tz-wV4"/>
-                                    <tabBarItem title="Groups" id="VvK-V6-ae7"/>
-                                    <tabBarItem title="Profile" id="hvQ-Mf-yi3"/>
+                                    <tabBarItem title="" image="tabBarIcon1.png" id="t1f-sv-GDC"/>
+                                    <tabBarItem title="" image="tabBarIcon2.png" id="S0i-p4-8k1"/>
+                                    <tabBarItem title="" image="tabBarIcon3.png" id="of4-cg-O3T"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -231,9 +231,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem title="Feed" id="FO2-ha-drL"/>
-                                    <tabBarItem title="Groups" id="XLc-tm-2qt"/>
-                                    <tabBarItem title="Profile" id="mGB-x2-84w"/>
+                                    <tabBarItem title="" image="tabBarIcon1.png" id="FO2-ha-drL"/>
+                                    <tabBarItem title="" image="tabBarIcon2.png" id="XLc-tm-2qt"/>
+                                    <tabBarItem title="" image="tabBarIcon3.png" id="mGB-x2-84w"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -259,16 +259,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vHN-vq-E2Y">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Feed" id="PQW-Jo-baA"/>
-                                    <tabBarItem title="Groups" id="x7x-l9-doC"/>
-                                    <tabBarItem title="Profile" id="EgJ-Ca-Dga"/>
-                                </items>
-                            </tabBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List of Groups User is part of/ explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GY-v4-pLM">
                                 <rect key="frame" x="64" y="68" width="286" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -276,6 +266,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugC-Bk-qr5">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="" image="tabBarIcon1.png" id="c08-4K-hZh"/>
+                                    <tabBarItem title="" image="tabBarIcon2.png" id="Bae-kU-qDY"/>
+                                    <tabBarItem title="" image="tabBarIcon3.png" id="eyo-Y4-l4V"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="kVI-1I-Kh8"/>
@@ -374,5 +374,8 @@
     </scenes>
     <resources>
         <image name="WelcomeScreenExport.png" width="375" height="812"/>
+        <image name="tabBarIcon1.png" width="75" height="75"/>
+        <image name="tabBarIcon2.png" width="75" height="75"/>
+        <image name="tabBarIcon3.png" width="75" height="75"/>
     </resources>
 </document>
