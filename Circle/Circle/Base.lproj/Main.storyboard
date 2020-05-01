@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uv0-We-3YR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3679.7101449275365" y="447.99107142857139"/>
+            <point key="canvasLocation" x="3480" y="449"/>
         </scene>
         <!--Groups View Controller-->
         <scene sceneID="Qhe-P3-Yph">
@@ -436,6 +436,9 @@
                                                 <rect key="frame" x="322" y="32" width="62" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Message"/>
+                                                <connections>
+                                                    <segue destination="ZMS-Ba-7b6" kind="show" identifier="toDirectMessages" id="iwZ-gm-BIT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -530,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4g3-ge-bpi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3662" y="1152"/>
+            <point key="canvasLocation" x="3758" y="1163"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YbT-0g-F75">
@@ -551,6 +554,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1T-zm-dra">
+                                        <rect key="frame" x="29" y="41" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Back"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0068226950240000001" green="0.098397739230000003" blue="0.31374433639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -646,7 +654,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8z5-R9-Eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4450.7246376811599" y="1148.4375"/>
+            <point key="canvasLocation" x="2968" y="1884"/>
         </scene>
     </scenes>
     <resources>
@@ -655,4 +663,7 @@
         <image name="tabBarIcon2.png" width="75" height="75"/>
         <image name="tabBarIcon3.png" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CkA-sK-Dae"/>
+    </inferredMetricsTieBreakers>
 </document>
