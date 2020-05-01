@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreGraphics
 class initialLoadingAnimation: UIView {
 
     /*
