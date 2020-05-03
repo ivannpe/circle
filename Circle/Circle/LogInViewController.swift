@@ -38,15 +38,16 @@ class LogInViewController: UIViewController {
         if fieldsfull(){
             AuthService.instance.loginUser(withEmail: emailLabel.text!, withPassword: passwordLabel.text!, loginComplete: { (success, loginError) in
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+                    //self.dismiss(animated: true, completion: nil)
+                    print("Login Successful")
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
             })
         }
-        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
-        mainTabController.modalPresentationStyle = .fullScreen
-        present(mainTabController, animated: false, completion: nil)
+        //let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        //mainTabController.modalPresentationStyle = .fullScreen
+        //present(mainTabController, animated: false, completion: nil)
         
         
     }

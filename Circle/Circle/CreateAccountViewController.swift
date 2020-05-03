@@ -58,7 +58,8 @@ class CreateAccountViewController: UIViewController {
         if fieldsfull(){
             AuthService.instance.loginUser(withEmail: emailLabel.text!, withPassword: passwordLabel.text!, loginComplete: { (success, loginError) in
                 if success {
-                    self.dismiss(animated: true, completion: nil)
+                    //self.dismiss(animated: true, completion: nil)
+                    print("success: fields full")
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
@@ -66,7 +67,7 @@ class CreateAccountViewController: UIViewController {
                 AuthService.instance.registerUser(withEmail: self.emailLabel.text!, withPassword: self.passwordLabel.text!, userCreationComplete: { (success, registrationError) in
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailLabel.text!, withPassword: self.passwordLabel.text!, loginComplete: { (success, nil) in
-                            self.dismiss(animated: true, completion: nil)
+                            //self.dismiss(animated: true, completion: nil)
                             //self.present(mainTabController, animated: false, completion: nil)
                             print("Successfully registered user")
                         })
