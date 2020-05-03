@@ -10,7 +10,8 @@ import UIKit
 
 class profileViewController: UIViewController {
 
-    @IBOutlet weak var profilePicture: UIImageView!
+
+    @IBOutlet weak var profilePic: UIImageView!
     
     @IBOutlet weak var fullNameLabel: UILabel!
     
@@ -23,7 +24,6 @@ class profileViewController: UIViewController {
     @IBOutlet weak var majorLabel: UILabel!
     
     @IBOutlet weak var yearLabel: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
