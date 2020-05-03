@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,7 +120,7 @@
             <objects>
                 <viewController id="csj-Dp-PEe" customClass="singleGroupViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khl-pe-2mc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FLu-NT-9B2">
@@ -229,51 +229,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8f-Ga-cZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6239.130434782609" y="446.65178571428567"/>
-        </scene>
-        <!--Group Members View Controller-->
-        <scene sceneID="144-zm-yPX">
-            <objects>
-                <viewController storyboardIdentifier="groupMembers" id="gW4-OV-kmY" customClass="groupMembersViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6dy-BV-6oN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0068226950240000001" green="0.098397739230000003" blue="0.31374433639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="VN4-pd-5mt"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vam-qP-9EX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7030" y="761"/>
-        </scene>
-        <!--Group About View Controller-->
-        <scene sceneID="xV8-Pk-grr">
-            <objects>
-                <viewController storyboardIdentifier="groupAbout" id="5XK-7T-uZG" customClass="groupAboutViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TNj-fa-u2c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Ece-Lg-ydW"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iFS-us-CjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7051" y="1408"/>
-        </scene>
-        <!--Group Post View Controller-->
-        <scene sceneID="Oe3-Lg-Xxv">
-            <objects>
-                <viewController storyboardIdentifier="groupPosts" id="z9j-5J-BcB" customClass="groupPostViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="at4-5v-R1U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="LLD-do-igp"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4da-Nt-cYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7029" y="105"/>
         </scene>
         <!--Newsfeed-->
         <scene sceneID="LWq-7J-FUW">
@@ -511,7 +466,7 @@
             <objects>
                 <viewController id="dXx-oP-p7a" customClass="profileViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MD1-Jf-YSj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luk-sb-xXj">
@@ -706,11 +661,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
                                                     <rect key="frame" x="28" y="11" width="29.5" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-cX-pVC">
-                                                            <rect key="frame" x="8" y="0.0" width="13.5" height="61"/>
+                                                            <rect key="frame" x="8" y="0.0" width="0.0" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -724,11 +679,11 @@
                                                         <constraint firstItem="0Ia-cX-pVC" firstAttribute="leading" secondItem="jQ5-Wv-UCT" secondAttribute="leading" constant="8" id="ugJ-LQ-Uhl"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
                                                     <rect key="frame" x="356.5" y="11" width="29.5" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-0t-XUs">
-                                                            <rect key="frame" x="8" y="8" width="13.5" height="53"/>
+                                                            <rect key="frame" x="8" y="8" width="0.0" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -864,18 +819,15 @@
             <point key="canvasLocation" x="5328.985507246377" y="446.65178571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="CkA-sK-Dae"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="WelcomeScreenExport.png" width="375" height="812"/>
-        <image name="circle.grid.2x2.fill" catalog="system" width="128" height="112"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="circle.grid.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
         <image name="logo.png" width="1024" height="1024"/>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="message.fill" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lp4-a8-atl"/>
+        <segue reference="CkA-sK-Dae"/>
     </inferredMetricsTieBreakers>
 </document>
