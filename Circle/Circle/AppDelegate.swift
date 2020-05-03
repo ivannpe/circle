@@ -9,13 +9,20 @@
 import UIKit
 import Firebase
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let lightOrange = UIColor(red: 0.9216, green: 0.6353, blue: 0.4902, alpha: 1.0)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let navigationBarAppearace = UINavigationBar.appearance()
+
+        navigationBarAppearace.tintColor = lightOrange
+        navigationBarAppearace.barTintColor = lightOrange
+        
+        
         FirebaseApp.configure()
         return true
     }

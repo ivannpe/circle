@@ -17,6 +17,7 @@ class animationViewController: UIViewController {
     let lightBlue = UIColor(red: 0.7608, green: 0.8667, blue: 0.902, alpha: 1.0)
     let darkBlue = UIColor(red: 0, green: 0.1059, blue: 0.3137, alpha: 1.0)
     let grayBlue = UIColor(red: 0.2941, green: 0.3412, blue: 0.4275, alpha: 1.0)
+    let lightOrange = UIColor(red: 0.9216, green: 0.6353, blue: 0.4902, alpha: 1.0)
     */
     
     @IBOutlet weak var viewContain: UIView!
