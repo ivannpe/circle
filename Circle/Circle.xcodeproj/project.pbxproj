@@ -39,6 +39,18 @@
 		124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */; };
 		124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0AF2446A1C600F14B0D /* CircleTests.swift */; };
 		124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0BA2446A1C600F14B0D /* CircleUITests.swift */; };
+		12CE701A245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
+		12CE701B245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
+		12CE701C245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
+		12CE7020245F553100E64D12 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE701F245F553100E64D12 /* AuthService.swift */; };
+		12CE7021245F553100E64D12 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE701F245F553100E64D12 /* AuthService.swift */; };
+		12CE7022245F553100E64D12 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE701F245F553100E64D12 /* AuthService.swift */; };
+		12CE7024245F554F00E64D12 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7023245F554F00E64D12 /* DataService.swift */; };
+		12CE7025245F554F00E64D12 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7023245F554F00E64D12 /* DataService.swift */; };
+		12CE7026245F554F00E64D12 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7023245F554F00E64D12 /* DataService.swift */; };
+		12CE7028245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
+		12CE7029245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
+		12CE702A245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
 		5D36425FACBAEC881D60830D /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35847F84C57BCB2F22763AF /* Pods_Circle.framework */; };
 		A3C1CE2D6F1EF648E1C37FFD /* Pods_Circle_CircleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F05DAC8070EC0E3611995D3 /* Pods_Circle_CircleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +107,10 @@
 		124DE0B62446A1C600F14B0D /* CircleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0BA2446A1C600F14B0D /* CircleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUITests.swift; sourceTree = "<group>"; };
 		124DE0BC2446A1C700F14B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12CE7019245F39B100E64D12 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		12CE701F245F553100E64D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		12CE7023245F554F00E64D12 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		12CE7027245F556200E64D12 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = SOURCE_ROOT; };
 		145AE0C7EAFBB6F331642572 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		2B5EBFC29F29F0351ACA52DB /* Pods-Circle-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.release.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6750CE6160BF2D9A6544875B /* Pods-Circle-CircleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +194,8 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
-				0BD77519245F599500768C97 /* groupViews */,
+				12CE701E245F550800E64D12 /* Services */,
+				12CE701D245F3E8000E64D12 /* Extensions */,
 				124DE0982446A1C000F14B0D /* AppDelegate.swift */,
 				0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */,
 				0B265D32245942E7009C7C91 /* groupsViewController.swift */,
@@ -222,6 +239,24 @@
 				124DE0BC2446A1C700F14B0D /* Info.plist */,
 			);
 			path = CircleUITests;
+			sourceTree = "<group>";
+		};
+		12CE701D245F3E8000E64D12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12CE7019245F39B100E64D12 /* StringExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12CE701E245F550800E64D12 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				12CE7027245F556200E64D12 /* StorageService.swift */,
+				12CE701F245F553100E64D12 /* AuthService.swift */,
+				12CE7023245F554F00E64D12 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B60BE089ABC3FFE519EBDD4C /* Pods */ = {
@@ -531,11 +566,14 @@
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
+				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
-				0BD7751B245F59A900768C97 /* groupPostViewController.swift in Sources */,
+				12CE701A245F39B100E64D12 /* StringExt.swift in Sources */,
+				12CE7028245F556200E64D12 /* StorageService.swift in Sources */,
 				0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */,
+				12CE7020245F553100E64D12 /* AuthService.swift in Sources */,
 				124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */,
 				124DE09B2446A1C000F14B0D /* SceneDelegate.swift in Sources */,
 			);
@@ -545,7 +583,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
+				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
+				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
+				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +595,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
+				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
+				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
+				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
