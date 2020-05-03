@@ -12,7 +12,17 @@ class profileViewController: UIViewController {
 
     @IBOutlet weak var profilePicture: UIImageView!
     
+    @IBOutlet weak var fullNameLabel: UILabel!
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    @IBOutlet weak var schoolLabel: UILabel!
+    
+    @IBOutlet weak var majorLabel: UILabel!
+    
+    @IBOutlet weak var yearLabel: UILabel!
     
     
     override func viewDidLoad() {

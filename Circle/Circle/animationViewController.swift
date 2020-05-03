@@ -22,16 +22,22 @@ class animationViewController: UIViewController {
     @IBOutlet weak var viewContain: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //logoImageView.center = CGPoint(x:512, y:364)
         view.addSubview(logoImageView)
-        UIView.animate(withDuration: 5, delay: 1.5, animations: {
+        UIView.animate(withDuration: 4.5, delay: 1, animations: {
             self.logoImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             self.logoImageView.transform = CGAffineTransform(scaleX: 4, y:4)
         } )
+        
+                let welcomePageViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomePageViewController") as! WelcomeScreenViewController
+
+        delay(4.5){
+            self.present(welcomePageViewController, animated:true, completion:nil)
+        }
         
         // Do any additional setup after loading the view.
         /*
@@ -65,6 +71,11 @@ class animationViewController: UIViewController {
         //logoImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
 
         //view.addSubview(logoImageView)
+    }
+    
+    func delay(_ delay: Double, closure:@escaping ()->()){
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
 
 }
