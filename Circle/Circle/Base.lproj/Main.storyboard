@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Welcome Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeScreenViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomePageViewController" id="BYZ-38-t0r" customClass="WelcomeScreenViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNt-7Z-M4J">
-                                <rect key="frame" x="186" y="654" width="42" height="30"/>
+                                <rect key="frame" x="186" y="680" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
@@ -212,6 +212,7 @@
                         <segue destination="zxj-E5-bma" kind="relationship" relationship="viewControllers" id="KdT-i3-i59"/>
                         <segue destination="J7M-sB-10e" kind="relationship" relationship="viewControllers" id="bFT-YO-BeB"/>
                         <segue destination="BsG-Si-tLS" kind="relationship" relationship="viewControllers" id="7mX-y9-LSF"/>
+                        <segue destination="vZa-H9-xzb" kind="relationship" relationship="viewControllers" id="q3f-Zl-dRL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVA-QH-BLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhM-R0-5fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1161" y="-807"/>
+            <point key="canvasLocation" x="1116" y="-526"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="vka-nK-n5e">
@@ -421,6 +422,11 @@
                         <viewLayoutGuide key="safeArea" id="vsY-jq-Ft0"/>
                     </view>
                     <navigationItem key="navigationItem" id="r1K-1S-Sbx"/>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="GO8-ZC-X4u" id="Ibe-vi-3tw"/>
+                        <outlet property="locationLabel" destination="Neq-JF-Lfb" id="h7f-cY-xJX"/>
+                        <outlet property="usernameLabel" destination="bL6-Z2-AVm" id="HCZ-dt-LeW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp2-f3-gA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -495,6 +501,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rQP-6S-E5a"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="message.fill" catalog="system" selectedImage="message.fill" id="rCh-Go-Ubq"/>
                     <navigationItem key="navigationItem" id="pVB-l5-gUr"/>
                     <connections>
                         <segue destination="ZMS-Ba-7b6" kind="show" identifier="toDirectMessages" id="CkA-sK-Dae"/>
@@ -502,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4g3-ge-bpi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4668.115942028986" y="1162.5"/>
+            <point key="canvasLocation" x="3790" y="1163"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YbT-0g-F75">
@@ -527,8 +534,8 @@
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
                                                     <rect key="frame" x="28" y="11" width="29.5" height="69"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-cX-pVC">
-                                                            <rect key="frame" x="8" y="0.0" width="13.5" height="61"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-cX-pVC">
+                                                            <rect key="frame" x="8" y="0.0" width="0.0" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -545,8 +552,8 @@
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
                                                     <rect key="frame" x="356.5" y="11" width="29.5" height="69"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-0t-XUs">
-                                                            <rect key="frame" x="8" y="8" width="13.5" height="53"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-0t-XUs">
+                                                            <rect key="frame" x="8" y="8" width="0.0" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -648,7 +655,7 @@
         <scene sceneID="fK5-sd-qxw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zxj-E5-bma" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tabBarIcon1.png" selectedImage="tabBarIcon1.png" id="ndR-mv-gxk"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabBarIcon1.png" id="ndR-mv-gxk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MLP-sQ-fdS">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -664,12 +671,10 @@
             <point key="canvasLocation" x="2686.9565217391305" y="-218.30357142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="CkA-sK-Dae"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="WelcomeScreenExport.png" width="375" height="812"/>
         <image name="logoImage.png" width="558.54547119140625" height="558.54547119140625"/>
+        <image name="message.fill" catalog="system" width="64" height="56"/>
         <image name="tabBarIcon1.png" width="75" height="75"/>
         <image name="tabBarIcon2.png" width="75" height="75"/>
         <image name="tabBarIcon3.png" width="75" height="75"/>
