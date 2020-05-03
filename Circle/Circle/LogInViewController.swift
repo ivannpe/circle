@@ -19,6 +19,7 @@ class LogInViewController: UIViewController {
      
     @IBAction func loginTapped(_ sender: Any) {
         let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        mainTabController.modalPresentationStyle = .fullScreen
         present(mainTabController, animated: false, completion: nil)
         
         

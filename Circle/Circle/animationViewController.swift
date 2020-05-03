@@ -36,6 +36,7 @@ class animationViewController: UIViewController {
                 let welcomePageViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomePageViewController") as! WelcomeScreenViewController
 
         delay(4.5){
+            welcomePageViewController.modalPresentationStyle = .fullScreen
             self.present(welcomePageViewController, animated:true, completion:nil)
         }
         
