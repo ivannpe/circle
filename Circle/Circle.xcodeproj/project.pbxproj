@@ -19,15 +19,14 @@
 		0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E7549245762170035731D /* CreateAccountViewController.swift */; };
 		0B4E754C245762250035731D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754B245762250035731D /* LogInViewController.swift */; };
 		0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
+		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
+		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
 		1206BA41245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		1206BA42245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		1206BA43245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		123FDA46245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
 		123FDA47245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
 		123FDA48245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
-		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
-		0BA9DFAE245E376D00F2495B /* logoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAD245E376D00F2495B /* logoImage.png */; };
-		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
 		124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0982446A1C000F14B0D /* AppDelegate.swift */; };
 		124DE09B2446A1C000F14B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE09A2446A1C000F14B0D /* SceneDelegate.swift */; };
 		124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE09C2446A1C000F14B0D /* ViewController.swift */; };
@@ -36,6 +35,9 @@
 		124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */; };
 		124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0AF2446A1C600F14B0D /* CircleTests.swift */; };
 		124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0BA2446A1C600F14B0D /* CircleUITests.swift */; };
+		12F2AE5B245E667700D2437A /* logoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F2AE5A245E667700D2437A /* logoImage.png */; };
+		12F2AE5C245E667700D2437A /* logoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F2AE5A245E667700D2437A /* logoImage.png */; };
+		12F2AE5D245E667700D2437A /* logoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F2AE5A245E667700D2437A /* logoImage.png */; };
 		5D36425FACBAEC881D60830D /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35847F84C57BCB2F22763AF /* Pods_Circle.framework */; };
 		A3C1CE2D6F1EF648E1C37FFD /* Pods_Circle_CircleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F05DAC8070EC0E3611995D3 /* Pods_Circle_CircleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -70,11 +72,10 @@
 		0B4E7549245762170035731D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0B4E754B245762250035731D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
+		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
 		1206BA40245E398600EAC99B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		123FDA45245E4619008C4375 /* WelcomeScreenExport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeScreenExport.png; sourceTree = "<group>"; };
-		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
-		0BA9DFAD245E376D00F2495B /* logoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoImage.png; sourceTree = "<group>"; };
-		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
 		124DE0952446A1C000F14B0D /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0982446A1C000F14B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124DE09A2446A1C000F14B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		124DE0B62446A1C600F14B0D /* CircleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0BA2446A1C600F14B0D /* CircleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUITests.swift; sourceTree = "<group>"; };
 		124DE0BC2446A1C700F14B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12F2AE5A245E667700D2437A /* logoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoImage.png; path = ../../../logoImage.png; sourceTree = "<group>"; };
 		145AE0C7EAFBB6F331642572 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		2B5EBFC29F29F0351ACA52DB /* Pods-Circle-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.release.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6750CE6160BF2D9A6544875B /* Pods-Circle-CircleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,7 +186,7 @@
 				0B265D42245A6A9A009C7C91 /* tabBarIcon1.png */,
 				0B265D43245A6A9E009C7C91 /* tabBarIcon2.png */,
 				0B265D44245A6A9E009C7C91 /* tabBarIcon3.png */,
-				0BA9DFAD245E376D00F2495B /* logoImage.png */,
+				12F2AE5A245E667700D2437A /* logoImage.png */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -336,7 +338,7 @@
 				0B265D45245A6A9E009C7C91 /* tabBarIcon1.png in Resources */,
 				0B265D46245A6A9E009C7C91 /* tabBarIcon2.png in Resources */,
 				123FDA46245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
-				0BA9DFAE245E376D00F2495B /* logoImage.png in Resources */,
+				12F2AE5B245E667700D2437A /* logoImage.png in Resources */,
 				124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */,
 				124DE0A22446A1C600F14B0D /* Assets.xcassets in Resources */,
 				124DE0A02446A1C000F14B0D /* Main.storyboard in Resources */,
@@ -347,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F2AE5C245E667700D2437A /* logoImage.png in Resources */,
 				123FDA47245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
 				1206BA42245E398600EAC99B /* GoogleService-Info.plist in Resources */,
 			);
@@ -356,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F2AE5D245E667700D2437A /* logoImage.png in Resources */,
 				123FDA48245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
 				1206BA43245E398600EAC99B /* GoogleService-Info.plist in Resources */,
 			);
