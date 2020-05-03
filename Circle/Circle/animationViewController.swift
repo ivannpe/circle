@@ -73,6 +73,8 @@ class animationViewController: UIViewController {
         //view.addSubview(logoImageView)
     }
     
+    //delay function taken from stackoverflow https://stackoverflow.com/questions/24034544/dispatch-after-gcd-in-swift
+    
     func delay(_ delay: Double, closure:@escaping ()->()){
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
