@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,8 +79,8 @@
                                     <navigationItem title="log in to your circle account" id="Imb-SN-RZU"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPK-Iu-GlA">
-                                <rect key="frame" x="78" y="233" width="79" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPK-Iu-GlA">
+                                <rect key="frame" x="78" y="233" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -93,22 +93,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJK-2K-F8U">
+                                <rect key="frame" x="139" y="355" width="98" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.78918439149999997" green="0.88356608150000004" blue="0.9145473838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="woK-Tl-Jco"/>
                     </view>
                     <navigationItem key="navigationItem" id="omV-hQ-TmF"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="IDy-3e-0g7" id="EC6-8J-Lpd"/>
+                        <outlet property="hiddenLabel" destination="ZJK-2K-F8U" id="dR6-pR-yqL"/>
+                        <outlet property="passwordLabel" destination="1Iv-0P-eCA" id="9F2-1V-fhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oow-w6-dH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183" y="419"/>
+            <point key="canvasLocation" x="182.60869565217394" y="418.52678571428572"/>
         </scene>
         <!--Group Name-->
         <scene sceneID="jY2-hR-JWv">
             <objects>
                 <viewController id="csj-Dp-PEe" customClass="singleGroupViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khl-pe-2mc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FLu-NT-9B2">
@@ -146,7 +158,7 @@
             <objects>
                 <viewController id="FbR-Un-on2" customClass="groupsViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tUD-Yf-HFl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g0l-3y-XzF">
@@ -195,7 +207,7 @@
             <objects>
                 <viewController id="n2X-vS-K43" customClass="newsfeedViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQd-Cc-VJd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="suP-Hc-VA9"/>
@@ -209,7 +221,7 @@
         <!--Main Tab Controller-->
         <scene sceneID="HAu-gc-xoX">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabController" id="Zlb-dA-oKF" customClass="MainTabController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabController" wantsFullScreenLayout="YES" id="Zlb-dA-oKF" customClass="MainTabController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="TW5-aF-Khn"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JxW-RS-GIB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -321,6 +333,7 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpTapped:" destination="Lrw-8e-UFR" eventType="touchUpInside" id="EOz-II-Iat"/>
+                                    <segue destination="Zlb-dA-oKF" kind="show" id="phn-Gl-ka4"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ho-hY-yxB">
@@ -392,22 +405,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXz-le-WfW">
+                                <rect key="frame" x="116" y="605" width="182" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79685074089999997" green="0.87397384639999998" blue="0.90196686979999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="vep-Dv-cDL"/>
                     </view>
                     <navigationItem key="navigationItem" id="3ci-H7-vdh"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="D4U-59-HIt" id="oex-hC-DtX"/>
+                        <outlet property="hiddenLabel" destination="xXz-le-WfW" id="8VW-M1-IRv"/>
+                        <outlet property="majorLabel" destination="kbW-fL-nb9" id="r5O-S6-pZ5"/>
+                        <outlet property="nameLabel" destination="CQP-vq-pbL" id="Bc4-dV-USf"/>
+                        <outlet property="passwordLabel" destination="g5y-rX-WmU" id="Q5e-Oa-H6y"/>
+                        <outlet property="schoolLabel" destination="jFK-tP-pUL" id="1rp-RS-8HA"/>
+                        <outlet property="universityLabel" destination="6ho-hY-yxB" id="TeU-qB-4pv"/>
+                        <outlet property="usernameLabel" destination="tL5-Qp-QvW" id="ocZ-BU-Ubi"/>
+                        <outlet property="yearLabel" destination="Hp8-y9-opP" id="GXx-b1-oev"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1z-oO-PVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="184" y="-280"/>
+            <point key="canvasLocation" x="182.60869565217394" y="-280.58035714285711"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="oiY-Kx-xF1">
             <objects>
                 <viewController id="dXx-oP-p7a" customClass="profileViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MD1-Jf-YSj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luk-sb-xXj">
@@ -505,7 +536,7 @@
             <objects>
                 <viewController id="vZa-H9-xzb" customClass="messagingViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M3l-Oe-PAb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3m-wX-Xof">
@@ -567,7 +598,7 @@
             <objects>
                 <viewController id="ZMS-Ba-7b6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIt-Qf-baN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3S5-fA-fDG">
@@ -582,11 +613,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
                                                     <rect key="frame" x="28" y="11" width="29.5" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-cX-pVC">
-                                                            <rect key="frame" x="8" y="0.0" width="0.0" height="61"/>
+                                                            <rect key="frame" x="8" y="0.0" width="13.5" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -600,11 +631,11 @@
                                                         <constraint firstItem="0Ia-cX-pVC" firstAttribute="leading" secondItem="jQ5-Wv-UCT" secondAttribute="leading" constant="8" id="ugJ-LQ-Uhl"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
                                                     <rect key="frame" x="356.5" y="11" width="29.5" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-0t-XUs">
-                                                            <rect key="frame" x="8" y="8" width="0.0" height="53"/>
+                                                            <rect key="frame" x="8" y="8" width="13.5" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -671,7 +702,7 @@
                     <tabBarItem key="tabBarItem" title="" image="circle.grid.2x2.fill" catalog="system" selectedImage="circle.grid.2x2.fill" id="sOC-y4-9fK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ncu-CO-Hu1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -690,7 +721,7 @@
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" selectedImage="house.fill" id="ndR-mv-gxk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MLP-sQ-fdS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -709,7 +740,7 @@
                     <tabBarItem key="tabBarItem" title="" image="message.fill" catalog="system" selectedImage="message.fill" id="rCh-Go-Ubq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZT4-FC-sux">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -722,15 +753,15 @@
             <point key="canvasLocation" x="3732" y="1200"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="WelcomeScreenExport.png" width="375" height="812"/>
-        <image name="circle.grid.2x2.fill" catalog="system" width="64" height="56"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="logo.png" width="1024" height="1024"/>
-        <image name="message.fill" catalog="system" width="64" height="56"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CkA-sK-Dae"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="WelcomeScreenExport.png" width="375" height="812"/>
+        <image name="circle.grid.2x2.fill" catalog="system" width="128" height="112"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="logo.png" width="1024" height="1024"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>
