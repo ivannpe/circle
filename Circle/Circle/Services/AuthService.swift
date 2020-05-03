@@ -21,7 +21,7 @@ class AuthService {
             guard let providerId = result.additionalUserInfo?.providerID else { return }
             let userUID = result.user.uid
             let userData = ["provider": providerId, "email": email]
-            //DataService.instance.createDBUser(uid: userUID, userData: userData)
+            DataService.instance.createDBUser(uid: userUID, userData: userData)
             userCreationComplete(true, nil)
         }
     }

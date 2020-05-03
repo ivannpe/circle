@@ -36,6 +36,12 @@
 		124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */; };
 		124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0AF2446A1C600F14B0D /* CircleTests.swift */; };
 		124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0BA2446A1C600F14B0D /* CircleUITests.swift */; };
+		127E9350245F884600E37697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E934F245F884600E37697 /* Message.swift */; };
+		127E9351245F884600E37697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E934F245F884600E37697 /* Message.swift */; };
+		127E9352245F884600E37697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E934F245F884600E37697 /* Message.swift */; };
+		127E9354245F887A00E37697 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E9353245F887A00E37697 /* Group.swift */; };
+		127E9355245F887A00E37697 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E9353245F887A00E37697 /* Group.swift */; };
+		127E9356245F887A00E37697 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E9353245F887A00E37697 /* Group.swift */; };
 		12CE701A245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
 		12CE701B245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
 		12CE701C245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
@@ -101,6 +107,8 @@
 		124DE0B62446A1C600F14B0D /* CircleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0BA2446A1C600F14B0D /* CircleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUITests.swift; sourceTree = "<group>"; };
 		124DE0BC2446A1C700F14B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127E934F245F884600E37697 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		127E9353245F887A00E37697 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		12CE7019245F39B100E64D12 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		12CE701F245F553100E64D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		12CE7023245F554F00E64D12 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -178,6 +186,7 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				127E934E245F880600E37697 /* Model */,
 				12CE701E245F550800E64D12 /* Services */,
 				12CE701D245F3E8000E64D12 /* Extensions */,
 				124DE0982446A1C000F14B0D /* AppDelegate.swift */,
@@ -223,6 +232,15 @@
 				124DE0BC2446A1C700F14B0D /* Info.plist */,
 			);
 			path = CircleUITests;
+			sourceTree = "<group>";
+		};
+		127E934E245F880600E37697 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127E934F245F884600E37697 /* Message.swift */,
+				127E9353245F887A00E37697 /* Group.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		12CE701D245F3E8000E64D12 /* Extensions */ = {
@@ -544,8 +562,10 @@
 				0B049A29245CB9AD00F42AF4 /* messagingViewController.swift in Sources */,
 				0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */,
 				0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */,
+				127E9350245F884600E37697 /* Message.swift in Sources */,
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
+				127E9354245F887A00E37697 /* Group.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
@@ -565,9 +585,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127E9355245F887A00E37697 /* Group.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
+				127E9351245F884600E37697 /* Message.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
 				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
 			);
@@ -577,9 +599,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127E9356245F887A00E37697 /* Group.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
+				127E9352245F884600E37697 /* Message.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
 				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
 			);
