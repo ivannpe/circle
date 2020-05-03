@@ -507,10 +507,9 @@
         <!--View Controller-->
         <scene sceneID="YbT-0g-F75">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8z5-R9-Eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ZMS-Ba-7b6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIt-Qf-baN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3S5-fA-fDG">
@@ -603,6 +602,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Q9D-of-d8f"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8z5-R9-Eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2966.666666666667" y="1883.7053571428571"/>
         </scene>
@@ -675,6 +675,6 @@
         <image name="tabBarIcon3.png" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iwZ-gm-BIT"/>
+        <segue reference="CkA-sK-Dae"/>
     </inferredMetricsTieBreakers>
 </document>
