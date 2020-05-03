@@ -18,7 +18,13 @@ class CreateAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func signUpTapped(_ sender: Any) {
+        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        present(mainTabController, animated: false, completion: nil)
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 

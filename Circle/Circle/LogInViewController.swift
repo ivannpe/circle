@@ -16,7 +16,13 @@ class LogInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+     
+    @IBAction func loginTapped(_ sender: Any) {
+        let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
+        present(mainTabController, animated: false, completion: nil)
+        
+        
+    }
     /*
     // MARK: - Navigation
 

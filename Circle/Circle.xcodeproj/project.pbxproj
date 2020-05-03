@@ -21,6 +21,7 @@
 		0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
 		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
 		0BA9DFAE245E376D00F2495B /* logoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAD245E376D00F2495B /* logoImage.png */; };
+		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
 		124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0982446A1C000F14B0D /* AppDelegate.swift */; };
 		124DE09B2446A1C000F14B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE09A2446A1C000F14B0D /* SceneDelegate.swift */; };
 		124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE09C2446A1C000F14B0D /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAD245E376D00F2495B /* logoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoImage.png; sourceTree = "<group>"; };
+		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
 		124DE0952446A1C000F14B0D /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0982446A1C000F14B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		124DE09A2446A1C000F14B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				124DE09A2446A1C000F14B0D /* SceneDelegate.swift */,
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
 				124DE09E2446A1C000F14B0D /* Main.storyboard */,
+				0BA9DFAF245E3FB900F2495B /* mainTabController.swift */,
 				0BA9DFAB245E229A00F2495B /* animationViewController.swift */,
 				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */,
@@ -314,6 +317,7 @@
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
+				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
 				0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */,
 				124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */,
