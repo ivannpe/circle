@@ -22,9 +22,6 @@
 		0B868F52245E6BEF00A75119 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B868F51245E6BEF00A75119 /* logo.png */; };
 		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
 		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
-		0BD7751B245F59A900768C97 /* groupPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7751A245F59A900768C97 /* groupPostViewController.swift */; };
-		0BD7751D245F59CF00768C97 /* groupMembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7751C245F59CF00768C97 /* groupMembersViewController.swift */; };
-		0BD7751F245F59E600768C97 /* groupAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD7751E245F59E600768C97 /* groupAboutViewController.swift */; };
 		1206BA41245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		1206BA42245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		1206BA43245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
@@ -88,9 +85,6 @@
 		0B868F51245E6BEF00A75119 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
-		0BD7751A245F59A900768C97 /* groupPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupPostViewController.swift; sourceTree = "<group>"; };
-		0BD7751C245F59CF00768C97 /* groupMembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupMembersViewController.swift; sourceTree = "<group>"; };
-		0BD7751E245F59E600768C97 /* groupAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupAboutViewController.swift; sourceTree = "<group>"; };
 		1206BA40245E398600EAC99B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		123FDA45245E4619008C4375 /* WelcomeScreenExport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeScreenExport.png; sourceTree = "<group>"; };
 		124DE0952446A1C000F14B0D /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,16 +151,6 @@
 				E82302A297230655CF1E3CF1 /* Pods_CircleTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0BD77519245F599500768C97 /* groupViews */ = {
-			isa = PBXGroup;
-			children = (
-				0BD7751A245F59A900768C97 /* groupPostViewController.swift */,
-				0BD7751C245F59CF00768C97 /* groupMembersViewController.swift */,
-				0BD7751E245F59E600768C97 /* groupAboutViewController.swift */,
-			);
-			path = groupViews;
 			sourceTree = "<group>";
 		};
 		124DE08C2446A1BF00F14B0D = {
@@ -557,11 +541,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BD7751F245F59E600768C97 /* groupAboutViewController.swift in Sources */,
 				0B049A29245CB9AD00F42AF4 /* messagingViewController.swift in Sources */,
 				0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */,
 				0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */,
-				0BD7751D245F59CF00768C97 /* groupMembersViewController.swift in Sources */,
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
