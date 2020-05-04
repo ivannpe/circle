@@ -51,6 +51,12 @@
 		127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E935E245FA66A00E37697 /* GroupVCCell.swift */; };
 		127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E935E245FA66A00E37697 /* GroupVCCell.swift */; };
 		127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E935E245FA66A00E37697 /* GroupVCCell.swift */; };
+		127E93632460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E93622460973400E37697 /* String+CurrentTimeInMilliSeconds.swift */; };
+		127E93642460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E93622460973400E37697 /* String+CurrentTimeInMilliSeconds.swift */; };
+		127E93652460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E93622460973400E37697 /* String+CurrentTimeInMilliSeconds.swift */; };
+		127E936724609FFF00E37697 /* defaultProfileImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 127E936624609FFE00E37697 /* defaultProfileImage.png */; };
+		127E936824609FFF00E37697 /* defaultProfileImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 127E936624609FFE00E37697 /* defaultProfileImage.png */; };
+		127E936924609FFF00E37697 /* defaultProfileImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 127E936624609FFE00E37697 /* defaultProfileImage.png */; };
 		12CE701A245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
 		12CE701B245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
 		12CE701C245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
@@ -121,6 +127,8 @@
 		127E934F245F884600E37697 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		127E9353245F887A00E37697 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		127E935E245FA66A00E37697 /* GroupVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVCCell.swift; sourceTree = "<group>"; };
+		127E93622460973400E37697 /* String+CurrentTimeInMilliSeconds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CurrentTimeInMilliSeconds.swift"; sourceTree = "<group>"; };
+		127E936624609FFE00E37697 /* defaultProfileImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultProfileImage.png; sourceTree = "<group>"; };
 		12CE7019245F39B100E64D12 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		12CE701F245F553100E64D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		12CE7023245F554F00E64D12 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -230,6 +238,7 @@
 				124DE0A62446A1C600F14B0D /* Info.plist */,
 				1206BA40245E398600EAC99B /* GoogleService-Info.plist */,
 				123FDA45245E4619008C4375 /* WelcomeScreenExport.png */,
+				127E936624609FFE00E37697 /* defaultProfileImage.png */,
 				0B265D42245A6A9A009C7C91 /* tabBarIcon1.png */,
 				0B265D43245A6A9E009C7C91 /* tabBarIcon2.png */,
 				0B265D44245A6A9E009C7C91 /* tabBarIcon3.png */,
@@ -278,6 +287,7 @@
 			children = (
 				12CE7019245F39B100E64D12 /* StringExt.swift */,
 				0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */,
+				127E93622460973400E37697 /* String+CurrentTimeInMilliSeconds.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -425,6 +435,7 @@
 				124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */,
 				124DE0A22446A1C600F14B0D /* Assets.xcassets in Resources */,
 				124DE0A02446A1C000F14B0D /* Main.storyboard in Resources */,
+				127E936724609FFF00E37697 /* defaultProfileImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127E936824609FFF00E37697 /* defaultProfileImage.png in Resources */,
 				123FDA47245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
 				1206BA42245E398600EAC99B /* GoogleService-Info.plist in Resources */,
 			);
@@ -441,6 +453,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127E936924609FFF00E37697 /* defaultProfileImage.png in Resources */,
 				123FDA48245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
 				1206BA43245E398600EAC99B /* GoogleService-Info.plist in Resources */,
 			);
@@ -596,6 +609,7 @@
 				127E9350245F884600E37697 /* Message.swift in Sources */,
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
+				127E93632460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
 				127E9354245F887A00E37697 /* Group.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
@@ -628,6 +642,7 @@
 				0B227EFB245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
+				127E93642460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
 				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +660,7 @@
 				0B227EFC245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
+				127E93652460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
 				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
