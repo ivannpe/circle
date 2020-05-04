@@ -42,6 +42,9 @@
 		127E9354245F887A00E37697 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E9353245F887A00E37697 /* Group.swift */; };
 		127E9355245F887A00E37697 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E9353245F887A00E37697 /* Group.swift */; };
 		127E9356245F887A00E37697 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E9353245F887A00E37697 /* Group.swift */; };
+		127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E935E245FA66A00E37697 /* GroupVCCell.swift */; };
+		127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E935E245FA66A00E37697 /* GroupVCCell.swift */; };
+		127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E935E245FA66A00E37697 /* GroupVCCell.swift */; };
 		12CE701A245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
 		12CE701B245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
 		12CE701C245F39B100E64D12 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7019245F39B100E64D12 /* StringExt.swift */; };
@@ -109,6 +112,7 @@
 		124DE0BC2446A1C700F14B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		127E934F245F884600E37697 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		127E9353245F887A00E37697 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		127E935E245FA66A00E37697 /* GroupVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVCCell.swift; sourceTree = "<group>"; };
 		12CE7019245F39B100E64D12 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		12CE701F245F553100E64D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		12CE7023245F554F00E64D12 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				127E9359245FA5B100E37697 /* Groups */,
 				127E934E245F880600E37697 /* Model */,
 				12CE701E245F550800E64D12 /* Services */,
 				12CE701D245F3E8000E64D12 /* Extensions */,
@@ -241,6 +246,14 @@
 				127E9353245F887A00E37697 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		127E9359245FA5B100E37697 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				127E935E245FA66A00E37697 /* GroupVCCell.swift */,
+			);
+			path = Groups;
 			sourceTree = "<group>";
 		};
 		12CE701D245F3E8000E64D12 /* Extensions */ = {
@@ -570,6 +583,7 @@
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
+				127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
 				12CE701A245F39B100E64D12 /* StringExt.swift in Sources */,
@@ -590,6 +604,7 @@
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9351245F884600E37697 /* Message.swift in Sources */,
+				127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
 				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
 			);
@@ -604,6 +619,7 @@
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9352245F884600E37697 /* Message.swift in Sources */,
+				127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
 				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
 			);
