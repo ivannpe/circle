@@ -21,9 +21,10 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var majorLabel: UITextField!
     @IBOutlet weak var yearLabel: UITextField!
     @IBOutlet weak var hiddenLabel: UILabel!
-    
+
     override func viewDidLoad() {
         hiddenLabel.isHidden = true
+        passwordLabel.isSecureTextEntry = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

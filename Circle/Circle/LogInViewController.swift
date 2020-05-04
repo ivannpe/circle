@@ -14,6 +14,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UITextField!
     @IBOutlet weak var hiddenLabel: UILabel!
     override func viewDidLoad() {
+        hiddenLabel.isHidden = true
+        passwordLabel.isSecureTextEntry = true
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
