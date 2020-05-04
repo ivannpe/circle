@@ -64,7 +64,7 @@ class CreateAccountViewController: UIViewController {
                     print(String(describing: loginError?.localizedDescription))
                 }
                 
-                AuthService.instance.registerUser(withEmail: self.emailLabel.text!, withPassword: self.passwordLabel.text!, userCreationComplete: { (success, registrationError) in
+                AuthService.instance.registerUser(withUniversity:self.universityLabel.text!, withEmail:self.emailLabel.text!, withFullName:self.nameLabel.text!, withUsername:self.usernameLabel.text!,withPassword:self.passwordLabel.text!, withSchool:self.schoolLabel.text!, withMajor:self.majorLabel.text!, withYear:self.yearLabel.text!, userCreationComplete: { (success, registrationError) in
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailLabel.text!, withPassword: self.passwordLabel.text!, loginComplete: { (success, nil) in
                             //self.dismiss(animated: true, completion: nil)

@@ -11,8 +11,8 @@ import Firebase
 
 class AuthService {
     static let instance = AuthService()
-    
-    func registerUser(withEmail email: String, withPassword password: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+//    func registerUser(withEmail email: String, withPassword password: String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ())
+    func registerUser(withUniversity university: String,withEmail email: String, withFullName fullname: String, withUsername username:String, withPassword password: String, withSchool school:String, withMajor major:String,withYear year:String, userCreationComplete: @escaping (_ status: Bool, _ error: Error?) -> ()) {
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             guard let result = authResult else {
                 userCreationComplete(false, error)
@@ -20,7 +20,7 @@ class AuthService {
             }
             guard let providerId = result.additionalUserInfo?.providerID else { return }
             let userUID = result.user.uid
-            let userData = ["provider": providerId, "email": email]
+            let userData = ["university":university,"email": email,"fullname":fullname,"username":username, "password":password,"school":school,"major":major,"year":year,"provider": providerId]
             DataService.instance.createDBUser(uid: userUID, userData: userData)
             userCreationComplete(true, nil)
         }
