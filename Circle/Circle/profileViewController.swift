@@ -23,9 +23,13 @@ class profileViewController: UIViewController {
     @IBOutlet weak var majorLabel: UILabel!
     
     @IBOutlet weak var yearLabel: UILabel!
+    var profilePictureTapGesture: UITapGestureRecognizer!
+    var imagePickerController: UIImagePickerController!
+    
     //var fullname: String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingProfilePictureTapGesture()
         
         // Do any additional setup after loading the view.
         let ref = Database.database().reference().child("users")
@@ -64,22 +68,6 @@ class profileViewController: UIViewController {
             print(year!)
             self.yearLabel.text = "Class of " + ((year!) as! String)
         })
-        
-
-            /*
-        DataService.instance.getDBFN { (fullname) in
-
-        self.fullname = fullname
-
-        if let fullname = fullname {
-
-            self.fullNameLabel.text = "\(fullname)"
-        }*/
-
-        //Auth.auth().currentUser?.
-    //}
-    
-
     /*
     // MARK: - Navigation
 
@@ -91,4 +79,80 @@ class profileViewController: UIViewController {
     */
 
     }
+    func settingProfilePictureTapGesture() {
+        //Creating Gesture for Profile Pic ImageView
+        profilePictureTapGesture = UITapGestureRecognizer(target: self, action: #selector(profileViewController.setProfilePicture))
+        profilePictureTapGesture.numberOfTapsRequired = 1
+        profilePictureTapGesture.numberOfTouchesRequired = 1
+        
+        //Adding gesture for ImageView
+        profilePic.addGestureRecognizer(profilePictureTapGesture)
+        profilePic.isUserInteractionEnabled = true
+    }
+    
+    //MARK: - Adding Profile Pictures
+    @objc func setProfilePicture() {
+        
+        let alertSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let takePictureAction = UIAlertAction(title: "Take Picture", style: .default) { (alertAction) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                self.imagePickerControllerWithSourceType(.camera)
+            } else {
+                print("Device has no camera")
+            }
+        }
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (alertAction) in
+            self.imagePickerControllerWithSourceType(.photoLibrary)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertSheet.addAction(takePictureAction)
+        alertSheet.addAction(photoLibraryAction)
+        alertSheet.addAction(cancelAction)
+        present(alertSheet, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerWithSourceType(_ imagePickerSourceType: UIImagePickerController.SourceType) {
+        
+        if imagePickerSourceType == .camera || imagePickerSourceType == .photoLibrary {
+            imagePickerController = UIImagePickerController()
+            imagePickerController.delegate = self
+            imagePickerController.allowsEditing = false
+            imagePickerController.sourceType = imagePickerSourceType
+            present(imagePickerController, animated: true, completion: nil)
+        } else {
+            print("Device has no camera")
+        }
+    }
 }
+
+extension profileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else { return }
+        self.profilePic.image = pickedImage
+        self.profilePic.contentMode = .scaleAspectFill
+        dismiss(animated: true, completion: nil)
+        StorageService(image: pickedImage).saveProfileImage((Auth.auth().currentUser?.uid)!) { (success, error) in
+            if success {
+                print("Image uploaded to Firebase Storage")
+            } else {
+                print("Failed to upload image to Firebase Storage",error?.localizedDescription)
+                let alert = UIAlertController(title: "Failed to upload image", message: "\(String(describing: error?.localizedDescription))", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: { (alertAction) in
+                    self.profilePic.image = UIImage(named: "defaultProfileImage.png")
+                    self.profilePic.contentMode = .scaleAspectFit
+                })
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+
+    
+

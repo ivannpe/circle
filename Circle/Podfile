@@ -12,6 +12,7 @@ target 'Circle' do
   pod 'Firebase/InAppMessaging'
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
   # Pods for Circle
 
   target 'CircleTests' do
