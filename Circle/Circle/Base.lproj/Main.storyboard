@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="5524.6376811594209" y="-925.44642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="QkU-rF-i2b">
             <objects>
-                <viewController id="K4m-tX-8i4" sceneMemberID="viewController">
+                <viewController id="K4m-tX-8i4" customClass="PostViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="doB-CL-kqf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,11 +283,18 @@
                                 <state key="normal" title="post">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="postTapped:" destination="K4m-tX-8i4" eventType="touchUpInside" id="WPW-OD-qRg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27781087160000001" green="0.34142917389999999" blue="0.43585008380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qJQ-Pn-8U7"/>
                     </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="8AC-3T-89G" id="VHh-P4-9CX"/>
+                        <outlet property="postBtn" destination="xJD-Tt-GG6" id="ZAO-GP-OO5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtr-Dp-zHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

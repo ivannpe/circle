@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		08DA7AD7D0295BE681861AF5 /* Pods_CircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82302A297230655CF1E3CF1 /* Pods_CircleTests.framework */; };
 		0B049A29245CB9AD00F42AF4 /* messagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */; };
+		0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B227EF5245FBBB70074A598 /* PostViewController.swift */; };
+		0B227EF7245FBBB80074A598 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B227EF5245FBBB70074A598 /* PostViewController.swift */; };
+		0B227EF8245FBBB80074A598 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B227EF5245FBBB70074A598 /* PostViewController.swift */; };
+		0B227EFA245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */; };
+		0B227EFB245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */; };
+		0B227EFC245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */; };
 		0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */; };
 		0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D32245942E7009C7C91 /* groupsViewController.swift */; };
@@ -81,6 +87,8 @@
 /* Begin PBXFileReference section */
 		04B7FBAA71AEE6ED37CA2B60 /* Pods-CircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleTests.release.xcconfig"; path = "Target Support Files/Pods-CircleTests/Pods-CircleTests.release.xcconfig"; sourceTree = "<group>"; };
 		0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagingViewController.swift; sourceTree = "<group>"; };
+		0B227EF5245FBBB70074A598 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ControllingKeyboard.swift"; sourceTree = "<group>"; };
 		0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsfeedViewController.swift; sourceTree = "<group>"; };
 		0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleGroupViewController.swift; sourceTree = "<group>"; };
 		0B265D32245942E7009C7C91 /* groupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupsViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +173,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0B227EF4245FBB810074A598 /* Single Group */ = {
+			isa = PBXGroup;
+			children = (
+				0B227EF5245FBBB70074A598 /* PostViewController.swift */,
+			);
+			path = "Single Group";
+			sourceTree = "<group>";
+		};
 		124DE08C2446A1BF00F14B0D = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +206,7 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				0B227EF4245FBB810074A598 /* Single Group */,
 				127E9359245FA5B100E37697 /* Groups */,
 				127E934E245F880600E37697 /* Model */,
 				12CE701E245F550800E64D12 /* Services */,
@@ -260,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				12CE7019245F39B100E64D12 /* StringExt.swift */,
+				0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -581,12 +599,14 @@
 				127E9354245F887A00E37697 /* Group.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
+				0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
 				127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
 				12CE701A245F39B100E64D12 /* StringExt.swift in Sources */,
+				0B227EFA245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				12CE7028245F556200E64D12 /* StorageService.swift in Sources */,
 				0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */,
 				12CE7020245F553100E64D12 /* AuthService.swift in Sources */,
@@ -599,11 +619,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B227EF7245FBBB80074A598 /* PostViewController.swift in Sources */,
 				127E9355245F887A00E37697 /* Group.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9351245F884600E37697 /* Message.swift in Sources */,
+				0B227EFB245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
 				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
@@ -614,11 +636,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B227EF8245FBBB80074A598 /* PostViewController.swift in Sources */,
 				127E9356245F887A00E37697 /* Group.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9352245F884600E37697 /* Message.swift in Sources */,
+				0B227EFC245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
 				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
