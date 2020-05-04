@@ -25,6 +25,7 @@
 		0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E7549245762170035731D /* CreateAccountViewController.swift */; };
 		0B4E754C245762250035731D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754B245762250035731D /* LogInViewController.swift */; };
 		0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
+		0B727F8D2460A0BC008EB2BC /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */; };
 		0B868F52245E6BEF00A75119 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B868F51245E6BEF00A75119 /* logo.png */; };
 		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
 		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
@@ -99,6 +100,7 @@
 		0B4E7549245762170035731D /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		0B4E754B245762250035731D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupViewController.swift; sourceTree = "<group>"; };
 		0B868F51245E6BEF00A75119 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				127E935E245FA66A00E37697 /* GroupVCCell.swift */,
+				0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
 				127E9354245F887A00E37697 /* Group.swift in Sources */,
+				0B727F8D2460A0BC008EB2BC /* createGroupViewController.swift in Sources */,
 				124DE09D2446A1C000F14B0D /* ViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */,
