@@ -43,8 +43,9 @@ class DataService {
         let ref = Database.database().reference().child("users").child("uid").child("fullname")
 
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-
+            //let fullname = snapshot.childSnapshot(forPath: "fullname").value
             completion(snapshot.value as? String)
+            //return fullname
         })
     }
     
