@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class profileViewController: UIViewController {
 
@@ -24,11 +25,21 @@ class profileViewController: UIViewController {
     @IBOutlet weak var majorLabel: UILabel!
     
     @IBOutlet weak var yearLabel: UILabel!
-    
+    var fullname: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        DataService.instance.getDBFN { (fullname) in
+
+        self.fullname = fullname
+
+        if let fullname = fullname {
+
+            self.fullNameLabel.text = "\(fullname)"
+        }
+
+        //Auth.auth().currentUser?.
     }
     
 
@@ -42,4 +53,5 @@ class profileViewController: UIViewController {
     }
     */
 
+    }
 }
