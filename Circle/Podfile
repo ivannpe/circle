@@ -13,6 +13,7 @@ target 'Circle' do
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'AlamofireImage', '~> 3.3'
   # Pods for Circle
 
   target 'CircleTests' do

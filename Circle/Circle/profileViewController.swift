@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Alamofire
+import AlamofireImage
 
 class profileViewController: UIViewController {
 
@@ -29,45 +31,46 @@ class profileViewController: UIViewController {
     //var fullname: String?
     override func viewDidLoad() {
         super.viewDidLoad()
+        //initializingProfile()
         settingProfilePictureTapGesture()
         
         // Do any additional setup after loading the view.
-        let ref = Database.database().reference().child("users")
-        let UserID = Auth.auth().currentUser?.uid
-        print(UserID!)
-
-        ref.child(UserID ?? "").observeSingleEvent(of: .value, with: { (snapshot) in
-            if !snapshot.exists() {
-                print("snapshot failed")
-                return }
-            print(snapshot)
-            print(snapshot.value as Any)
-            
-            //to make full name label retrieve from database
-            let fullname = snapshot.childSnapshot(forPath: "fullname").value
-            print(fullname!)
-            self.fullNameLabel.text = ((fullname!) as! String)
-            
-            //to make username label retrieve from database
-            let username = snapshot.childSnapshot(forPath: "username").value
-            print(username!)
-            self.usernameLabel.text = "@" + ((username!) as! String)
-            
-            //to make full name label retrieve from database
-            let school = snapshot.childSnapshot(forPath: "school").value
-            print(school!)
-            self.schoolLabel.text = ((school!) as! String)
-            
-            //to make major label retrieve from database
-            let major = snapshot.childSnapshot(forPath: "major").value
-            print(major!)
-            self.majorLabel.text = ((major!) as! String)
-            
-            //to make year label retrieve from database
-            let year = snapshot.childSnapshot(forPath: "year").value
-            print(year!)
-            self.yearLabel.text = "Class of " + ((year!) as! String)
-        })
+//        let ref = Database.database().reference().child("users")
+//        let UserID = Auth.auth().currentUser?.uid
+//        print(UserID!)
+//
+//        ref.child(UserID ?? "").observeSingleEvent(of: .value, with: { (snapshot) in
+//            if !snapshot.exists() {
+//                print("snapshot failed")
+//                return }
+//            print(snapshot)
+//            print(snapshot.value as Any)
+//
+//            //to make full name label retrieve from database
+//            let fullname = snapshot.childSnapshot(forPath: "fullname").value
+//            print(fullname!)
+//            self.fullNameLabel.text = ((fullname!) as! String)
+//
+//            //to make username label retrieve from database
+//            let username = snapshot.childSnapshot(forPath: "username").value
+//            print(username!)
+//            self.usernameLabel.text = "@" + ((username!) as! String)
+//
+//            //to make full name label retrieve from database
+//            let school = snapshot.childSnapshot(forPath: "school").value
+//            print(school!)
+//            self.schoolLabel.text = ((school!) as! String)
+//
+//            //to make major label retrieve from database
+//            let major = snapshot.childSnapshot(forPath: "major").value
+//            print(major!)
+//            self.majorLabel.text = ((major!) as! String)
+//
+//            //to make year label retrieve from database
+//            let year = snapshot.childSnapshot(forPath: "year").value
+//            print(year!)
+//            self.yearLabel.text = "Class of " + ((year!) as! String)
+//        })
     /*
     // MARK: - Navigation
 
@@ -79,6 +82,52 @@ class profileViewController: UIViewController {
     */
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initializingProfile()
+    }
+    func initializingProfile() {
+        let ref = Database.database().reference().child("users")
+        let UserID = Auth.auth().currentUser?.uid
+        print(UserID!)
+
+        ref.child(UserID ?? "").observeSingleEvent(of: .value, with: { (snapshot) in
+        if !snapshot.exists() {
+            print("snapshot failed")
+            return }
+        print(snapshot)
+        print(snapshot.value as Any)
+        
+        //to make full name label retrieve from database
+        let fullname = snapshot.childSnapshot(forPath: "fullname").value
+        print(fullname!)
+        self.fullNameLabel.text = ((fullname!) as! String)
+        
+        //to make username label retrieve from database
+        let username = snapshot.childSnapshot(forPath: "username").value
+        print(username!)
+        self.usernameLabel.text = "@" + ((username!) as! String)
+        
+        //to make full name label retrieve from database
+        let school = snapshot.childSnapshot(forPath: "school").value
+        print(school!)
+        self.schoolLabel.text = ((school!) as! String)
+        
+        //to make major label retrieve from database
+        let major = snapshot.childSnapshot(forPath: "major").value
+        print(major!)
+        self.majorLabel.text = ((major!) as! String)
+        
+        //to make year label retrieve from database
+        let year = snapshot.childSnapshot(forPath: "year").value
+        print(year!)
+        self.yearLabel.text = "Class of " + ((year!) as! String)
+    })
+    DataService.instance.getCurrentUserProfilePicture(userUID: UserID!) { (imageURL) in
+        guard let url = URL(string: imageURL) else { return }
+        self.profilePic.af_setImage(withURL: url)
+    }
+    }
     func settingProfilePictureTapGesture() {
         //Creating Gesture for Profile Pic ImageView
         profilePictureTapGesture = UITapGestureRecognizer(target: self, action: #selector(profileViewController.setProfilePicture))
@@ -88,6 +137,7 @@ class profileViewController: UIViewController {
         //Adding gesture for ImageView
         profilePic.addGestureRecognizer(profilePictureTapGesture)
         profilePic.isUserInteractionEnabled = true
+        print("IMAGE TAPPED");
     }
     
     //MARK: - Adding Profile Pictures
@@ -136,7 +186,7 @@ extension profileViewController: UIImagePickerControllerDelegate, UINavigationCo
             if success {
                 print("Image uploaded to Firebase Storage")
             } else {
-                print("Failed to upload image to Firebase Storage",error?.localizedDescription)
+                print("Failed to upload image to Firebase Storage",error?.localizedDescription as Any)
                 let alert = UIAlertController(title: "Failed to upload image", message: "\(String(describing: error?.localizedDescription))", preferredStyle: .alert)
                 let action = UIAlertAction(title: "Ok", style: .default, handler: { (alertAction) in
                     self.profilePic.image = UIImage(named: "defaultProfileImage.png")
