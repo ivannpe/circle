@@ -21,7 +21,7 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var majorLabel: UITextField!
     @IBOutlet weak var yearLabel: UITextField!
     @IBOutlet weak var hiddenLabel: UILabel!
-
+    var cantReg = true
     override func viewDidLoad() {
         hiddenLabel.isHidden = true
         passwordLabel.isSecureTextEntry = true
@@ -53,6 +53,16 @@ class CreateAccountViewController: UIViewController {
         }
         return true
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if fieldsfull() == true && self.cantReg != true{
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
     @IBAction func signUpTapped(_ sender: Any) {
         let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
         mainTabController.modalPresentationStyle = .fullScreen
@@ -61,6 +71,8 @@ class CreateAccountViewController: UIViewController {
                 if success {
                     //self.dismiss(animated: true, completion: nil)
                     print("success: fields full")
+                    self.performSegue(withIdentifier: "signupSegue", sender: AnyObject.self)
+                    self.cantReg = false
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
@@ -71,9 +83,16 @@ class CreateAccountViewController: UIViewController {
                             //self.dismiss(animated: true, completion: nil)
                             //self.present(mainTabController, animated: false, completion: nil)
                             print("Successfully registered user")
+                            self.performSegue(withIdentifier: "signupSegue", sender: AnyObject.self)
+                            self.cantReg = false
+                            print(self.cantReg)
                         })
                     } else {
                         print(String(describing: registrationError?.localizedDescription))
+                        self.hiddenLabel.isHidden = false
+                        self.hiddenLabel.text = String(describing:registrationError?.localizedDescription)
+                        self.cantReg = true
+                        print(self.cantReg)
                     }
                 })
             })
