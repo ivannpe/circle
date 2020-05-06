@@ -17,6 +17,9 @@ class groupsViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.rowHeight = 120
+        //tableView.estimatedRowHeight = UITableView.automaticDimension
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,4 +54,9 @@ extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
         groupFeedVC.initData(group: groupsArray[indexPath.row])
         presentDetail(groupFeedVC)
     }
+    // UITableViewAutomaticDimension calculates height of label contents/text
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("auto dimension called for height of rows")
+        return UITableView.automaticDimension
+    }*/
 }
