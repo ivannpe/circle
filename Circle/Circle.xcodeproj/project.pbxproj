@@ -26,6 +26,8 @@
 		0B4E754C245762250035731D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754B245762250035731D /* LogInViewController.swift */; };
 		0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
 		0B727F8D2460A0BC008EB2BC /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */; };
+		0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
+		0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B868F52245E6BEF00A75119 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B868F51245E6BEF00A75119 /* logo.png */; };
 		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
 		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
@@ -196,6 +198,7 @@
 		0B227EF4245FBB810074A598 /* Single Group */ = {
 			isa = PBXGroup;
 			children = (
+				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				0B227EF5245FBBB70074A598 /* PostViewController.swift */,
 			);
 			path = "Single Group";
@@ -233,13 +236,12 @@
 				12CE701E245F550800E64D12 /* Services */,
 				12CE701D245F3E8000E64D12 /* Extensions */,
 				124DE0982446A1C000F14B0D /* AppDelegate.swift */,
+				124DE09E2446A1C000F14B0D /* Main.storyboard */,
 				0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */,
 				124DE09A2446A1C000F14B0D /* SceneDelegate.swift */,
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
-				124DE09E2446A1C000F14B0D /* Main.storyboard */,
 				0BA9DFAF245E3FB900F2495B /* mainTabController.swift */,
 				0BA9DFAB245E229A00F2495B /* animationViewController.swift */,
-				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */,
 				0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */,
 				0B4E754D2458B68F0035731D /* profileViewController.swift */,
@@ -672,6 +674,7 @@
 				125F0BCC24622BCD00BE846D /* createGroupViewController.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
 				125F0BD024622FBF00BE846D /* UserTableViewCell.swift in Sources */,
+				0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */,
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
 				125F0BD32462310600BE846D /* groupsViewController.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
@@ -693,6 +696,7 @@
 				125F0BCD24622BCE00BE846D /* createGroupViewController.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
 				125F0BD124622FBF00BE846D /* UserTableViewCell.swift in Sources */,
+				0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */,
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
 				125F0BD42462310600BE846D /* groupsViewController.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
