@@ -71,6 +71,7 @@ class CreateAccountViewController: UIViewController {
                 if success {
                     //self.dismiss(animated: true, completion: nil)
                     print("success: fields full")
+                    self.cantReg = false
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
