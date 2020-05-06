@@ -38,17 +38,6 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
     }
-    func getDBFN(completion: @escaping (String?)->()){
-
-        let ref = Database.database().reference().child("users").child("uid").child("fullname")
-
-        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            //let fullname = snapshot.childSnapshot(forPath: "fullname").value
-            completion(snapshot.value as? String)
-            //return fullname
-        })
-    }
-    
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
         if groupKey != nil {
             REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])

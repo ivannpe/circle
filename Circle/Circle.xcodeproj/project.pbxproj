@@ -43,6 +43,13 @@
 		124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */; };
 		124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0AF2446A1C600F14B0D /* CircleTests.swift */; };
 		124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DE0BA2446A1C600F14B0D /* CircleUITests.swift */; };
+		125F0BCC24622BCD00BE846D /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */; };
+		125F0BCD24622BCE00BE846D /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */; };
+		125F0BCF24622FBF00BE846D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F0BCE24622FBF00BE846D /* UserTableViewCell.swift */; };
+		125F0BD024622FBF00BE846D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F0BCE24622FBF00BE846D /* UserTableViewCell.swift */; };
+		125F0BD124622FBF00BE846D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125F0BCE24622FBF00BE846D /* UserTableViewCell.swift */; };
+		125F0BD32462310600BE846D /* groupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D32245942E7009C7C91 /* groupsViewController.swift */; };
+		125F0BD42462310600BE846D /* groupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D32245942E7009C7C91 /* groupsViewController.swift */; };
 		127E9350245F884600E37697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E934F245F884600E37697 /* Message.swift */; };
 		127E9351245F884600E37697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E934F245F884600E37697 /* Message.swift */; };
 		127E9352245F884600E37697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127E934F245F884600E37697 /* Message.swift */; };
@@ -128,6 +135,7 @@
 		124DE0B62446A1C600F14B0D /* CircleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0BA2446A1C600F14B0D /* CircleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUITests.swift; sourceTree = "<group>"; };
 		124DE0BC2446A1C700F14B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		125F0BCE24622FBF00BE846D /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		127E934F245F884600E37697 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		127E9353245F887A00E37697 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		127E935E245FA66A00E37697 /* GroupVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVCCell.swift; sourceTree = "<group>"; };
@@ -218,6 +226,7 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				125F0BD52462311D00BE846D /* Authentication */,
 				0B227EF4245FBB810074A598 /* Single Group */,
 				127E9359245FA5B100E37697 /* Groups */,
 				127E934E245F880600E37697 /* Model */,
@@ -225,7 +234,6 @@
 				12CE701D245F3E8000E64D12 /* Extensions */,
 				124DE0982446A1C000F14B0D /* AppDelegate.swift */,
 				0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */,
-				0B265D32245942E7009C7C91 /* groupsViewController.swift */,
 				124DE09A2446A1C000F14B0D /* SceneDelegate.swift */,
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
 				124DE09E2446A1C000F14B0D /* Main.storyboard */,
@@ -233,8 +241,6 @@
 				0BA9DFAB245E229A00F2495B /* animationViewController.swift */,
 				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */,
-				0B4E7549245762170035731D /* CreateAccountViewController.swift */,
-				0B4E754B245762250035731D /* LogInViewController.swift */,
 				0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */,
 				0B4E754D2458B68F0035731D /* profileViewController.swift */,
 				124DE0A12446A1C600F14B0D /* Assets.xcassets */,
@@ -269,6 +275,24 @@
 			path = CircleUITests;
 			sourceTree = "<group>";
 		};
+		125F0BD2246230D800BE846D /* Create Group */ = {
+			isa = PBXGroup;
+			children = (
+				125F0BCE24622FBF00BE846D /* UserTableViewCell.swift */,
+				0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */,
+			);
+			path = "Create Group";
+			sourceTree = "<group>";
+		};
+		125F0BD52462311D00BE846D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0B4E7549245762170035731D /* CreateAccountViewController.swift */,
+				0B4E754B245762250035731D /* LogInViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		127E934E245F880600E37697 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,8 +305,9 @@
 		127E9359245FA5B100E37697 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				125F0BD2246230D800BE846D /* Create Group */,
 				127E935E245FA66A00E37697 /* GroupVCCell.swift */,
-				0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */,
+				0B265D32245942E7009C7C91 /* groupsViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -624,6 +649,7 @@
 				0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
+				125F0BCF24622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
@@ -643,8 +669,11 @@
 			files = (
 				0B227EF7245FBBB80074A598 /* PostViewController.swift in Sources */,
 				127E9355245F887A00E37697 /* Group.swift in Sources */,
+				125F0BCC24622BCD00BE846D /* createGroupViewController.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
+				125F0BD024622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
+				125F0BD32462310600BE846D /* groupsViewController.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9351245F884600E37697 /* Message.swift in Sources */,
 				0B227EFB245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
@@ -661,8 +690,11 @@
 			files = (
 				0B227EF8245FBBB80074A598 /* PostViewController.swift in Sources */,
 				127E9356245F887A00E37697 /* Group.swift in Sources */,
+				125F0BCD24622BCE00BE846D /* createGroupViewController.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
+				125F0BD124622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
+				125F0BD42462310600BE846D /* groupsViewController.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9352245F884600E37697 /* Message.swift in Sources */,
 				0B227EFC245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
