@@ -1,17 +1,17 @@
 //
-//  GroupVCCell.swift
+//  GroupFeedTableViewCell.swift
 //  Circle
 //
-//  Created by Ivanna Peña on 5/3/20.
+//  Created by Ivanna Peña on 5/6/20.
 //  Copyright © 2020 Ivanna Peña and Leena Loo. All rights reserved.
 //
 
 import UIKit
 
-class GroupVCCell: UITableViewCell {
-    @IBOutlet weak var groupnameLabel: UILabel!
-    @IBOutlet weak var groupdescLabel: UILabel!
-    
+class GroupFeedTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,9 +22,9 @@ class GroupVCCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configureCell(title: String, description: String) {
-        self.groupnameLabel.text = title
-        self.groupdescLabel.text = description
-    }
+     func configureCell(username: String, content: String) {
+         usernameLabel.text = username
+         messageLabel.text = content
+     }
 
 }

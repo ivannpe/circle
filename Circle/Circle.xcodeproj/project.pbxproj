@@ -34,6 +34,15 @@
 		1206BA41245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		1206BA42245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
 		1206BA43245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
+		123F5076246278C30060362C /* GroupFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F5075246278C30060362C /* GroupFeedViewController.swift */; };
+		123F5077246278C30060362C /* GroupFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F5075246278C30060362C /* GroupFeedViewController.swift */; };
+		123F5078246278C30060362C /* GroupFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F5075246278C30060362C /* GroupFeedViewController.swift */; };
+		123F507A24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */; };
+		123F507B24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */; };
+		123F507C24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */; };
+		123F507E246281A80060362C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507D246281A80060362C /* UIViewControllerExt.swift */; };
+		123F507F246281A80060362C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507D246281A80060362C /* UIViewControllerExt.swift */; };
+		123F5080246281A80060362C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507D246281A80060362C /* UIViewControllerExt.swift */; };
 		123FDA46245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
 		123FDA47245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
 		123FDA48245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
@@ -122,6 +131,9 @@
 		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
 		1206BA40245E398600EAC99B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		123F5075246278C30060362C /* GroupFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedViewController.swift; sourceTree = "<group>"; };
+		123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedTableViewCell.swift; sourceTree = "<group>"; };
+		123F507D246281A80060362C /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		123FDA45245E4619008C4375 /* WelcomeScreenExport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeScreenExport.png; sourceTree = "<group>"; };
 		124DE0952446A1C000F14B0D /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0982446A1C000F14B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +212,8 @@
 			children = (
 				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				0B227EF5245FBBB70074A598 /* PostViewController.swift */,
+				123F5075246278C30060362C /* GroupFeedViewController.swift */,
+				123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */,
 			);
 			path = "Single Group";
 			sourceTree = "<group>";
@@ -230,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				125F0BD52462311D00BE846D /* Authentication */,
-				0B227EF4245FBB810074A598 /* Single Group */,
 				127E9359245FA5B100E37697 /* Groups */,
 				127E934E245F880600E37697 /* Model */,
 				12CE701E245F550800E64D12 /* Services */,
@@ -295,6 +308,15 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		125F0BD62462644F00BE846D /* Groups Feed */ = {
+			isa = PBXGroup;
+			children = (
+				127E935E245FA66A00E37697 /* GroupVCCell.swift */,
+				0B265D32245942E7009C7C91 /* groupsViewController.swift */,
+			);
+			path = "Groups Feed";
+			sourceTree = "<group>";
+		};
 		127E934E245F880600E37697 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,9 +329,9 @@
 		127E9359245FA5B100E37697 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				0B227EF4245FBB810074A598 /* Single Group */,
+				125F0BD62462644F00BE846D /* Groups Feed */,
 				125F0BD2246230D800BE846D /* Create Group */,
-				127E935E245FA66A00E37697 /* GroupVCCell.swift */,
-				0B265D32245942E7009C7C91 /* groupsViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -320,6 +342,7 @@
 				12CE7019245F39B100E64D12 /* StringExt.swift */,
 				0B227EF9245FC01A0074A598 /* UIView+ControllingKeyboard.swift */,
 				127E93622460973400E37697 /* String+CurrentTimeInMilliSeconds.swift */,
+				123F507D246281A80060362C /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -639,6 +662,7 @@
 			files = (
 				0B049A29245CB9AD00F42AF4 /* messagingViewController.swift in Sources */,
 				0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */,
+				123F5076246278C30060362C /* GroupFeedViewController.swift in Sources */,
 				0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */,
 				127E9350245F884600E37697 /* Message.swift in Sources */,
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
@@ -652,6 +676,7 @@
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
 				125F0BCF24622FBF00BE846D /* UserTableViewCell.swift in Sources */,
+				123F507A24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
 				127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
@@ -661,6 +686,7 @@
 				0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */,
 				12CE7020245F553100E64D12 /* AuthService.swift in Sources */,
 				124DE0992446A1C000F14B0D /* AppDelegate.swift in Sources */,
+				123F507E246281A80060362C /* UIViewControllerExt.swift in Sources */,
 				124DE09B2446A1C000F14B0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +696,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B227EF7245FBBB80074A598 /* PostViewController.swift in Sources */,
+				123F507B24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
+				123F507F246281A80060362C /* UIViewControllerExt.swift in Sources */,
 				127E9355245F887A00E37697 /* Group.swift in Sources */,
 				125F0BCC24622BCD00BE846D /* createGroupViewController.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
@@ -677,6 +705,7 @@
 				0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */,
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
 				125F0BD32462310600BE846D /* groupsViewController.swift in Sources */,
+				123F5077246278C30060362C /* GroupFeedViewController.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9351245F884600E37697 /* Message.swift in Sources */,
 				0B227EFB245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
@@ -692,6 +721,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B227EF8245FBBB80074A598 /* PostViewController.swift in Sources */,
+				123F507C24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
+				123F5080246281A80060362C /* UIViewControllerExt.swift in Sources */,
 				127E9356245F887A00E37697 /* Group.swift in Sources */,
 				125F0BCD24622BCE00BE846D /* createGroupViewController.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
@@ -699,6 +730,7 @@
 				0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */,
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
 				125F0BD42462310600BE846D /* groupsViewController.swift in Sources */,
+				123F5078246278C30060362C /* GroupFeedViewController.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
 				127E9352245F884600E37697 /* Message.swift in Sources */,
 				0B227EFC245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
