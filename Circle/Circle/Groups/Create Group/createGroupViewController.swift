@@ -15,15 +15,15 @@ class createGroupViewController: UIViewController {
     @IBOutlet weak var groupDesc: UITextView!
     @IBOutlet weak var groupMembers: UITextField!
     @IBOutlet weak var addMemberLabel: UILabel!
-    @IBOutlet weak var membersTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var createGroupBtn: UIButton!
     var emailArray = [String]()
     var chosenUserArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        membersTableView.delegate = self
-        membersTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         groupMembers.delegate = self
         
         groupMembers.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -34,18 +34,14 @@ class createGroupViewController: UIViewController {
         createGroupBtn.isHidden = true
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     @objc func textFieldDidChange() {
         if(groupMembers.text == "") {
             self.emailArray.removeAll()
-            membersTableView.reloadData()
+            tableView.reloadData()
         } else {
             DataService.instance.getEmail(forSearchQuery: groupMembers.text!) { (emails) in
                 self.emailArray = emails
-                self.membersTableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
