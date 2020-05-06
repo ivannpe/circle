@@ -40,7 +40,7 @@ class GroupFeedViewController: UIViewController {
         }
         
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
-            DataService.instance.getAllMessages(desiredGroup: self.group!, handler: { (messages) in
+            DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
                 self.messages = messages
                 self.tableView.reloadData()
                 
