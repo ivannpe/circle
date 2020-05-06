@@ -27,7 +27,6 @@ class profileViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     var profilePictureTapGesture: UITapGestureRecognizer!
     var imagePickerController: UIImagePickerController!
-    
     //var fullname: String?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,10 +124,12 @@ class profileViewController: UIViewController {
     })
     DataService.instance.getCurrentUserProfilePicture(userUID: UserID!) { (imageURL) in
         guard let url = URL(string: imageURL) else { return }
+        print("calling self.profilepic.af_setimage")
         self.profilePic.af_setImage(withURL: url)
     }
     }
     func settingProfilePictureTapGesture() {
+        print("settingprofilepicturetapgesture called")
         //Creating Gesture for Profile Pic ImageView
         profilePictureTapGesture = UITapGestureRecognizer(target: self, action: #selector(profileViewController.setProfilePicture))
         profilePictureTapGesture.numberOfTapsRequired = 1
@@ -142,7 +143,7 @@ class profileViewController: UIViewController {
     
     //MARK: - Adding Profile Pictures
     @objc func setProfilePicture() {
-        
+        print("set profile pic() called")
         let alertSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let takePictureAction = UIAlertAction(title: "Take Picture", style: .default) { (alertAction) in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -163,13 +164,16 @@ class profileViewController: UIViewController {
     }
     
     func imagePickerControllerWithSourceType(_ imagePickerSourceType: UIImagePickerController.SourceType) {
-        
+        print("imagePickerControllerWithSourceType called")
         if imagePickerSourceType == .camera || imagePickerSourceType == .photoLibrary {
             imagePickerController = UIImagePickerController()
             imagePickerController.delegate = self
+            print("delegate called for")
             imagePickerController.allowsEditing = false
             imagePickerController.sourceType = imagePickerSourceType
             present(imagePickerController, animated: true, completion: nil)
+            //imagePickerController.delegate = self
+            print("present imagepickercontroller")
         } else {
             print("Device has no camera")
         }
@@ -177,8 +181,10 @@ class profileViewController: UIViewController {
 }
 
 extension profileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage else { return }
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("imagePickerController called")
+        guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+        print("self.profilePic setting to pickedImage")
         self.profilePic.image = pickedImage
         self.profilePic.contentMode = .scaleAspectFill
         dismiss(animated: true, completion: nil)
@@ -198,9 +204,9 @@ extension profileViewController: UIImagePickerControllerDelegate, UINavigationCo
         }
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
+    //func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        //dismiss(animated: true, completion: nil)
+    //}
 }
 
 

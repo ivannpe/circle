@@ -863,20 +863,11 @@
             <objects>
                 <viewController wantsFullScreenLayout="YES" id="dXx-oP-p7a" customClass="profileViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MD1-Jf-YSj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Mk-1a-d6m">
-                                <rect key="frame" x="-1" y="543" width="414" height="924"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="Gc9-3u-Q4F"/>
-                                    <constraint firstAttribute="height" constant="924" id="Xdk-1A-WIt"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="sOq-8G-me5"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="qTx-a3-M3Q"/>
-                            </scrollView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9oC-ai-o5k">
-                                <rect key="frame" x="0.0" y="361" width="414" height="800"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oC-ai-o5k">
+                                <rect key="frame" x="0.0" y="361" width="414" height="481"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO8-ZC-X4u">
                                         <rect key="frame" x="78" y="4" width="263" height="23"/>
@@ -939,32 +930,31 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="luk-sb-xXj">
-                                <rect key="frame" x="0.0" y="20" width="413" height="400"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="BqU-IK-KYU">
+                                <rect key="frame" x="37" y="37" width="333" height="244"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="KYs-9B-iPa"/>
-                                    <constraint firstAttribute="height" constant="400" id="fzQ-i9-tY5"/>
+                                    <constraint firstAttribute="height" constant="244" id="YAj-u0-rLD"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vsY-jq-Ft0" firstAttribute="trailing" secondItem="2Mk-1a-d6m" secondAttribute="trailing" id="4pF-hs-m1z"/>
-                            <constraint firstItem="vsY-jq-Ft0" firstAttribute="trailing" secondItem="luk-sb-xXj" secondAttribute="trailing" constant="1" id="QmL-id-awZ"/>
-                            <constraint firstItem="luk-sb-xXj" firstAttribute="leading" secondItem="vsY-jq-Ft0" secondAttribute="leading" id="dp1-GQ-JXx"/>
-                            <constraint firstItem="9oC-ai-o5k" firstAttribute="top" secondItem="luk-sb-xXj" secondAttribute="bottom" constant="27" id="drN-SZ-6nj"/>
-                            <constraint firstItem="2Mk-1a-d6m" firstAttribute="leading" secondItem="MD1-Jf-YSj" secondAttribute="leading" constant="20" symbolic="YES" id="s1b-4v-jw2"/>
-                            <constraint firstItem="luk-sb-xXj" firstAttribute="top" secondItem="vsY-jq-Ft0" secondAttribute="top" constant="20" id="xqj-jh-5c6"/>
+                            <constraint firstItem="9oC-ai-o5k" firstAttribute="centerX" secondItem="MD1-Jf-YSj" secondAttribute="centerX" id="9ij-aD-I8z"/>
+                            <constraint firstItem="9oC-ai-o5k" firstAttribute="top" secondItem="BqU-IK-KYU" secondAttribute="bottom" constant="80" id="DVC-Th-rRZ"/>
+                            <constraint firstItem="vsY-jq-Ft0" firstAttribute="trailing" secondItem="BqU-IK-KYU" secondAttribute="trailing" constant="44" id="PvF-7g-OUr"/>
+                            <constraint firstItem="BqU-IK-KYU" firstAttribute="top" secondItem="vsY-jq-Ft0" secondAttribute="top" constant="37" id="RcP-G5-1hM"/>
+                            <constraint firstItem="BqU-IK-KYU" firstAttribute="leading" secondItem="vsY-jq-Ft0" secondAttribute="leading" constant="37" id="S02-17-SGf"/>
+                            <constraint firstItem="9oC-ai-o5k" firstAttribute="leading" secondItem="vsY-jq-Ft0" secondAttribute="leading" id="cea-oB-Bkk"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="9oC-ai-o5k" secondAttribute="bottom" constant="-83" id="unx-y5-sGB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vsY-jq-Ft0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" selectedImage="person.fill" id="EBc-cs-hiH"/>
                     <navigationItem key="navigationItem" id="r1K-1S-Sbx"/>
-                    <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="fullNameLabel" destination="GO8-ZC-X4u" id="Ibe-vi-3tw"/>
                         <outlet property="majorLabel" destination="Ooh-sq-0ZT" id="ZB6-YF-Fhh"/>
-                        <outlet property="profilePic" destination="luk-sb-xXj" id="bru-Dh-Y28"/>
+                        <outlet property="profilePic" destination="BqU-IK-KYU" id="vuA-hg-CAm"/>
                         <outlet property="schoolLabel" destination="w2I-o9-HA8" id="LZw-K4-uOd"/>
                         <outlet property="usernameLabel" destination="bL6-Z2-AVm" id="HCZ-dt-LeW"/>
                         <outlet property="yearLabel" destination="n3T-6h-jX9" id="DNf-Zd-wKd"/>
