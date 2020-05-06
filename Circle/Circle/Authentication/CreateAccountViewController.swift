@@ -71,6 +71,7 @@ class CreateAccountViewController: UIViewController {
                 if success {
                     //self.dismiss(animated: true, completion: nil)
                     print("success: fields full")
+                    self.performSegue(withIdentifier: "signupSegue", sender: AnyObject.self)
                     self.cantReg = false
                 } else {
                     print(String(describing: loginError?.localizedDescription))
@@ -82,6 +83,7 @@ class CreateAccountViewController: UIViewController {
                             //self.dismiss(animated: true, completion: nil)
                             //self.present(mainTabController, animated: false, completion: nil)
                             print("Successfully registered user")
+                            self.performSegue(withIdentifier: "signupSegue", sender: AnyObject.self)
                             self.cantReg = false
                             print(self.cantReg)
                         })

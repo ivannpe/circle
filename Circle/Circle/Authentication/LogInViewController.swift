@@ -38,26 +38,20 @@ class LogInViewController: UIViewController {
     }
  
      
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if fieldsfull() == true && self.cantLogin != true{
-            print(self.cantLogin)
-            return true
-        }
-        else {
-            return false
-        }
-    }
+
     
     @IBAction func loginTapped(_ sender: Any) {
         
         if fieldsfull(){
             AuthService.instance.loginUser(withEmail: emailLabel.text!, withPassword: passwordLabel.text!, loginComplete: { (success, loginError) in
                 if success {
+                    self.performSegue(withIdentifier: "loginSegue", sender: AnyObject.self)
+                    self.cantLogin = false
+                    print(self.cantLogin)
                     //self.dismiss(animated: true, completion: nil)
                     print("Login Successful")
                     //self.performSegue(withIdentifier: "loginSegue", sender: AnyObject?.self)
-                    self.cantLogin = false
-                    print(self.cantLogin)
+
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                     self.hiddenLabel.isHidden = false
@@ -73,6 +67,21 @@ class LogInViewController: UIViewController {
         
         
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print("should perform segue called")
+        if fieldsfull() == true && self.cantLogin != true{
+            print("should perform segue part success")
+            print(self.cantLogin)
+            
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
