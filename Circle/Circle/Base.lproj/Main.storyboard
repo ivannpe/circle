@@ -195,6 +195,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="aboutButtonPressed:" destination="3qq-pf-KzU" eventType="touchUpInside" id="LZG-hj-0FF"/>
                                     <segue destination="Qkv-Qk-vBz" kind="showDetail" identifier="toAbout" id="91J-JD-saI"/>
                                 </connections>
                             </button>
@@ -211,6 +212,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="membersButtonPressed:" destination="3qq-pf-KzU" eventType="touchUpInside" id="bf8-el-MRt"/>
                                     <segue destination="vm2-vG-Slx" kind="showDetail" identifier="toMembers" id="Nnp-Bg-C9l"/>
                                 </connections>
                             </button>
@@ -227,6 +229,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="postButtonPressed:" destination="3qq-pf-KzU" eventType="touchUpInside" id="oi3-eh-lyJ"/>
                                     <segue destination="K4m-tX-8i4" kind="presentation" id="c4v-X2-ymB"/>
                                 </connections>
                             </button>
@@ -234,7 +237,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9rW-uc-Okn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Group Name" id="g3n-sC-7ed"/>
+                    <navigationItem key="navigationItem" id="g3n-sC-7ed"/>
                     <connections>
                         <outlet property="aboutPage" destination="S5H-s1-NpV" id="Q5f-sx-wV2"/>
                         <outlet property="groupName" destination="g3n-sC-7ed" id="E7g-lD-XVe"/>
@@ -247,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="4466.666666666667" y="-244.41964285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--About Page View Controller-->
         <scene sceneID="PPZ-oS-b51">
             <objects>
-                <viewController id="Qkv-Qk-vBz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qkv-Qk-vBz" customClass="AboutPageViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Udm-l8-kvj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="4686.9565217391309" y="-925.44642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Members View Controller-->
         <scene sceneID="cOX-0c-OGI">
             <objects>
-                <viewController id="vm2-vG-Slx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MembersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vm2-vG-Slx" customClass="MembersViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hWE-da-O3k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,7 +332,7 @@
         <!--Post View Controller-->
         <scene sceneID="QkU-rF-i2b">
             <objects>
-                <viewController id="K4m-tX-8i4" customClass="PostViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K4m-tX-8i4" customClass="PostViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="doB-CL-kqf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -22,6 +22,7 @@ class GroupFeedViewController: UIViewController {
     
     func initData(group: Group) {
         self.group = group
+        //print(group);
     }
     
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class GroupFeedViewController: UIViewController {
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
                 self.messages = messages
+                print(self.messages)
                 self.tableView.reloadData()
                 
                 if(self.messages.count > 0) {
@@ -49,12 +51,29 @@ class GroupFeedViewController: UIViewController {
                         let indexPath = IndexPath(row: self.messages.count-1, section: 0)
                         self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
                     }
+                }else{
+                    print("no messages")
                 }
-            })
+            }) //end of data service
         }
     }
-    
-//    @IBAction func backBtnPressed(_ sender: Any) {
+
+    @IBAction func aboutButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
+        //vc.group = self.group
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func membersButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
+        //vc.group = self.group
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func postButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        //vc.group = self.group
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    //    @IBAction func backBtnPressed(_ sender: Any) {
 //        dismissDetail()
 //    }
     

@@ -43,6 +43,12 @@
 		123F507E246281A80060362C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507D246281A80060362C /* UIViewControllerExt.swift */; };
 		123F507F246281A80060362C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507D246281A80060362C /* UIViewControllerExt.swift */; };
 		123F5080246281A80060362C /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F507D246281A80060362C /* UIViewControllerExt.swift */; };
+		123F50822463186E0060362C /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F50812463186E0060362C /* AboutPageViewController.swift */; };
+		123F50832463186F0060362C /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F50812463186E0060362C /* AboutPageViewController.swift */; };
+		123F50842463186F0060362C /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F50812463186E0060362C /* AboutPageViewController.swift */; };
+		123F5086246318A80060362C /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F5085246318A80060362C /* MembersViewController.swift */; };
+		123F5087246318A80060362C /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F5085246318A80060362C /* MembersViewController.swift */; };
+		123F5088246318A80060362C /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123F5085246318A80060362C /* MembersViewController.swift */; };
 		123FDA46245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
 		123FDA47245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
 		123FDA48245E461A008C4375 /* WelcomeScreenExport.png in Resources */ = {isa = PBXBuildFile; fileRef = 123FDA45245E4619008C4375 /* WelcomeScreenExport.png */; };
@@ -134,6 +140,8 @@
 		123F5075246278C30060362C /* GroupFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedViewController.swift; sourceTree = "<group>"; };
 		123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedTableViewCell.swift; sourceTree = "<group>"; };
 		123F507D246281A80060362C /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		123F50812463186E0060362C /* AboutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageViewController.swift; sourceTree = "<group>"; };
+		123F5085246318A80060362C /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		123FDA45245E4619008C4375 /* WelcomeScreenExport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomeScreenExport.png; sourceTree = "<group>"; };
 		124DE0952446A1C000F14B0D /* Circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124DE0982446A1C000F14B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,9 +219,11 @@
 			isa = PBXGroup;
 			children = (
 				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
-				0B227EF5245FBBB70074A598 /* PostViewController.swift */,
 				123F5075246278C30060362C /* GroupFeedViewController.swift */,
 				123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */,
+				123F50812463186E0060362C /* AboutPageViewController.swift */,
+				0B227EF5245FBBB70074A598 /* PostViewController.swift */,
+				123F5085246318A80060362C /* MembersViewController.swift */,
 			);
 			path = "Single Group";
 			sourceTree = "<group>";
@@ -674,6 +684,7 @@
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
+				123F50822463186E0060362C /* AboutPageViewController.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
 				125F0BCF24622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				123F507A24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
@@ -681,6 +692,7 @@
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
 				12CE701A245F39B100E64D12 /* StringExt.swift in Sources */,
+				123F5086246318A80060362C /* MembersViewController.swift in Sources */,
 				0B227EFA245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				12CE7028245F556200E64D12 /* StorageService.swift in Sources */,
 				0B4E7548245761FA0035731D /* WelcomeScreenViewController.swift in Sources */,
@@ -707,10 +719,12 @@
 				125F0BD32462310600BE846D /* groupsViewController.swift in Sources */,
 				123F5077246278C30060362C /* GroupFeedViewController.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
+				123F5087246318A80060362C /* MembersViewController.swift in Sources */,
 				127E9351245F884600E37697 /* Message.swift in Sources */,
 				0B227EFB245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
+				123F50832463186F0060362C /* AboutPageViewController.swift in Sources */,
 				127E93642460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
 				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
 			);
@@ -732,10 +746,12 @@
 				125F0BD42462310600BE846D /* groupsViewController.swift in Sources */,
 				123F5078246278C30060362C /* GroupFeedViewController.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
+				123F5088246318A80060362C /* MembersViewController.swift in Sources */,
 				127E9352245F884600E37697 /* Message.swift in Sources */,
 				0B227EFC245FC01A0074A598 /* UIView+ControllingKeyboard.swift in Sources */,
 				127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
+				123F50842463186F0060362C /* AboutPageViewController.swift in Sources */,
 				127E93652460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
 				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
 			);
