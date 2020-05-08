@@ -50,9 +50,11 @@ extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
+        
 
         groupFeedVC.initData(group: groupsArray[indexPath.row])
-        presentDetail(groupFeedVC)
+        //presentDetail(groupFeedVC)
+        show(groupFeedVC, sender: AnyObject.self)
     }
     // UITableViewAutomaticDimension calculates height of label contents/text
     /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

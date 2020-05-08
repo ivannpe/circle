@@ -40,38 +40,42 @@ class GroupFeedViewController: UIViewController {
 //            self.memberLbl.text = group.members.joined(separator: ", ")
         }
         
-        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
-            DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
-                self.messages = messages
-                print(self.messages)
-                self.tableView.reloadData()
-                
-                if(self.messages.count > 0) {
-                    DispatchQueue.main.async {
-                        let indexPath = IndexPath(row: self.messages.count-1, section: 0)
-                        self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
-                    }
-                }else{
-                    print("no messages")
-                }
-            }) //end of data service
-        }
+//        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+//            DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
+//                self.messages = messages
+//                print(self.messages)
+//                self.tableView.reloadData()
+//
+//                if(self.messages.count > 0) {
+//                    DispatchQueue.main.async {
+//                        let indexPath = IndexPath(row: self.messages.count-1, section: 0)
+//                        self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+//                    }
+//                }else{
+//                    print("no messages")
+//                }
+//            })
+//        }//end of data service
     }
 
     @IBAction func aboutButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
         //vc.group = self.group
-        navigationController?.pushViewController(vc, animated: true)
+        //presentDetail(vc)
+        showDetailViewController(vc, sender: AnyObject.self)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func membersButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         //vc.group = self.group
-        navigationController?.pushViewController(vc, animated: true)
+        showDetailViewController(vc, sender: AnyObject.self)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func postButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        showDetailViewController(vc, sender: AnyObject.self)
         //vc.group = self.group
-        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     //    @IBAction func backBtnPressed(_ sender: Any) {
 //        dismissDetail()
