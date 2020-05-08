@@ -16,6 +16,7 @@ class AboutPageViewController: UIViewController {
     //var groupD: String = ""
     @IBOutlet weak var groupDescriptionLabel: UILabel!
     @IBOutlet weak var memberCountLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
     
     func initData(group: Group) {
         print("init data")
@@ -36,6 +37,7 @@ class AboutPageViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("viewdidload")
         //print(groupD)
+        self.aboutLabel.text = "About " + self.group!.groupTitle
         self.groupDescriptionLabel.text = self.group?.groupDesc
         self.memberCountLabel.text = String(format:"%d Members", self.group!.memberCount)
         //print(self.groupD)

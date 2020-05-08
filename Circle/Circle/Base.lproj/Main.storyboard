@@ -255,8 +255,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About this group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-0l-QMB">
-                                <rect key="frame" x="106" y="75" width="203" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About this group" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-0l-QMB">
+                                <rect key="frame" x="59" y="75" width="295" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -293,6 +293,7 @@
                         <viewLayoutGuide key="safeArea" id="e7o-hh-Ddi"/>
                     </view>
                     <connections>
+                        <outlet property="aboutLabel" destination="Tjc-0l-QMB" id="SgR-jC-Vwd"/>
                         <outlet property="groupDescriptionLabel" destination="qtw-a3-2Tc" id="j0R-En-OGo"/>
                         <outlet property="memberCountLabel" destination="4xg-cQ-brC" id="2he-MS-kGP"/>
                     </connections>
