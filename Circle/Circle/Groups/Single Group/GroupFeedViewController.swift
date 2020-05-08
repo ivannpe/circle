@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 
 class GroupFeedViewController: UIViewController {
-    
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var aboutPage: UIButton!
     @IBOutlet weak var membersPage: UIButton!
@@ -19,24 +19,24 @@ class GroupFeedViewController: UIViewController {
     @IBOutlet weak var groupName: UINavigationItem!
     var group: Group?
     var messages = [Message]()
-    
+
     func initData(group: Group) {
         self.group = group
         print("group");
         print(group)
         print(group.groupTitle)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if let group = group {
             groupName.title = group.groupTitle
 //            self.memberLbl.text = group.members.joined(separator: ", ")
@@ -47,7 +47,7 @@ class GroupFeedViewController: UIViewController {
                 self.messages = messages
                 print(self.messages)
                 self.tableView.reloadData()
-                
+
                 if(self.messages.count > 0) {
                     DispatchQueue.main.async {
                         let indexPath = IndexPath(row: self.messages.count-1, section: 0)
@@ -63,22 +63,26 @@ class GroupFeedViewController: UIViewController {
     @IBAction func aboutButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
         //vc.group = self.group
-        navigationController?.pushViewController(vc, animated: true)
+        //presentDetail(vc)
+        showDetailViewController(vc, sender: AnyObject.self)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func membersButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         //vc.group = self.group
-        navigationController?.pushViewController(vc, animated: true)
+        showDetailViewController(vc, sender: AnyObject.self)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func postButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        showDetailViewController(vc, sender: AnyObject.self)
         //vc.group = self.group
-        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     //    @IBAction func backBtnPressed(_ sender: Any) {
 //        dismissDetail()
 //    }
-    
+
 //    @IBAction func sendMessageBtnPressed(_ sender: Any) {
 //        let message: String = messageTextField.text!
 //
@@ -101,18 +105,17 @@ extension GroupFeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GroupFeedTableViewCell") as? GroupFeedTableViewCell {
             let email = messages[indexPath.row].senderId
             let content = messages[indexPath.row].content
-            
+
             cell.configureCell(username: email, content: content)
-            
+
             return cell
         } else {
             return UITableViewCell()
         }
     }
 }
-

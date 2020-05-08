@@ -218,7 +218,6 @@
 		0B227EF4245FBB810074A598 /* Single Group */ = {
 			isa = PBXGroup;
 			children = (
-				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				123F5075246278C30060362C /* GroupFeedViewController.swift */,
 				123F507924627A7E0060362C /* GroupFeedTableViewCell.swift */,
 				123F50812463186E0060362C /* AboutPageViewController.swift */,
@@ -262,6 +261,7 @@
 				124DE09E2446A1C000F14B0D /* Main.storyboard */,
 				0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */,
 				124DE09A2446A1C000F14B0D /* SceneDelegate.swift */,
+				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
 				0BA9DFAF245E3FB900F2495B /* mainTabController.swift */,
 				0BA9DFAB245E229A00F2495B /* animationViewController.swift */,
