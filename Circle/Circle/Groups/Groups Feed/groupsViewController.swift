@@ -50,7 +50,7 @@ extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
-
+        print("didselectrowat function called in groups view controller")
         groupFeedVC.initData(group: groupsArray[indexPath.row])
         presentDetail(groupFeedVC)
     }

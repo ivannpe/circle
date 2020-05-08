@@ -19,12 +19,14 @@ class GroupFeedTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        print("group feed - setSelected called")
 
         // Configure the view for the selected state
     }
      func configureCell(username: String, content: String) {
          usernameLabel.text = username
          messageLabel.text = content
+        print("group feed - configure cell called")
      }
 
 }

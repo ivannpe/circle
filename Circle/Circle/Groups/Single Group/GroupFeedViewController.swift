@@ -22,7 +22,9 @@ class GroupFeedViewController: UIViewController {
     
     func initData(group: Group) {
         self.group = group
-        //print(group);
+        print("group");
+        print(group)
+        print(group.groupTitle)
     }
     
     override func viewDidLoad() {
@@ -39,7 +41,7 @@ class GroupFeedViewController: UIViewController {
             groupName.title = group.groupTitle
 //            self.memberLbl.text = group.members.joined(separator: ", ")
         }
-        
+        /*
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
                 self.messages = messages
@@ -55,7 +57,7 @@ class GroupFeedViewController: UIViewController {
                     print("no messages")
                 }
             }) //end of data service
-        }
+        }*/
     }
 
     @IBAction func aboutButtonPressed(_ sender: Any) {
