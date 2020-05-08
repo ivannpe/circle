@@ -11,45 +11,44 @@ import Firebase
 
 class PostViewController: UIViewController {
 
-    @IBOutlet weak var contentTextView: UITextView!
+
+    @IBOutlet weak var messageText: UITextField!
     @IBOutlet weak var postBtn: UIButton!
-    
-    
+    var group: Group?
+    func initData(group: Group) {
+        print("init data")
+        print(group.groupTitle)
+        self.group = group
+        //self.groupD = group.groupDesc
+        print(group.groupTitle)
+        //print(self.groupD)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //initialSetupPostView()
         // Do any additional setup after loading the view.
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-        }
-        
-        /*func initialSetupPostView() {
-            contentTextView.delegate = self as? UITextViewDelegate
-        
-            //postBtn.bindToKeyboard()
-            
-            guard let uid = Auth.auth().currentUser?.uid else { return }
-        }*/
-        
-    
-    @IBAction func postTapped(_ sender: Any) {
-            if contentTextView.text != nil && contentTextView.text != "Write something here.." {
-                postBtn.isEnabled = false
-                DataService.instance.uploadPost(withMessage: contentTextView.text!, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: nil, sendComplete: { (isComplete) in
-                    if isComplete {
-                        self.postBtn.isEnabled = false
-                        self.dismiss(animated: true, completion: nil)
-                    } else {
-                        self.postBtn.isEnabled = true
-                        print("Error while posting")
-                    }
-                })
+    @IBAction func postBtnPressed(_ sender: Any) {
+        let message: String = messageText.text!
+        if(message != "") {
+            postBtn.isEnabled = false
+            messageText.isEnabled = false
+
+            DataService.instance.uploadPost(withMessage: message, forUID: (Auth.auth().currentUser?.email)!, withGroupKey: (group?.key)!) { (success) in
+                if(success) {
+                    self.postBtn.isEnabled = true
+                    self.messageText.isEnabled = true
+                    self.messageText.text = ""
+                }
             }
         }
-        
-    
+    }
 /*
 extension PostViewController: UITextViewDelegate {
         func textViewDidBeginEditing(_ textView: UITextView) {

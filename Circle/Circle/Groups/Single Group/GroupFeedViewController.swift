@@ -41,7 +41,6 @@ class GroupFeedViewController: UIViewController {
             groupName.title = group.groupTitle
 //            self.memberLbl.text = group.members.joined(separator: ", ")
         }
-        /*
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
                 self.messages = messages
@@ -57,12 +56,13 @@ class GroupFeedViewController: UIViewController {
                     print("no messages")
                 }
             }) //end of data service
-        }*/
+        }
     }
 
     @IBAction func aboutButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
         //vc.initData(group: group)
+        //group != nil
         if let group = group {
             vc.group = self.group
         }
@@ -78,6 +78,9 @@ class GroupFeedViewController: UIViewController {
     }
     @IBAction func postButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        if let group = group {
+            vc.group = self.group
+        }
         showDetailViewController(vc, sender: AnyObject.self)
         //vc.group = self.group
 //        navigationController?.pushViewController(vc, animated: true)
