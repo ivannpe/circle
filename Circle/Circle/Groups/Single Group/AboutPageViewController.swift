@@ -8,18 +8,44 @@
 
 import Foundation
 import Firebase
+import UIKit
+
+
 class AboutPageViewController: UIViewController {
+    var group: Group?
+    //var groupD: String = ""
+    @IBOutlet weak var groupDescriptionLabel: UILabel!
+    @IBOutlet weak var memberCountLabel: UILabel!
+    
+    func initData(group: Group) {
+        print("init data")
+        print(group.groupTitle)
+        self.group = group
+        //self.groupD = group.groupDesc
+        print(group.groupTitle)
+        //print(self.groupD)
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //groupDescriptionLabel.text = self.groupSingle?.groupDesc
+        //print("viewdidloadcalled in about page")
+        //print(self.groupSingle?.groupDesc)
         //initialSetupPostView()
         // Do any additional setup after loading the view.
+        print("viewdidload")
+        //print(groupD)
+        self.groupDescriptionLabel.text = self.group?.groupDesc
+        self.memberCountLabel.text = String(format:"%d Members", self.group!.memberCount)
+        //print(self.groupD)
     }
     
-        override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
+
         
-        }
+    }
         
         /*func initialSetupPostView() {
             contentTextView.delegate = self as? UITextViewDelegate

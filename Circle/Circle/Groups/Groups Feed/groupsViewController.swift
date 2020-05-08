@@ -52,6 +52,12 @@ extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
         guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
         print("didselectrowat function called in groups view controller")
         groupFeedVC.initData(group: groupsArray[indexPath.row])
+        //to init group about page with proper group
+        /*
+        guard let aboutPageVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as? AboutPageViewController else { return }
+        print("didselectrowat function called in groups view controller")
+        aboutPageVC.initData(group: groupsArray[indexPath.row])
+        */
         //presentDetail(groupFeedVC)
         show(groupFeedVC, sender: AnyObject.self)
     }

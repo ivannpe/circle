@@ -62,7 +62,10 @@ class GroupFeedViewController: UIViewController {
 
     @IBAction func aboutButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
-        //vc.group = self.group
+        //vc.initData(group: group)
+        if let group = group {
+            vc.group = self.group
+        }
         //presentDetail(vc)
         showDetailViewController(vc, sender: AnyObject.self)
 //        navigationController?.pushViewController(vc, animated: true)
