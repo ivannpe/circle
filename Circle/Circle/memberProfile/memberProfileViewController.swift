@@ -62,7 +62,7 @@ class memberProfileViewController: UIViewController {
         for user in snapshot {
             let email = user.childSnapshot(forPath: "email").value as! String
             if email.contains(self.email) {
-                //let userID = user.value as! String
+                let userID = user.key 
                 let fullname = user.childSnapshot(forPath: "fullname").value
                 print(fullname!)
                 self.fullNameLabel.text = ((fullname!) as! String)
@@ -74,14 +74,14 @@ class memberProfileViewController: UIViewController {
                 self.majorLabel.text = ((major!) as! String)
                 let year = user.childSnapshot(forPath: "year").value
                 self.yearLabel.text = "Class of " + ((year!) as! String)
-                /*
+                
                  //need to figure out how to get the user id from this
                  //crashes when try to cast user.value as a string which the function takes in
                 DataService.instance.getCurrentUserProfilePicture(userUID: userID) { (imageURL) in
                     guard let url = URL(string: imageURL) else { return }
                     print("calling self.profilepic.af_setimage")
                     self.profilePic.af_setImage(withURL: url)
-                }*/
+                }
             }
         }
             /*
