@@ -32,6 +32,7 @@ class GroupFeedViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 120
     }
 
     override func viewWillAppear(_ animated: Bool) {

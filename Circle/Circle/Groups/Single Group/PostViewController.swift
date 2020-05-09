@@ -12,7 +12,7 @@ import Firebase
 class PostViewController: UIViewController {
 
 
-    @IBOutlet weak var messageText: UITextField!
+    @IBOutlet weak var messageText: UITextView!
     @IBOutlet weak var postBtn: UIButton!
     var group: Group?
     func initData(group: Group) {
@@ -38,12 +38,12 @@ class PostViewController: UIViewController {
         let message: String = messageText.text!
         if(message != "") {
             postBtn.isEnabled = false
-            messageText.isEnabled = false
+            //messageText.isEnabled = false
 
             DataService.instance.uploadPost(withMessage: message, forUID: (Auth.auth().currentUser?.email)!, withGroupKey: (group?.key)!) { (success) in
                 if(success) {
                     self.postBtn.isEnabled = true
-                    self.messageText.isEnabled = true
+                    //self.messageText.isEnabled = true
                     self.messageText.text = ""
                 }
             }
