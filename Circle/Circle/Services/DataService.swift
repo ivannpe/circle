@@ -148,6 +148,7 @@ class DataService {
     }
     
     func getIds(forUsername usernames: [String], handler: @escaping (_ uidArray: [String]) -> ()) {
+        print("getIds function")
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
             var idArray = [String]()
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
@@ -157,6 +158,7 @@ class DataService {
                     idArray.append(user.key)
                 }
             }
+            print(idArray[0])
             handler(idArray)
         }
     }

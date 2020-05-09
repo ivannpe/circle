@@ -86,4 +86,17 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
             return UITableViewCell()
         }
 }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           guard let memberProfileVC = storyboard?.instantiateViewController(withIdentifier: "memberProfile") as? memberProfileViewController else { return }
+           print("didselectrowat function called in groups view controller")
+        memberProfileVC.initData(email: self.emailArray[indexPath.row])
+           //to init group about page with proper group
+           /*
+           guard let aboutPageVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as? AboutPageViewController else { return }
+           print("didselectrowat function called in groups view controller")
+           aboutPageVC.initData(group: groupsArray[indexPath.row])
+           */
+           //presentDetail(groupFeedVC)
+           show(memberProfileVC, sender: AnyObject.self)
+       }
 }
