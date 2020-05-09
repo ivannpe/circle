@@ -73,6 +73,9 @@ class GroupFeedViewController: UIViewController {
     @IBAction func membersButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         //vc.group = self.group
+        if let group = group {
+            vc.group = self.group
+        }
         showDetailViewController(vc, sender: AnyObject.self)
 //        navigationController?.pushViewController(vc, animated: true)
     }

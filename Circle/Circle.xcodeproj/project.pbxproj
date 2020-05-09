@@ -29,6 +29,7 @@
 		0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B868F52245E6BEF00A75119 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B868F51245E6BEF00A75119 /* logo.png */; };
+		0BA5BD3B2466056400DBA58C /* memberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5BD3A2466056400DBA58C /* memberTableViewCell.swift */; };
 		0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAB245E229A00F2495B /* animationViewController.swift */; };
 		0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9DFAF245E3FB900F2495B /* mainTabController.swift */; };
 		1206BA41245E398600EAC99B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1206BA40245E398600EAC99B /* GoogleService-Info.plist */; };
@@ -134,6 +135,7 @@
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupViewController.swift; sourceTree = "<group>"; };
 		0B868F51245E6BEF00A75119 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0BA5BD3A2466056400DBA58C /* memberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberTableViewCell.swift; sourceTree = "<group>"; };
 		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAF245E3FB900F2495B /* mainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabController.swift; sourceTree = "<group>"; };
 		1206BA40245E398600EAC99B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				123F50812463186E0060362C /* AboutPageViewController.swift */,
 				0B227EF5245FBBB70074A598 /* PostViewController.swift */,
 				123F5085246318A80060362C /* MembersViewController.swift */,
+				0BA5BD3A2466056400DBA58C /* memberTableViewCell.swift */,
 			);
 			path = "Single Group";
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				0B049A29245CB9AD00F42AF4 /* messagingViewController.swift in Sources */,
 				0B265D33245942E7009C7C91 /* groupsViewController.swift in Sources */,
 				123F5076246278C30060362C /* GroupFeedViewController.swift in Sources */,
+				0BA5BD3B2466056400DBA58C /* memberTableViewCell.swift in Sources */,
 				0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */,
 				127E9350245F884600E37697 /* Message.swift in Sources */,
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
