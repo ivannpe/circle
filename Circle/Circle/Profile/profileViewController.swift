@@ -25,6 +25,12 @@ class profileViewController: UIViewController {
     @IBOutlet weak var majorLabel: UILabel!
     
     @IBOutlet weak var yearLabel: UILabel!
+    var groupsArray = [String]()
+    /*
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let reuseIdentifier = "cell"*/
+    
     var profilePictureTapGesture: UITapGestureRecognizer!
     var imagePickerController: UIImagePickerController!
     //var fullname: String?
@@ -84,6 +90,10 @@ class profileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initializingProfile()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
     }
     func initializingProfile() {
         let ref = Database.database().reference().child("users")
@@ -127,6 +137,7 @@ class profileViewController: UIViewController {
         print("calling self.profilepic.af_setimage")
         self.profilePic.af_setImage(withURL: url)
     }
+
     }
     func settingProfilePictureTapGesture() {
         print("settingprofilepicturetapgesture called")
@@ -178,6 +189,7 @@ class profileViewController: UIViewController {
             print("Device has no camera")
         }
     }
+
 }
 
 extension profileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -203,12 +215,53 @@ extension profileViewController: UIImagePickerControllerDelegate, UINavigationCo
             }
         }
     }
-    
+
     //func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         //dismiss(animated: true, completion: nil)
     //}
 }
+/*
+extension profileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("number of rows in collection")
+        return self.groupsArray.count
+    }
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("cell for item at")
+        print("call data service for groups")
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllGroups { (groups) in
+                for group in groups{
+                    if !(self.groupsArray.contains(group.groupTitle)) {
+                        self.groupsArray.append(group.groupTitle)
+                    }
+                    print(group.groupTitle)
+                }
+                print(self.groupsArray)
+            }
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,for: indexPath as IndexPath) as! profileCollectionViewCell
+        cell.collectionViewCellLabel.text = self.groupsArray[indexPath.item]
+        return cell
+
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        /* put select collection cell code here
+        guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
+        print("didselectrowat function called in groups view controller")
+        groupFeedVC.initData(group: groupsArray[indexPath.row])*/
+        //to init group about page with proper group
+        /*
+        guard let aboutPageVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as? AboutPageViewController else { return }
+        print("didselectrowat function called in groups view controller")
+        aboutPageVC.initData(group: groupsArray[indexPath.row])
+        */
+        //presentDetail(groupFeedVC)
+        //show(groupFeedVC, sender: AnyObject.self)
+    }
+}*/
 
     
 

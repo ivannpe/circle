@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPF-Gb-fjE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -262,7 +263,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y27-dp-NBP">
-                                                    <rect key="frame" x="20" y="11" width="87.5" height="23"/>
+                                                    <rect key="frame" x="16" y="11" width="87.5" height="23"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -426,10 +427,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memberTableViewCell" id="T3h-bb-gfo" customClass="memberTableViewCell" customModule="Circle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T3h-bb-gfo" id="A6O-RW-2iz" customClass="memberTableViewCell" customModule="Circle" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6Q-pE-r98">
@@ -712,7 +713,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jln-5G-8Iv" userLabel="User Email">
-                                                    <rect key="frame" x="33" y="20" width="93" height="21"/>
+                                                    <rect key="frame" x="29" y="20" width="93" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1101,6 +1102,46 @@
                                         <color key="tintColor" red="0.92357867959999995" green="0.6648759246" blue="0.52938395739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Message" image="message.fill" catalog="system"/>
                                     </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-1G-OSP">
+                                        <rect key="frame" x="27" y="176" width="360" height="205"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="izi-uE-9y1">
+                                            <size key="itemSize" width="165" height="205"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="DM7-bE-lUn" customClass="profileCollectionViewCell" customModule="Circle" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="205"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vhy-SL-IdT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="205"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="groupName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYw-ZG-wDk">
+                                                            <rect key="frame" x="43" y="0.0" width="90" height="197"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.92357867959999995" green="0.6648759246" blue="0.52938395739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="165" height="205"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="collectionViewCellLabel" destination="bYw-ZG-wDk" id="2U0-i1-kCN"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -1122,6 +1163,7 @@
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" selectedImage="person.fill" id="EBc-cs-hiH"/>
                     <navigationItem key="navigationItem" id="r1K-1S-Sbx"/>
                     <connections>
+                        <outlet property="collectionView" destination="kwc-1G-OSP" id="9FR-6l-0WZ"/>
                         <outlet property="fullNameLabel" destination="GO8-ZC-X4u" id="Ibe-vi-3tw"/>
                         <outlet property="majorLabel" destination="Ooh-sq-0ZT" id="ZB6-YF-Fhh"/>
                         <outlet property="profilePic" destination="BqU-IK-KYU" id="vuA-hg-CAm"/>
@@ -1132,7 +1174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wp2-f3-gA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="1063"/>
+            <point key="canvasLocation" x="1771.0144927536232" y="1062.7232142857142"/>
         </scene>
         <!--Messages-->
         <scene sceneID="Ac2-wH-xFT">
@@ -1216,11 +1258,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQ5-Wv-UCT">
                                                     <rect key="frame" x="28" y="11" width="29.5" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-cX-pVC">
-                                                            <rect key="frame" x="8" y="0.0" width="13.5" height="61"/>
+                                                            <rect key="frame" x="8" y="0.0" width="0.0" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1234,11 +1276,11 @@
                                                         <constraint firstItem="0Ia-cX-pVC" firstAttribute="leading" secondItem="jQ5-Wv-UCT" secondAttribute="leading" constant="8" id="ugJ-LQ-Uhl"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
                                                     <rect key="frame" x="356.5" y="11" width="29.5" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZf-0t-XUs">
-                                                            <rect key="frame" x="8" y="8" width="13.5" height="53"/>
+                                                            <rect key="frame" x="8" y="8" width="0.0" height="53"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1477,19 +1519,19 @@
             <point key="canvasLocation" x="6348" y="-925"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="WelcomeScreenExport.png" width="375" height="812"/>
+        <image name="checkmark" catalog="system" width="64" height="56"/>
+        <image name="circle.grid.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="defaultProfileImage.png" width="300" height="300"/>
+        <image name="house.fill" catalog="system" width="64" height="52"/>
+        <image name="logo.png" width="1024" height="1024"/>
+        <image name="message.fill" catalog="system" width="64" height="56"/>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CkA-sK-Dae"/>
         <segue reference="OD9-Xs-fxR"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <image name="WelcomeScreenExport.png" width="375" height="812"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="circle.grid.2x2.fill" catalog="system" width="128" height="112"/>
-        <image name="defaultProfileImage.png" width="300" height="300"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="logo.png" width="1024" height="1024"/>
-        <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-    </resources>
 </document>
