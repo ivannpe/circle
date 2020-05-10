@@ -91,8 +91,8 @@ class profileViewController: UIViewController {
         super.viewWillAppear(animated)
         initializingProfile()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        //collectionView.delegate = self
+        //collectionView.dataSource = self
 
     }
     func initializingProfile() {

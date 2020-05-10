@@ -78,14 +78,32 @@ class DataService {
 //    }
     func getAllFeedMessages(handler: @escaping (_ message: [Message]) -> ()) {
         var messageArray = [Message]()
-        REF_FEED.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
+        print("get all feed messages called")
+        //REF_FEED.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
+        REF_GROUPS.observeSingleEvent(of: .value) { (feedMessageSnapshot) in
             guard let feedMessageSnapshot = feedMessageSnapshot.children.allObjects as? [DataSnapshot] else { return }
-            for message in feedMessageSnapshot {
-                let content = message.childSnapshot(forPath: "content").value as! String
-                let senderId = message.childSnapshot(forPath: "senderId").value as! String
-                let message = Message(content: content, senderId: senderId)
-                messageArray.append(message)
+            for group in feedMessageSnapshot{
+                let members = group.childSnapshot(forPath: "members").value as! [String]
+                if members.contains(String((Auth.auth().currentUser?.email)!)){
+            self.REF_GROUPS.child(group.key).child("messages").observeSingleEvent(of: .value) { (feedSnapshot) in
+                guard let feedSnapshot = feedSnapshot.children.allObjects as? [DataSnapshot]
+                    else { return }
+                
+                for message in feedSnapshot {
+                    let content = message.childSnapshot(forPath: "content").value as! String
+                    let senderID = message.childSnapshot(forPath: "senderId").value as! String
+                    //print(content)
+                    //print(senderID)
+                    let message = Message(content: content, senderId: senderID)
+                    messageArray.append(message)
+                    //print(messageArray)
+                    handler(messageArray)
+                    print(messageArray)
+                }
+                    }
             }
+            }
+            
             handler(messageArray)
         }
     }
