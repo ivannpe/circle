@@ -100,6 +100,11 @@
 		12CE7028245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
 		12CE7029245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
 		12CE702A245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
+		12FD984D2467556B0060EA65 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
+		12FD984E2467556B0060EA65 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
+		12FD985424675E690060EA65 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FD985324675E690060EA65 /* NewsFeedCell.swift */; };
+		12FD985524675E690060EA65 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FD985324675E690060EA65 /* NewsFeedCell.swift */; };
+		12FD985624675E690060EA65 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FD985324675E690060EA65 /* NewsFeedCell.swift */; };
 		5D36425FACBAEC881D60830D /* Pods_Circle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35847F84C57BCB2F22763AF /* Pods_Circle.framework */; };
 		A3C1CE2D6F1EF648E1C37FFD /* Pods_Circle_CircleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F05DAC8070EC0E3611995D3 /* Pods_Circle_CircleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -173,6 +178,7 @@
 		12CE701F245F553100E64D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		12CE7023245F554F00E64D12 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		12CE7027245F556200E64D12 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = SOURCE_ROOT; };
+		12FD985324675E690060EA65 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		145AE0C7EAFBB6F331642572 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		2B5EBFC29F29F0351ACA52DB /* Pods-Circle-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.release.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6750CE6160BF2D9A6544875B /* Pods-Circle-CircleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,12 +240,13 @@
 			path = "Single Group";
 			sourceTree = "<group>";
 		};
-		0BA5BD40246658E100DBA58C /* memberProfile */ = {
+		0BA5BD40246658E100DBA58C /* Members */ = {
 			isa = PBXGroup;
 			children = (
+				0B4E754D2458B68F0035731D /* profileViewController.swift */,
 				0BA5BD3C246658CA00DBA58C /* memberProfileViewController.swift */,
 			);
-			path = memberProfile;
+			path = Members;
 			sourceTree = "<group>";
 		};
 		124DE08C2446A1BF00F14B0D = {
@@ -267,7 +274,8 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
-				0BA5BD40246658E100DBA58C /* memberProfile */,
+				12FD984C246755250060EA65 /* NewsFeed */,
+				0BA5BD40246658E100DBA58C /* Members */,
 				125F0BD52462311D00BE846D /* Authentication */,
 				127E9359245FA5B100E37697 /* Groups */,
 				127E934E245F880600E37697 /* Model */,
@@ -281,9 +289,7 @@
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
 				0BA9DFAF245E3FB900F2495B /* mainTabController.swift */,
 				0BA9DFAB245E229A00F2495B /* animationViewController.swift */,
-				0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */,
 				0B4E7547245761FA0035731D /* WelcomeScreenViewController.swift */,
-				0B4E754D2458B68F0035731D /* profileViewController.swift */,
 				124DE0A12446A1C600F14B0D /* Assets.xcassets */,
 				124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */,
 				124DE0A62446A1C600F14B0D /* Info.plist */,
@@ -381,6 +387,15 @@
 				12CE7023245F554F00E64D12 /* DataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		12FD984C246755250060EA65 /* NewsFeed */ = {
+			isa = PBXGroup;
+			children = (
+				0B265D2C2458B9B6009C7C91 /* newsfeedViewController.swift */,
+				12FD985324675E690060EA65 /* NewsFeedCell.swift */,
+			);
+			path = NewsFeed;
 			sourceTree = "<group>";
 		};
 		B60BE089ABC3FFE519EBDD4C /* Pods */ = {
@@ -706,6 +721,7 @@
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
 				125F0BCF24622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				123F507A24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
+				12FD985424675E690060EA65 /* NewsFeedCell.swift in Sources */,
 				127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,
@@ -728,9 +744,11 @@
 				0B227EF7245FBBB80074A598 /* PostViewController.swift in Sources */,
 				123F507B24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
 				123F507F246281A80060362C /* UIViewControllerExt.swift in Sources */,
+				12FD985524675E690060EA65 /* NewsFeedCell.swift in Sources */,
 				127E9355245F887A00E37697 /* Group.swift in Sources */,
 				125F0BCC24622BCD00BE846D /* createGroupViewController.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
+				12FD984D2467556B0060EA65 /* profileViewController.swift in Sources */,
 				125F0BD024622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */,
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
@@ -756,9 +774,11 @@
 				0B227EF8245FBBB80074A598 /* PostViewController.swift in Sources */,
 				123F507C24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
 				123F5080246281A80060362C /* UIViewControllerExt.swift in Sources */,
+				12FD985624675E690060EA65 /* NewsFeedCell.swift in Sources */,
 				127E9356245F887A00E37697 /* Group.swift in Sources */,
 				125F0BCD24622BCE00BE846D /* createGroupViewController.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
+				12FD984E2467556B0060EA65 /* profileViewController.swift in Sources */,
 				125F0BD124622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */,
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
