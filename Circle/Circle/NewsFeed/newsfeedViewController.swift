@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class newsfeedViewController: UIViewController {
-
+    //let lightBlue = UIColor(red: 0.7608, green: 0.8667, blue: 0.902, alpha: 1.0)
     @IBOutlet weak var tableView: UITableView!
     var messageArray = [Message]()
 
@@ -58,11 +58,16 @@ extension newsfeedViewController: UITableViewDelegate, UITableViewDataSource {
                 print(message.content)
             cell.setupCell(username: message.senderId, content: message.content)
             //}
-
+            //cell.backgroundColor = lightBlue
             return cell
         } else {
             print("NO MESSAGES TO RETRIEVE")
             return UITableViewCell()
         }
     }
+    /* to round edges
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // this will turn on `masksToBounds` just before showing the cell
+        cell.contentView.layer.masksToBounds = true
+    }*/
 }
