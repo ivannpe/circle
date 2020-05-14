@@ -25,7 +25,9 @@ class profileViewController: UIViewController {
     @IBOutlet weak var majorLabel: UILabel!
     
     @IBOutlet weak var yearLabel: UILabel!
-    var groupsArray = [String]()
+    var groupsArray = [Group]()
+    
+    @IBOutlet weak var tableView: UITableView!
     /*
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -37,6 +39,11 @@ class profileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //initializingProfile()
+        tableView.delegate = self
+        tableView.dataSource = self
+        print("profile table view delegate called")
+        self.tableView.reloadData()
+        //tableView.estimatedRowHeight = UITableView.automaticDimension
         settingProfilePictureTapGesture()
         
         // Do any additional setup after loading the view.
@@ -93,6 +100,13 @@ class profileViewController: UIViewController {
         
         //collectionView.delegate = self
         //collectionView.dataSource = self
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllGroups { (groups) in
+                self.groupsArray = groups
+                self.tableView.reloadData()
+                print(self.groupsArray)
+            }
+        }
 
     }
     func initializingProfile() {
@@ -263,5 +277,42 @@ extension profileViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
 }*/
 
-    
+extension profileViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.groupsArray.count)
+        return self.groupsArray.count
+
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("profile group cell for row at called")
+        print(self.groupsArray[indexPath.row].groupTitle)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileGroupTableViewCell") as? ProfileGroupTableViewCell {
+            cell.configureCell(title: self.groupsArray[indexPath.row].groupTitle)
+            print(self.groupsArray[indexPath.row].groupTitle)
+            return cell
+        } else {
+            return ProfileGroupTableViewCell()
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
+        print("didselectrowat function called in profile controller")
+        groupFeedVC.initData(group: self.groupsArray[indexPath.row])
+        //to init group about page with proper group
+        /*
+        guard let aboutPageVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as? AboutPageViewController else { return }
+        print("didselectrowat function called in groups view controller")
+        aboutPageVC.initData(group: groupsArray[indexPath.row])
+        */
+        //presentDetail(groupFeedVC)
+        show(groupFeedVC, sender: AnyObject.self)
+    }
+    // UITableViewAutomaticDimension calculates height of label contents/text
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("auto dimension called for height of rows")
+        return UITableView.automaticDimension
+    }*/
+}
 

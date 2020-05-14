@@ -29,6 +29,7 @@
 		0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B868F52245E6BEF00A75119 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B868F51245E6BEF00A75119 /* logo.png */; };
+		0B86F2ED246DEF6400023AC8 /* ProfileGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86F2EC246DEF6400023AC8 /* ProfileGroupTableViewCell.swift */; };
 		0BA5BD3B2466056400DBA58C /* memberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5BD3A2466056400DBA58C /* memberTableViewCell.swift */; };
 		0BA5BD3D246658CB00DBA58C /* memberProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5BD3C246658CA00DBA58C /* memberProfileViewController.swift */; };
 		0BA5BD3E246658CB00DBA58C /* memberProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA5BD3C246658CA00DBA58C /* memberProfileViewController.swift */; };
@@ -143,6 +144,7 @@
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupViewController.swift; sourceTree = "<group>"; };
 		0B868F51245E6BEF00A75119 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		0B86F2EC246DEF6400023AC8 /* ProfileGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGroupTableViewCell.swift; sourceTree = "<group>"; };
 		0BA5BD3A2466056400DBA58C /* memberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberTableViewCell.swift; sourceTree = "<group>"; };
 		0BA5BD3C246658CA00DBA58C /* memberProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberProfileViewController.swift; sourceTree = "<group>"; };
 		0BA9DFAB245E229A00F2495B /* animationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animationViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			children = (
 				0B4E754D2458B68F0035731D /* profileViewController.swift */,
 				0BA5BD3C246658CA00DBA58C /* memberProfileViewController.swift */,
+				0B86F2EC246DEF6400023AC8 /* ProfileGroupTableViewCell.swift */,
 			);
 			path = Members;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				125F0BCF24622FBF00BE846D /* UserTableViewCell.swift in Sources */,
 				123F507A24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
 				12FD985424675E690060EA65 /* NewsFeedCell.swift in Sources */,
+				0B86F2ED246DEF6400023AC8 /* ProfileGroupTableViewCell.swift in Sources */,
 				127E935F245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				0BA9DFB0245E3FB900F2495B /* mainTabController.swift in Sources */,
 				0B4E754C245762250035731D /* LogInViewController.swift in Sources */,

@@ -25,6 +25,7 @@ class GroupFeedViewController: UIViewController {
         print("group");
         print(group)
         print(group.groupTitle)
+        
     }
 
     override func viewDidLoad() {
