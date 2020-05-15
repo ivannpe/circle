@@ -22,15 +22,28 @@ class memberProfileViewController: UIViewController {
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     //var user: DataSnapshot
+    @IBOutlet weak var tableView: UITableView!
     var email: String = ""
+    var groupsArray = [Group]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initializingProfile()
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllMembersGroupNames(email: self.email) { (groups) in
+                self.groupsArray = groups
+                self.tableView.reloadData()
+                print(self.groupsArray)
+            }
+        }
     }
     
     func initData(email:String){
@@ -115,4 +128,43 @@ class memberProfileViewController: UIViewController {
     }*/
     }
 
+}
+
+extension memberProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.groupsArray.count)
+        return self.groupsArray.count
+
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("profile group cell for row at called")
+        print(self.groupsArray[indexPath.row].groupTitle)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "memberProfileCell") as? memberProfileTableViewCell{
+            cell.configureCell(title: self.groupsArray[indexPath.row].groupTitle)
+            print(self.groupsArray[indexPath.row].groupTitle)
+            return cell
+        } else {
+            return memberProfileTableViewCell()
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
+        print("didselectrowat function called in profile controller")
+        groupFeedVC.initData(group: self.groupsArray[indexPath.row])
+        //to init group about page with proper group
+        /*
+        guard let aboutPageVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as? AboutPageViewController else { return }
+        print("didselectrowat function called in groups view controller")
+        aboutPageVC.initData(group: groupsArray[indexPath.row])
+        */
+        //presentDetail(groupFeedVC)
+        show(groupFeedVC, sender: AnyObject.self)
+    }
+    // UITableViewAutomaticDimension calculates height of label contents/text
+    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("auto dimension called for height of rows")
+        return UITableView.automaticDimension
+    }*/
 }

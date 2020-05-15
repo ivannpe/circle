@@ -218,6 +218,7 @@ class DataService {
         REF_GROUPS.childByAutoId().updateChildValues(["title" : title, "description": description, "members": ids])
         handler(true)
     }
+    
     func getAllGroups(handler: @escaping (_ groupsArray: [Group]) -> ()) {
         var groupsArray = [Group]()
         
@@ -235,6 +236,32 @@ class DataService {
                 let groupInstance = Group(title: title, description: description, memberCount: memberCount, key: key, members: members)
                 
                 if(members.contains((Auth.auth().currentUser?.email)!)) {
+                    groupsArray.append(groupInstance)
+                }
+            }
+            
+            handler(groupsArray)
+        }
+    }
+    
+    //new function for member profile view controller to retrieve groups with the current selected user's email
+    func getAllMembersGroupNames(email: String, handler: @escaping (_ groupsArray: [Group]) -> ()) {
+        var groupsArray = [Group]()
+        
+        REF_GROUPS.observeSingleEvent(of: .value) { (groupSnapshot) in
+            guard let groupSnapshot = groupSnapshot.children.allObjects as? [DataSnapshot]
+                else { return }
+            
+            for group in groupSnapshot {
+                let title = group.childSnapshot(forPath: "title").value as! String
+                let description = group.childSnapshot(forPath: "description").value as! String
+                let key = group.key
+                let members = group.childSnapshot(forPath: "members").value as! [String]
+                let memberCount = members.count
+                
+                let groupInstance = Group(title: title, description: description, memberCount: memberCount, key: key, members: members)
+                
+                if(members.contains(email)) {
                     groupsArray.append(groupInstance)
                 }
             }
