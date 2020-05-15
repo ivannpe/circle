@@ -244,6 +244,7 @@ class DataService {
         }
     }
     
+    //new function for member profile view controller to retrieve groups with the current selected user's email
     func getAllMembersGroupNames(email: String, handler: @escaping (_ groupsArray: [Group]) -> ()) {
         var groupsArray = [Group]()
         
