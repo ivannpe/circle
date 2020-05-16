@@ -114,6 +114,9 @@
 		12F64C1D247095A7004B4DBA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */; };
 		12F64C1E247095A7004B4DBA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */; };
 		12F64C1F247095A7004B4DBA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */; };
+		12F64C212470A784004B4DBA /* twinkle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12F64C202470A784004B4DBA /* twinkle.wav */; };
+		12F64C222470A784004B4DBA /* twinkle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12F64C202470A784004B4DBA /* twinkle.wav */; };
+		12F64C232470A784004B4DBA /* twinkle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12F64C202470A784004B4DBA /* twinkle.wav */; };
 		12FD984D2467556B0060EA65 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
 		12FD984E2467556B0060EA65 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
 		12FD985424675E690060EA65 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FD985324675E690060EA65 /* NewsFeedCell.swift */; };
@@ -198,6 +201,7 @@
 		12F64C1424709043004B4DBA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		12F64C18247091B1004B4DBA /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		12F64C202470A784004B4DBA /* twinkle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = twinkle.wav; sourceTree = "<group>"; };
 		12FD985324675E690060EA65 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		145AE0C7EAFBB6F331642572 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		2B5EBFC29F29F0351ACA52DB /* Pods-Circle-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.release.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 				124DE0A12446A1C600F14B0D /* Assets.xcassets */,
 				124DE0A32446A1C600F14B0D /* LaunchScreen.storyboard */,
 				124DE0A62446A1C600F14B0D /* Info.plist */,
+				12F64C202470A784004B4DBA /* twinkle.wav */,
 				1206BA40245E398600EAC99B /* GoogleService-Info.plist */,
 				127E936C2461F47500E37697 /* defaultProfileImage.png */,
 				123FDA45245E4619008C4375 /* WelcomeScreenExport.png */,
@@ -569,6 +574,7 @@
 				123FDA46245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
 				0B868F52245E6BEF00A75119 /* logo.png in Resources */,
 				124DE0A52446A1C600F14B0D /* LaunchScreen.storyboard in Resources */,
+				12F64C212470A784004B4DBA /* twinkle.wav in Resources */,
 				124DE0A22446A1C600F14B0D /* Assets.xcassets in Resources */,
 				124DE0A02446A1C000F14B0D /* Main.storyboard in Resources */,
 				127E936D2461F47500E37697 /* defaultProfileImage.png in Resources */,
@@ -580,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				123FDA47245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
+				12F64C222470A784004B4DBA /* twinkle.wav in Resources */,
 				1206BA42245E398600EAC99B /* GoogleService-Info.plist in Resources */,
 				127E936A2461F26A00E37697 /* Main.storyboard in Resources */,
 				127E936E2461F47600E37697 /* defaultProfileImage.png in Resources */,
@@ -591,6 +598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				123FDA48245E461A008C4375 /* WelcomeScreenExport.png in Resources */,
+				12F64C232470A784004B4DBA /* twinkle.wav in Resources */,
 				1206BA43245E398600EAC99B /* GoogleService-Info.plist in Resources */,
 				127E936B2461F26B00E37697 /* Main.storyboard in Resources */,
 				127E936F2461F47600E37697 /* defaultProfileImage.png in Resources */,

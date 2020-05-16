@@ -54,6 +54,7 @@ class createChatViewController: UIViewController {
             DataService.instance.createChats(forUserIds: chosenUserArray) { (completed) in
                 if(completed) {
                     self.dismiss(animated: true, completion: nil)
+                    
                 } else {
                     print("Failed to create chat")
                 }

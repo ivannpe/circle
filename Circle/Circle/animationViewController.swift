@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreGraphics
+import AVFoundation
 
 class animationViewController: UIViewController {
 /*
@@ -22,14 +23,24 @@ class animationViewController: UIViewController {
     
     @IBOutlet weak var viewContain: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
-
+    var twinkle: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //logoImageView.center = CGPoint(x:512, y:364)
         view.addSubview(logoImageView)
-        UIView.animate(withDuration: 4.5, delay: 1, animations: {
+        let path = Bundle.main.path(forResource: "twinkle.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        delay(1){
+            do {
+                self.twinkle = try AVAudioPlayer(contentsOf: url)
+                self.twinkle?.play()
+            } catch {
+                // couldn't load file :(
+            }
+        }
+        UIView.animate(withDuration: 4, delay: 1, animations: {
             self.logoImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             self.logoImageView.transform = CGAffineTransform(scaleX: 4, y:4)
         } )
