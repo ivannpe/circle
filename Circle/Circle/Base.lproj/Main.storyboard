@@ -241,6 +241,13 @@
                                     <action selector="followButtonPressed:" destination="3qq-pf-KzU" eventType="touchUpInside" id="kId-tn-sbK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPy-Vz-8u0">
+                                <rect key="frame" x="54" y="44" width="306" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.27781087160000001" green="0.34142917389999999" blue="0.43585008380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="9rW-uc-Okn"/>
@@ -250,6 +257,7 @@
                         <outlet property="aboutPage" destination="S5H-s1-NpV" id="Q5f-sx-wV2"/>
                         <outlet property="followButton" destination="vxu-Du-EfN" id="yP8-Ol-oCq"/>
                         <outlet property="groupName" destination="g3n-sC-7ed" id="E7g-lD-XVe"/>
+                        <outlet property="groupNameLabel" destination="FPy-Vz-8u0" id="I7I-jk-AfL"/>
                         <outlet property="membersPage" destination="U5d-n0-aQd" id="Dq8-Fh-cxc"/>
                         <outlet property="postPage" destination="F8d-bx-4gm" id="HD1-0g-kQ3"/>
                         <outlet property="tableView" destination="fTT-Lc-68G" id="urM-uu-y4p"/>

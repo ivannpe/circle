@@ -12,6 +12,7 @@ import Firebase
 
 class GroupFeedViewController: UIViewController {
     @IBOutlet weak var followButton: UIButton!
+    @IBOutlet weak var groupNameLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var aboutPage: UIButton!
@@ -50,6 +51,7 @@ class GroupFeedViewController: UIViewController {
         
         if let group = group {
             groupName.title = group.groupTitle
+            groupNameLabel.text = group.groupTitle
 //            self.memberLbl.text = group.members.joined(separator: ", ")
         }
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
