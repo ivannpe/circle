@@ -13,7 +13,8 @@ import AlamofireImage
 
 class profileViewController: UIViewController {
 
-
+    @IBOutlet weak var logOutButton: UIButton!
+    
     @IBOutlet weak var profilePic: UIImageView!
     
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -166,6 +167,12 @@ class profileViewController: UIViewController {
         print("IMAGE TAPPED");
     }
     
+    @IBAction func logoutButtonPressed(_ sender: Any) {
+        let welcomePageViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomePageViewController") as! WelcomeScreenViewController
+        welcomePageViewController.modalPresentationStyle = .fullScreen
+        self.present(welcomePageViewController, animated:true, completion:nil)
+        
+    }
     //MARK: - Adding Profile Pictures
     @objc func setProfilePicture() {
         print("set profile pic() called")
