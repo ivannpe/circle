@@ -45,6 +45,7 @@ class PostViewController: UIViewController {
                     self.postBtn.isEnabled = true
                     //self.messageText.isEnabled = true
                     self.messageText.text = ""
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
