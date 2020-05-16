@@ -9,14 +9,30 @@
 import UIKit
 
 class messagingViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var textInput: UITextField!
+    
+    @IBOutlet weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 100
+        self.tableView.reloadData()
+        
         // Do any additional setup after loading the view.
+    }
+    func initData(){
+        //initialize data sent in from the create message thread page
+        //initialize the users
     }
     
 
+    @IBAction func sendButtonPressed(_ sender: Any) {
+        //create a message object here based off of text from textInput textfield
+    }
     /*
     // MARK: - Navigation
 
@@ -27,4 +43,23 @@ class messagingViewController: UIViewController {
     }
     */
 
+}
+
+extension messagingViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "messagingCell") as? messagingTableViewCell{
+            //let email = messages[indexPath.row].senderId
+            //let content = messages[indexPath.row].content
+
+           //here is where you input data for cell //cell.configureCell(senderType: email, content: content)
+
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
 }

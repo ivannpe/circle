@@ -1325,7 +1325,7 @@
         <!--User Name-->
         <scene sceneID="YbT-0g-F75">
             <objects>
-                <viewController id="ZMS-Ba-7b6" sceneMemberID="viewController">
+                <viewController id="ZMS-Ba-7b6" customClass="messagingViewController" customModule="Circle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UIt-Qf-baN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1335,7 +1335,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="r4Z-5c-UQZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagingCell" rowHeight="83" id="r4Z-5c-UQZ" customClass="messagingTableViewCell" customModule="Circle" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r4Z-5c-UQZ" id="RrB-5I-g05">
@@ -1392,6 +1392,10 @@
                                                 <constraint firstItem="jQ5-Wv-UCT" firstAttribute="top" secondItem="RrB-5I-g05" secondAttribute="topMargin" id="qP4-CB-wdR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="receiveTextLabel" destination="0Ia-cX-pVC" id="nr6-1W-wxg"/>
+                                            <outlet property="sentTextLabel" destination="AZf-0t-XUs" id="LK1-Up-X3s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1403,7 +1407,12 @@
                                         <rect key="frame" x="334" y="14" width="51" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                        <state key="normal" title="Send"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.27781087160000001" green="0.34142917389999999" blue="0.43585008380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="ZMS-Ba-7b6" eventType="touchUpInside" id="DTe-mA-jKS"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wY3-jv-edi">
                                         <rect key="frame" x="24" y="14" width="296" height="34"/>
@@ -1419,6 +1428,11 @@
                         <viewLayoutGuide key="safeArea" id="h42-2F-bEP"/>
                     </view>
                     <navigationItem key="navigationItem" title="User Name" id="Q9D-of-d8f"/>
+                    <connections>
+                        <outlet property="sendButton" destination="jlc-Dw-VY0" id="OQp-T5-9s2"/>
+                        <outlet property="tableView" destination="3S5-fA-fDG" id="Opo-Kl-ZdC"/>
+                        <outlet property="textInput" destination="wY3-jv-edi" id="vkY-eP-DXE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8z5-R9-Eeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
