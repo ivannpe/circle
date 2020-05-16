@@ -17,7 +17,7 @@ class memberProfileTableViewCell: UITableViewCell {
             // Configure the view for the selected state
         }
         
-        func configureCell(title: String) {
+        func configureCell(title: String, isSelected: Bool) {
             print("member profile group configure cell called")
             self.groupNameLabel.text = title
             print(title)

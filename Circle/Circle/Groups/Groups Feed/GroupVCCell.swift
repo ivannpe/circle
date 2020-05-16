@@ -24,7 +24,7 @@ class GroupVCCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(title: String, description: String, memberCount: Int) {
+    func configureCell(title: String, description: String, memberCount: Int, isSelected: Bool) {
         self.groupnameLabel.text = title
         print(title)
         self.groupdescLabel.text = description

@@ -41,7 +41,7 @@ extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GroupVCCell") as? GroupVCCell {
-            cell.configureCell(title: groupsArray[indexPath.row].groupTitle, description: groupsArray[indexPath.row].groupDesc, memberCount: groupsArray[indexPath.row].memberCount)
+            cell.configureCell(title: groupsArray[indexPath.row].groupTitle, description: groupsArray[indexPath.row].groupDesc, memberCount: groupsArray[indexPath.row].memberCount, isSelected: false)
             return cell
         } else {
             return GroupVCCell()

@@ -141,7 +141,7 @@ extension memberProfileViewController: UITableViewDelegate, UITableViewDataSourc
         print("profile group cell for row at called")
         print(self.groupsArray[indexPath.row].groupTitle)
         if let cell = tableView.dequeueReusableCell(withIdentifier: "memberProfileCell") as? memberProfileTableViewCell{
-            cell.configureCell(title: self.groupsArray[indexPath.row].groupTitle)
+            cell.configureCell(title: self.groupsArray[indexPath.row].groupTitle, isSelected: false)
             print(self.groupsArray[indexPath.row].groupTitle)
             return cell
         } else {
