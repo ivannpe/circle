@@ -101,7 +101,7 @@ class profileViewController: UIViewController {
         //collectionView.delegate = self
         //collectionView.dataSource = self
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
-            DataService.instance.getAllGroups { (groups) in
+            DataService.instance.getAllProfileGroups { (groups) in
                 self.groupsArray = groups
                 self.tableView.reloadData()
                 print(self.groupsArray)

@@ -11,7 +11,8 @@ import UIKit
 import Firebase
 
 class GroupFeedViewController: UIViewController {
-
+    @IBOutlet weak var followButton: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var aboutPage: UIButton!
     @IBOutlet weak var membersPage: UIButton!
@@ -19,26 +20,34 @@ class GroupFeedViewController: UIViewController {
     @IBOutlet weak var groupName: UINavigationItem!
     var group: Group?
     var messages = [Message]()
+    var emailArray = [String]()
 
     func initData(group: Group) {
         self.group = group
         print("group");
         print(group)
         print(group.groupTitle)
+        DataService.instance.getEmails(group: self.group!) { (returnedEmails) in
+        self.emailArray = returnedEmails
+        }
+        print("initdata")
+        print(self.emailArray)
         
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //followButton.isHidden = true
+        //postPage.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 120
+        self.tableView.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         if let group = group {
             groupName.title = group.groupTitle
 //            self.memberLbl.text = group.members.joined(separator: ", ")
@@ -59,8 +68,45 @@ class GroupFeedViewController: UIViewController {
                 }
             }) //end of data service
         }
+        /*
+        if (self.emailArray.contains((Auth.auth().currentUser?.email)!)){
+            print("hide follow button")
+            followButton.isHidden = true
+            postPage.isHidden = false
+        }
+        if !(self.emailArray.contains((Auth.auth().currentUser?.email)!)){
+            print("show follow button")
+            followButton.isHidden = false
+            postPage.isHidden = true
+        }*/
     }
 
+    @IBAction func followButtonPressed(_ sender: Any) {
+        print("follow button pressed")
+        
+        //DataService.instance.REF_GROUPS.observe(.value) { (userSnapshot) in
+            //guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
+        
+        //self.emailArray = self.group!.members
+        print("original returned emails in follow button pressed")
+        print(self.emailArray)
+        if !(self.emailArray.contains((Auth.auth().currentUser?.email)!)){
+            self.emailArray.append((Auth.auth().currentUser?.email)!)
+        }
+        print("appended current user email")
+        print(self.emailArray)
+            //userSnapshot.updateChildValues(["members": self.emailArray])
+        //}
+        let groupKey = self.group?.key
+        print(groupKey!)
+        if groupKey != nil {
+            DataService.instance.REF_GROUPS.child(groupKey!).updateChildValues(["members": self.emailArray])
+            print("updated members")
+            followButton.isHidden = true
+        }
+}
+    
+    
     @IBAction func aboutButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
         //vc.initData(group: group)
@@ -72,6 +118,8 @@ class GroupFeedViewController: UIViewController {
         showDetailViewController(vc, sender: AnyObject.self)
 //        navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
     @IBAction func membersButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         //vc.group = self.group

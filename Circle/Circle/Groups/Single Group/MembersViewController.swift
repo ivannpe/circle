@@ -31,6 +31,7 @@ class MembersViewController: UIViewController {
         print("member table view delegate called")
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.reloadData()
     }
     
         override func viewWillAppear(_ animated: Bool) {
