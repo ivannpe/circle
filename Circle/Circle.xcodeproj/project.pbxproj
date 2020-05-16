@@ -102,6 +102,18 @@
 		12CE7028245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
 		12CE7029245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
 		12CE702A245F556200E64D12 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CE7027245F556200E64D12 /* StorageService.swift */; };
+		12F64C11247088AE004B4DBA /* createChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C10247088AE004B4DBA /* createChatViewController.swift */; };
+		12F64C12247088AE004B4DBA /* createChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C10247088AE004B4DBA /* createChatViewController.swift */; };
+		12F64C13247088AE004B4DBA /* createChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C10247088AE004B4DBA /* createChatViewController.swift */; };
+		12F64C1524709043004B4DBA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1424709043004B4DBA /* Chat.swift */; };
+		12F64C1624709043004B4DBA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1424709043004B4DBA /* Chat.swift */; };
+		12F64C1724709043004B4DBA /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1424709043004B4DBA /* Chat.swift */; };
+		12F64C19247091B1004B4DBA /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C18247091B1004B4DBA /* ChatMessage.swift */; };
+		12F64C1A247091B1004B4DBA /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C18247091B1004B4DBA /* ChatMessage.swift */; };
+		12F64C1B247091B1004B4DBA /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C18247091B1004B4DBA /* ChatMessage.swift */; };
+		12F64C1D247095A7004B4DBA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */; };
+		12F64C1E247095A7004B4DBA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */; };
+		12F64C1F247095A7004B4DBA /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */; };
 		12FD984D2467556B0060EA65 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
 		12FD984E2467556B0060EA65 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4E754D2458B68F0035731D /* profileViewController.swift */; };
 		12FD985424675E690060EA65 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FD985324675E690060EA65 /* NewsFeedCell.swift */; };
@@ -182,6 +194,10 @@
 		12CE701F245F553100E64D12 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		12CE7023245F554F00E64D12 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		12CE7027245F556200E64D12 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = SOURCE_ROOT; };
+		12F64C10247088AE004B4DBA /* createChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createChatViewController.swift; sourceTree = "<group>"; };
+		12F64C1424709043004B4DBA /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		12F64C18247091B1004B4DBA /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		12FD985324675E690060EA65 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		145AE0C7EAFBB6F331642572 /* Pods-Circle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle.release.xcconfig"; path = "Target Support Files/Pods-Circle/Pods-Circle.release.xcconfig"; sourceTree = "<group>"; };
 		2B5EBFC29F29F0351ACA52DB /* Pods-Circle-CircleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Circle-CircleUITests.release.xcconfig"; path = "Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +304,7 @@
 		124DE0972446A1C000F14B0D /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				12A39917247051CC0020F554 /* Messaging */,
 				12FD984C246755250060EA65 /* NewsFeed */,
 				0BA5BD40246658E100DBA58C /* Members */,
 				125F0BD52462311D00BE846D /* Authentication */,
@@ -368,6 +385,8 @@
 			children = (
 				127E934F245F884600E37697 /* Message.swift */,
 				127E9353245F887A00E37697 /* Group.swift */,
+				12F64C1424709043004B4DBA /* Chat.swift */,
+				12F64C18247091B1004B4DBA /* ChatMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +399,15 @@
 				125F0BD2246230D800BE846D /* Create Group */,
 			);
 			path = Groups;
+			sourceTree = "<group>";
+		};
+		12A39917247051CC0020F554 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				12F64C10247088AE004B4DBA /* createChatViewController.swift */,
+				12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */,
+			);
+			path = Messaging;
 			sourceTree = "<group>";
 		};
 		12CE701D245F3E8000E64D12 /* Extensions */ = {
@@ -437,7 +465,6 @@
 				124DE0922446A1BF00F14B0D /* Frameworks */,
 				124DE0932446A1BF00F14B0D /* Resources */,
 				A85D4F1FD4AB4E6AAA642891 /* [CP] Embed Pods Frameworks */,
-				3E8219FA9909A265F4237B58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -476,7 +503,6 @@
 				124DE0B32446A1C600F14B0D /* Frameworks */,
 				124DE0B42446A1C600F14B0D /* Resources */,
 				45B4DE8DC72CECDEA82C24F1 /* [CP] Embed Pods Frameworks */,
-				DF2BE3C6B193F7AD7C95512B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -574,23 +600,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E8219FA9909A265F4237B58 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Circle/Pods-Circle-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Circle/Pods-Circle-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Circle/Pods-Circle-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		45B4DE8DC72CECDEA82C24F1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -669,23 +678,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF2BE3C6B193F7AD7C95512B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Circle-CircleUITests/Pods-Circle-CircleUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F859DD0EAA299C3B41B8A853 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -730,7 +722,11 @@
 				0BA5BD3D246658CB00DBA58C /* memberProfileViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */,
+				12F64C19247091B1004B4DBA /* ChatMessage.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
+				12F64C1524709043004B4DBA /* Chat.swift in Sources */,
+				12F64C11247088AE004B4DBA /* createChatViewController.swift in Sources */,
+				12F64C1D247095A7004B4DBA /* MemberTableViewCell.swift in Sources */,
 				123F50822463186E0060362C /* AboutPageViewController.swift in Sources */,
 				0B86F2EF246E6F0300023AC8 /* memberProfileTableViewCell.swift in Sources */,
 				0B4E754E2458B68F0035731D /* profileViewController.swift in Sources */,
@@ -760,7 +756,10 @@
 				0B227EF7245FBBB80074A598 /* PostViewController.swift in Sources */,
 				123F507B24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
 				123F507F246281A80060362C /* UIViewControllerExt.swift in Sources */,
+				12F64C1624709043004B4DBA /* Chat.swift in Sources */,
+				12F64C1E247095A7004B4DBA /* MemberTableViewCell.swift in Sources */,
 				12FD985524675E690060EA65 /* NewsFeedCell.swift in Sources */,
+				12F64C12247088AE004B4DBA /* createChatViewController.swift in Sources */,
 				127E9355245F887A00E37697 /* Group.swift in Sources */,
 				125F0BCC24622BCD00BE846D /* createGroupViewController.swift in Sources */,
 				12CE7029245F556200E64D12 /* StorageService.swift in Sources */,
@@ -770,6 +769,7 @@
 				12CE7021245F553100E64D12 /* AuthService.swift in Sources */,
 				125F0BD32462310600BE846D /* groupsViewController.swift in Sources */,
 				123F5077246278C30060362C /* GroupFeedViewController.swift in Sources */,
+				12F64C1A247091B1004B4DBA /* ChatMessage.swift in Sources */,
 				0BA5BD3E246658CB00DBA58C /* memberProfileViewController.swift in Sources */,
 				12CE701B245F39B100E64D12 /* StringExt.swift in Sources */,
 				123F5087246318A80060362C /* MembersViewController.swift in Sources */,
@@ -790,7 +790,10 @@
 				0B227EF8245FBBB80074A598 /* PostViewController.swift in Sources */,
 				123F507C24627A7E0060362C /* GroupFeedTableViewCell.swift in Sources */,
 				123F5080246281A80060362C /* UIViewControllerExt.swift in Sources */,
+				12F64C1724709043004B4DBA /* Chat.swift in Sources */,
+				12F64C1F247095A7004B4DBA /* MemberTableViewCell.swift in Sources */,
 				12FD985624675E690060EA65 /* NewsFeedCell.swift in Sources */,
+				12F64C13247088AE004B4DBA /* createChatViewController.swift in Sources */,
 				127E9356245F887A00E37697 /* Group.swift in Sources */,
 				125F0BCD24622BCE00BE846D /* createGroupViewController.swift in Sources */,
 				12CE702A245F556200E64D12 /* StorageService.swift in Sources */,
@@ -800,6 +803,7 @@
 				12CE7022245F553100E64D12 /* AuthService.swift in Sources */,
 				125F0BD42462310600BE846D /* groupsViewController.swift in Sources */,
 				123F5078246278C30060362C /* GroupFeedViewController.swift in Sources */,
+				12F64C1B247091B1004B4DBA /* ChatMessage.swift in Sources */,
 				0BA5BD3F246658CB00DBA58C /* memberProfileViewController.swift in Sources */,
 				12CE701C245F39B100E64D12 /* StringExt.swift in Sources */,
 				123F5088246318A80060362C /* MembersViewController.swift in Sources */,
