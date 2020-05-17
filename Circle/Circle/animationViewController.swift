@@ -30,6 +30,7 @@ class animationViewController: UIViewController {
         
         //logoImageView.center = CGPoint(x:512, y:364)
         view.addSubview(logoImageView)
+        //generates sound at a delay to match with animation
         let path = Bundle.main.path(forResource: "twinkle.wav", ofType:nil)!
         let url = URL(fileURLWithPath: path)
         delay(1){
@@ -40,13 +41,16 @@ class animationViewController: UIViewController {
                 // couldn't load file :(
             }
         }
+        //animate logo image
         UIView.animate(withDuration: 4, delay: 1, animations: {
+            //rotate
             self.logoImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+            //scale up
             self.logoImageView.transform = CGAffineTransform(scaleX: 4, y:4)
         } )
-        
+                //instantiate welcome screen controller
                 let welcomePageViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomePageViewController") as! WelcomeScreenViewController
-
+        //delay segue after animation
         delay(4.5){
             welcomePageViewController.modalPresentationStyle = .fullScreen
             self.present(welcomePageViewController, animated:true, completion:nil)

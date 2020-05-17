@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+//cell for creating a chat table of available users to chat with
 class MemberTableViewCell: UITableViewCell {
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet weak var checkMark: UIImageView!

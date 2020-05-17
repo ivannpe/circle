@@ -10,7 +10,7 @@
 import UIKit
 
 extension UIView {
-    
+    //bind views to keyboard
     func bindToKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }

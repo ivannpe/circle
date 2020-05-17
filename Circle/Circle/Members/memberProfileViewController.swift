@@ -38,6 +38,7 @@ class memberProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         initializingProfile()
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            //gets member group name
             DataService.instance.getAllMembersGroupNames(email: self.email) { (groups) in
                 self.groupsArray = groups
                 self.tableView.reloadData()
@@ -71,7 +72,7 @@ class memberProfileViewController: UIViewController {
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
         guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
             else { return }
-        
+        //retrieve all data about the member for their profile
         for user in snapshot {
             let email = user.childSnapshot(forPath: "email").value as! String
             if email.contains(self.email) {
@@ -129,7 +130,7 @@ class memberProfileViewController: UIViewController {
     }
 
 }
-
+//table view delegate to display other members groups
 extension memberProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(self.groupsArray.count)

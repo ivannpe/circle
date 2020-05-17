@@ -33,7 +33,7 @@ class PostViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+    //when pressed, post is uploaded to database under respective group as a message object with senderId of current user
     @IBAction func postBtnPressed(_ sender: Any) {
         let message: String = messageText.text!
         if(message != "") {

@@ -21,6 +21,7 @@ class LogInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    //ensure fields are full and email is valid
     func fieldsfull()->Bool{
         let email = emailLabel.text
         let password = passwordLabel.text
@@ -39,19 +40,20 @@ class LogInViewController: UIViewController {
  
      
 
-    
+    //calls firebase authentication log in
     @IBAction func loginTapped(_ sender: Any) {
         
         if fieldsfull(){
             AuthService.instance.loginUser(withEmail: emailLabel.text!, withPassword: passwordLabel.text!, loginComplete: { (success, loginError) in
                 if success {
+                    //ensures proper credentials are entered prior to segue
                     self.performSegue(withIdentifier: "loginSegue", sender: AnyObject.self)
                     self.cantLogin = false
                     print(self.cantLogin)
                     //self.dismiss(animated: true, completion: nil)
                     print("Login Successful")
                     //self.performSegue(withIdentifier: "loginSegue", sender: AnyObject?.self)
-
+                    //displays firebase error if unsuccessful
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                     self.hiddenLabel.isHidden = false
@@ -67,7 +69,7 @@ class LogInViewController: UIViewController {
         
         
     }
-    
+    //ensures all functions above are true to segue into app
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         print("should perform segue called")
         if fieldsfull() == true && self.cantLogin != true{

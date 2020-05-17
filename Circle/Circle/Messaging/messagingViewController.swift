@@ -32,14 +32,14 @@ class messagingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func initData(chat: Chat){
-        //initialize data sent in from the create message thread page
-        //initialize the users
+        //initialize data sent in from the message preview
         print("init data in messaging ")
         self.chat = chat
         print(self.chat!.members[0])
         //self.messages = self.chat.chatMessageArray
     }
     override func viewWillAppear(_ animated: Bool){
+        //setting title as secondary user
         if self.chat!.members[0] == (Auth.auth().currentUser?.email)! {
             self.user = self.chat!.members[1]
         }
@@ -47,7 +47,7 @@ class messagingViewController: UIViewController {
             self.user = self.chat!.members[0]
         }
         userNameTitle.title = self.user
-        
+        //retrieve all chatmessage objects as an array
         DataService.instance.REF_CHATS.observe(.value) { (snapshot) in
             DataService.instance.getAllChatMessages(chatKey: self.chat!.key) { (chatMessageArray) in
                 
@@ -69,7 +69,7 @@ class messagingViewController: UIViewController {
     }
 
     @IBAction func sendButtonPressed(_ sender: Any) {
-        //create a message object here based off of text from textInput textfield
+        //create a chatmessage object here based off of text from textInput textfield
         //let message = textInput
         DataService.instance.uploadChat(withMessage: textInput.text!, forUID: (Auth.auth().currentUser?.email)!, withChatKey: self.chat?.key) { (success) in
             if success{
@@ -89,7 +89,7 @@ class messagingViewController: UIViewController {
     */
 
 }
-
+//table view delegate to display all past chatmessage object history between current user and secondary user
 extension messagingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("number of message in thread")
@@ -103,14 +103,14 @@ extension messagingViewController: UITableViewDelegate, UITableViewDataSource {
             //let email = messages[indexPath.row].senderId
             let email = self.messages[indexPath.row].senderId
             let content = self.messages[indexPath.row].content
-            
+            //declares message type dependent on user type(current or secondary)
             if email == (Auth.auth().currentUser?.email)! {
                 senderType = "sent"
             }
             else{
                 senderType = "received"
             }
-
+            //presents cells depending on sendertype
            cell.configureCell(senderType: senderType, content: content)
 
             return cell

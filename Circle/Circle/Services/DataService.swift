@@ -51,7 +51,7 @@ class DataService {
             sendComplete(true)
         }
     }
-    
+    //gets username and profile for user
     func getUsernameAndProfilePictureURL(forUID uid: String, handler: @escaping (_ username: String, _ profileImageURL: String) -> ()) {
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
@@ -62,6 +62,7 @@ class DataService {
             }
         }
     }
+    //retrieves messages for newsfeed
     func getAllFeedMessages(handler: @escaping (_ message: [Message]) -> ()) {
         var messageArray = [Message]()
         print("get all feed messages called")
@@ -93,6 +94,7 @@ class DataService {
             handler(messageArray)
         }
     }
+    //retrieves messages for group feed
     func getAllMessages(group: Group, handler: @escaping (_ messages: [Message]) -> ()) {
         var messageArray = [Message]()
         
@@ -111,6 +113,7 @@ class DataService {
             handler(messageArray)
         }
     }
+    //retrieves username for user
     func getUsername(forUID uid: String, handler: @escaping (_ username: String) -> ()) {
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot]
@@ -123,7 +126,7 @@ class DataService {
             }
         }
     }
-
+    //retrieves user email
     func getEmail(forSearchQuery query: String, handler: @escaping (_ emailArray: [String]) -> ()) {
         var emailArray = [String]()
         REF_USERS.observe(.value) { (userSnapshot) in
@@ -137,7 +140,7 @@ class DataService {
             handler(emailArray)
         }
     }
-    
+    //retreives user profile picture
     func getCurrentUserProfilePicture(userUID: String, handler: @escaping (_ imageURL: String)-> ()) {
         REF_USERS.observe(.value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return }
@@ -149,7 +152,7 @@ class DataService {
             }
         }
     }
-    
+    //retrieves user id for username
     func getIds(forUsername usernames: [String], handler: @escaping (_ uidArray: [String]) -> ()) {
         print("getIds function")
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
@@ -165,7 +168,7 @@ class DataService {
             handler(idArray)
         }
     }
-    
+    //retrieves email of all group members
     func getEmails(group: Group, handler: @escaping (_ emailArray: [String]) -> ()) {
         var emailArray = [String]()
         print("getEmails called")
@@ -176,16 +179,17 @@ class DataService {
             handler(emailArray)
         }
     }
-    
+    //create group object
     func createGroups(withTitle title: String, andDescription description: String, forUserIds ids: [String], handler: @escaping (_ groupCreated: Bool) -> ()) {
         REF_GROUPS.childByAutoId().updateChildValues(["title" : title, "description": description, "members": ids])
         handler(true)
     }
+    //create chat object
     func createChats(forUserIds ids: [String], handler: @escaping (_ chatCreated: Bool) -> ()) {
         REF_CHATS.childByAutoId().updateChildValues(["members": ids])
         handler(true)
     }
-    
+    //create chat message object
     func uploadChat(withMessage message: String, forUID uid: String, withChatKey chatKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
         if chatKey != nil {
            REF_CHATS.child(chatKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
@@ -195,6 +199,7 @@ class DataService {
             sendComplete(true)
         }
     }
+    //retrieve lists of all chats a user is a part of
     func getAllChats(handler: @escaping (_ chatArray: [Chat]) -> ()) {
         var chatArray = [Chat]()
         
@@ -217,7 +222,7 @@ class DataService {
             handler(chatArray)
         }
     }
-    
+    //retreives all chat messages in a single chat object
     func getAllChatMessages(chatKey: String, handler: @escaping (_ chatMessageArray: [ChatMessage]) -> ()) {
         var chatMessageArray = [ChatMessage]()
         
@@ -241,7 +246,7 @@ class DataService {
             handler(chatMessageArray)
         }
     }
-    
+    //retrieves all groups for group page
     func getAllGroups(handler: @escaping (_ groupsArray: [Group]) -> ()) {
         var groupsArray = [Group]()
         

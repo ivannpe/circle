@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+//api to customize user profile
 import Alamofire
 import AlamofireImage
 
@@ -46,53 +47,6 @@ class profileViewController: UIViewController {
         self.tableView.reloadData()
         //tableView.estimatedRowHeight = UITableView.automaticDimension
         settingProfilePictureTapGesture()
-        
-        // Do any additional setup after loading the view.
-//        let ref = Database.database().reference().child("users")
-//        let UserID = Auth.auth().currentUser?.uid
-//        print(UserID!)
-//
-//        ref.child(UserID ?? "").observeSingleEvent(of: .value, with: { (snapshot) in
-//            if !snapshot.exists() {
-//                print("snapshot failed")
-//                return }
-//            print(snapshot)
-//            print(snapshot.value as Any)
-//
-//            //to make full name label retrieve from database
-//            let fullname = snapshot.childSnapshot(forPath: "fullname").value
-//            print(fullname!)
-//            self.fullNameLabel.text = ((fullname!) as! String)
-//
-//            //to make username label retrieve from database
-//            let username = snapshot.childSnapshot(forPath: "username").value
-//            print(username!)
-//            self.usernameLabel.text = "@" + ((username!) as! String)
-//
-//            //to make full name label retrieve from database
-//            let school = snapshot.childSnapshot(forPath: "school").value
-//            print(school!)
-//            self.schoolLabel.text = ((school!) as! String)
-//
-//            //to make major label retrieve from database
-//            let major = snapshot.childSnapshot(forPath: "major").value
-//            print(major!)
-//            self.majorLabel.text = ((major!) as! String)
-//
-//            //to make year label retrieve from database
-//            let year = snapshot.childSnapshot(forPath: "year").value
-//            print(year!)
-//            self.yearLabel.text = "Class of " + ((year!) as! String)
-//        })
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -101,6 +55,7 @@ class profileViewController: UIViewController {
         
         //collectionView.delegate = self
         //collectionView.dataSource = self
+        //retrieve all groups current user is a part of
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllProfileGroups { (groups) in
                 self.groupsArray = groups
@@ -110,6 +65,7 @@ class profileViewController: UIViewController {
         }
 
     }
+    //retrieve all relevant user information from database and display in labels
     func initializingProfile() {
         let ref = Database.database().reference().child("users")
         let UserID = Auth.auth().currentUser?.uid
@@ -147,6 +103,7 @@ class profileViewController: UIViewController {
         print(year!)
         self.yearLabel.text = "Class of " + ((year!) as! String)
     })
+        //retrieves current user profile picture url from database
     DataService.instance.getCurrentUserProfilePicture(userUID: UserID!) { (imageURL) in
         guard let url = URL(string: imageURL) else { return }
         print("calling self.profilepic.af_setimage")
@@ -154,6 +111,7 @@ class profileViewController: UIViewController {
     }
 
     }
+    //sets up the gesture to recognize user profile picture tap
     func settingProfilePictureTapGesture() {
         print("settingprofilepicturetapgesture called")
         //Creating Gesture for Profile Pic ImageView
@@ -166,14 +124,14 @@ class profileViewController: UIViewController {
         profilePic.isUserInteractionEnabled = true
         print("IMAGE TAPPED");
     }
-    
+    //closes current user instance and returns to welcome screen
     @IBAction func logoutButtonPressed(_ sender: Any) {
         let welcomePageViewController = storyboard?.instantiateViewController(withIdentifier: "WelcomePageViewController") as! WelcomeScreenViewController
         welcomePageViewController.modalPresentationStyle = .fullScreen
         self.present(welcomePageViewController, animated:true, completion:nil)
         
     }
-    //MARK: - Adding Profile Pictures
+    //sets the current profile picture for user with options to take a picture with camera or choose from photo library
     @objc func setProfilePicture() {
         print("set profile pic() called")
         let alertSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -194,7 +152,7 @@ class profileViewController: UIViewController {
         present(alertSheet, animated: true, completion: nil)
         
     }
-    
+    //allows user to pick image from photolibrary to save as profile picture
     func imagePickerControllerWithSourceType(_ imagePickerSourceType: UIImagePickerController.SourceType) {
         print("imagePickerControllerWithSourceType called")
         if imagePickerSourceType == .camera || imagePickerSourceType == .photoLibrary {
@@ -212,7 +170,7 @@ class profileViewController: UIViewController {
     }
 
 }
-
+//image picker delegate to upload image file to Firebase storage
 extension profileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print("imagePickerController called")
@@ -283,7 +241,7 @@ extension profileViewController: UICollectionViewDelegate, UICollectionViewDataS
         //show(groupFeedVC, sender: AnyObject.self)
     }
 }*/
-
+//table view delegate to display all groups user is in
 extension profileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(self.groupsArray.count)

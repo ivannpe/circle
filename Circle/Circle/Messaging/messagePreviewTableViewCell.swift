@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//cell for message preview
 class messagePreviewTableViewCell: UITableViewCell {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var messagePreviewLabel: UILabel!

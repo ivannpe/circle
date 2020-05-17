@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//cell configuration for newsfeed
 class NewsFeedCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!

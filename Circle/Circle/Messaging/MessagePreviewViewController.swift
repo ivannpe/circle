@@ -17,6 +17,7 @@ class MessagePreviewViewController: UIViewController {
     var preview: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        //sets constraints
         tableView.rowHeight = 100
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,7 +27,7 @@ class MessagePreviewViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
+        //retrieves all chat objects that current user is a member of
         DataService.instance.REF_CHATS.observe(.value) { (snapshot) in
             DataService.instance.getAllChats { (chatArray) in
                 self.chatArray = chatArray
@@ -49,7 +50,7 @@ class MessagePreviewViewController: UIViewController {
     */
 
 }
-
+//table view delegate to display message previews and message recipients
 extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //fix this
@@ -60,10 +61,12 @@ extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSour
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messagePreview") as? messagePreviewTableViewCell {
             //change this when have chat message objects
             let chatkey = self.chatArray[indexPath.row].key
+            //retrieve chatmessage objects from current chat object as an array
             DataService.instance.REF_CHATS.observe(.value) { (snapshot) in
                 DataService.instance.getAllChatMessages(chatKey: chatkey) { (chatMessageArray) in
                 self.messages = chatMessageArray
                     let count = self.messages.count
+                    //sets preview message to last message in array
                     if count > 0{
                         self.preview = self.messages[count-1].content
                     }
@@ -72,6 +75,7 @@ extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSour
             }
             //let preview = self.chatArray[indexPath.row].messages[count].value
             //let preview = ""
+            //set name of chat as the secondary member email of the chat
             if self.chatArray[indexPath.row].members[0] == (Auth.auth().currentUser?.email)! {
                 self.user = self.chatArray[indexPath.row].members[1]
             }
@@ -81,29 +85,19 @@ extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSour
             print("message preview users")
             print(user)
             print(self.preview)
+            //configures messagePreviewTableViewCell
             cell.configureCell(user: self.user, preview: self.preview, isSelected: false)
             return cell
         } else {
-            return GroupVCCell()
+            return UITableViewCell()
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let messagingVC = storyboard?.instantiateViewController(withIdentifier: "messagingViewController") as? messagingViewController else { return }
         print("didselectrowat function called in message preview")
+        //initialize the messagingViewController with current chat object selected
         messagingVC.initData(chat: self.chatArray[indexPath.row])
-        //to init group about page with proper group
-        /*
-        guard let aboutPageVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as? AboutPageViewController else { return }
-        print("didselectrowat function called in groups view controller")
-        aboutPageVC.initData(group: groupsArray[indexPath.row])
-        */
-        //presentDetail(groupFeedVC)
         show(messagingVC, sender: AnyObject.self)
     }
-    // UITableViewAutomaticDimension calculates height of label contents/text
-    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("auto dimension called for height of rows")
-        return UITableView.automaticDimension
-    }*/
 }

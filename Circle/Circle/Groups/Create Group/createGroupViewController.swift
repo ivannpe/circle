@@ -39,13 +39,14 @@ class createGroupViewController: UIViewController {
             self.emailArray.removeAll()
             tableView.reloadData()
         } else {
+            //retreives the emails of existing members based on search query
             DataService.instance.getEmail(forSearchQuery: groupMembers.text!) { (emails) in
                 self.emailArray = emails
                 self.tableView.reloadData()
             }
         }
     }
-
+//creates a group witth a group title, description, and array of group members
     @IBAction func createGroupBtnPressed(_ sender: Any) {
         let title = groupName.text
         let description = groupDesc.text
@@ -63,7 +64,7 @@ class createGroupViewController: UIViewController {
         }
     }
 }
-
+//table view delegate to display potential users to add to group
 extension createGroupViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emailArray.count
@@ -90,7 +91,7 @@ extension createGroupViewController: UITableViewDelegate, UITableViewDataSource 
         tableView.deselectRow(at: indexPath, animated: true)
         
         let email = emailArray[indexPath.row]
-        
+        //appends user email to member array if cell is selected
         if(!chosenUserArray.contains(email)) {
             chosenUserArray.append(email)
         } else {
@@ -100,10 +101,11 @@ extension createGroupViewController: UITableViewDelegate, UITableViewDataSource 
         }
         
         addMemberLabel.text = chosenUserArray.joined(separator: ", ")
-        
+        //ensures member array is not empty
         if(addMemberLabel.text == "") {
             addMemberLabel.text = "Add Members"
             createGroupBtn.isHidden = true
+            //cannot create group without members
         } else {
             createGroupBtn.isHidden = false
         }

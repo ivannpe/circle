@@ -14,7 +14,7 @@ class MembersViewController: UIViewController {
     var group: Group?
     var emailArray = [String]()
     @IBOutlet weak var tableView: UITableView!
-    
+    //initializes view
     func initData(group: Group) {
         print("init data for member view")
         print(group.groupTitle)
@@ -38,6 +38,7 @@ class MembersViewController: UIViewController {
             super.viewWillAppear(animated)
             print(self.group!.groupTitle)
             print(group!.groupTitle)
+            //retrieves the emails of the group members as an array
             DataService.instance.getEmails(group: group!) { (returnedEmails) in
                 self.emailArray = returnedEmails
                 print(self.emailArray)
@@ -65,7 +66,7 @@ class MembersViewController: UIViewController {
         }*/
 
 }
-
+//table view delegate to display members
 extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     print("number of rows in section members called")
@@ -90,6 +91,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            guard let memberProfileVC = storyboard?.instantiateViewController(withIdentifier: "memberProfile") as? memberProfileViewController else { return }
            print("didselectrowat function called in groups view controller")
+        //segue to selected user profile
         memberProfileVC.initData(email: self.emailArray[indexPath.row])
            //to init group about page with proper group
            /*

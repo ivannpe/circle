@@ -26,7 +26,7 @@ class newsfeedViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-
+        //retrieves all feed messages from database for groups user is a part of
         DataService.instance.getAllFeedMessages{ (messageArray) in
             print(messageArray)
             self.messageArray = messageArray.reversed()
@@ -38,7 +38,7 @@ class newsfeedViewController: UIViewController {
     }
     
 }
-
+//table view delegate for newsfeed
 extension newsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("getting message array count")
@@ -47,7 +47,7 @@ extension newsfeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cellforrowat feed called")
+        print("cell for row at feed called")
         if let cell = tableView.dequeueReusableCell(withIdentifier: "NewsFeedCell") as? NewsFeedCell {
             let message = self.messageArray[indexPath.row]
             print("message:")
@@ -56,6 +56,7 @@ extension newsfeedViewController: UITableViewDelegate, UITableViewDataSource {
                 //print("username: ")
                 //print(username)
                 print(message.content)
+            //display every message as a cell
             cell.setupCell(username: message.senderId, content: message.content)
             //}
             //cell.backgroundColor = lightBlue

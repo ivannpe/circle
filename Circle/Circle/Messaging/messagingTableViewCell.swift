@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//cells for messaging chat bubbles
 class messagingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var receiveTextLabel: UILabel!

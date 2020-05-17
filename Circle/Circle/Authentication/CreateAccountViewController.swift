@@ -46,6 +46,7 @@ class CreateAccountViewController: UIViewController {
             hiddenLabel.text = "📩 fill all fields"
             return false
         }
+        //calls function in string extension to ensure it is an nyu email
         if email!.isValidEmail() == false{
             hiddenLabel.isHidden = false
             hiddenLabel.text = "📩 enter a valid email address"
@@ -62,11 +63,11 @@ class CreateAccountViewController: UIViewController {
             return false
         }
     }
-    
     @IBAction func signUpTapped(_ sender: Any) {
         let mainTabController = storyboard?.instantiateViewController(withIdentifier: "MainTabController") as! MainTabController
         mainTabController.modalPresentationStyle = .fullScreen
         if fieldsfull(){
+            //instantiates a new user with Firebase authentication
             AuthService.instance.loginUser(withEmail: emailLabel.text!, withPassword: passwordLabel.text!, loginComplete: { (success, loginError) in
                 if success {
                     //self.dismiss(animated: true, completion: nil)
@@ -76,17 +77,19 @@ class CreateAccountViewController: UIViewController {
                 } else {
                     print(String(describing: loginError?.localizedDescription))
                 }
-                
+                //registers user with different profile categories
                 AuthService.instance.registerUser(withUniversity:self.universityLabel.text!, withEmail:self.emailLabel.text!, withFullName:self.nameLabel.text!, withUsername:self.usernameLabel.text!,withPassword:self.passwordLabel.text!, withSchool:self.schoolLabel.text!, withMajor:self.majorLabel.text!, withYear:self.yearLabel.text!, userCreationComplete: { (success, registrationError) in
                     if success {
                         AuthService.instance.loginUser(withEmail: self.emailLabel.text!, withPassword: self.passwordLabel.text!, loginComplete: { (success, nil) in
                             //self.dismiss(animated: true, completion: nil)
                             //self.present(mainTabController, animated: false, completion: nil)
                             print("Successfully registered user")
+                            //only performs segue if user is successfully registered
                             self.performSegue(withIdentifier: "signupSegue", sender: AnyObject.self)
                             self.cantReg = false
                             print(self.cantReg)
                         })
+                        //display firebase error if unsuccessful
                     } else {
                         print(String(describing: registrationError?.localizedDescription))
                         self.hiddenLabel.isHidden = false

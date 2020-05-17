@@ -11,9 +11,6 @@ import Firebase
 import FirebaseAuth
 
 class createChatViewController: UIViewController {
-    //member label
-    //table view
-    //createGoupbutton
     @IBOutlet weak var chatMember: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var createChatButton: UIButton!
@@ -25,13 +22,11 @@ class createChatViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         chatMember.delegate = self
-
         chatMember.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//        createChatButton.isHidden = true
     }
 
     @objc func textFieldDidChange() {
@@ -39,13 +34,14 @@ class createChatViewController: UIViewController {
             self.emailArray.removeAll()
             tableView.reloadData()
         } else {
+            //gets user email
             DataService.instance.getEmail(forSearchQuery: chatMember.text!) { (emails) in
                 self.emailArray = emails
                 self.tableView.reloadData()
             }
         }
     }
-
+//calls createChats from DataService to add chat to database
     @IBAction func createChatButton(_ sender: Any) {
         let members = chatMember.text
         if(members != "") {
@@ -62,12 +58,12 @@ class createChatViewController: UIViewController {
         }
     }
 }
-
+//view controller extension for tablw view delegate to add user you want to chat with
 extension createChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emailArray.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MemberTableViewCell") as? MemberTableViewCell {
             let email = emailArray[indexPath.row]
@@ -76,7 +72,7 @@ extension createChatViewController: UITableViewDelegate, UITableViewDataSource {
             if(chosenUserArray.contains(email)) {
                 selected = true
             }
-
+            //updates Cell in MemberTableViewCell
             cell.setupCell(email: email, isSelected: selected)
 
             return cell

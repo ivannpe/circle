@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension String {
+    //validates NYU email
     func isValidEmail() -> Bool {
         let firstpart = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?"
         let lastpart = "nyu.edu"

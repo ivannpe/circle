@@ -24,7 +24,7 @@ class groupsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-
+        //retreives all groups in database as array
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllGroups { (groups) in
                 self.groupsArray = groups
@@ -33,7 +33,7 @@ class groupsViewController: UIViewController {
         }
     }
 }
-
+//table view delegate to display all groups as cells
 extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groupsArray.count
@@ -51,6 +51,7 @@ extension groupsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let groupFeedVC = storyboard?.instantiateViewController(withIdentifier: "GroupFeedViewController") as? GroupFeedViewController else { return }
         print("didselectrowat function called in groups view controller")
+        //segue into group feed with current group selected for initialization
         groupFeedVC.initData(group: groupsArray[indexPath.row])
         //to init group about page with proper group
         /*

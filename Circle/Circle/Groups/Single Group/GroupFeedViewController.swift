@@ -22,7 +22,7 @@ class GroupFeedViewController: UIViewController {
     var group: Group?
     var messages = [Message]()
     var emailArray = [String]()
-
+    //initialize the selected group
     func initData(group: Group) {
         self.group = group
         print("group");
@@ -54,6 +54,7 @@ class GroupFeedViewController: UIViewController {
             groupNameLabel.text = group.groupTitle
 //            self.memberLbl.text = group.members.joined(separator: ", ")
         }
+        //retrieves database messages for respective group
         DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
             DataService.instance.getAllMessages(group: self.group!, handler: { (messages) in
                 self.messages = messages
@@ -61,6 +62,7 @@ class GroupFeedViewController: UIViewController {
                 self.tableView.reloadData()
 
                 if(self.messages.count > 0) {
+                    //displays the messages with the most recent showing on page
                     DispatchQueue.main.async {
                         let indexPath = IndexPath(row: self.messages.count-1, section: 0)
                         self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
@@ -82,7 +84,7 @@ class GroupFeedViewController: UIViewController {
             postPage.isHidden = true
         }*/
     }
-
+//adds current user to member array in selected group
     @IBAction func followButtonPressed(_ sender: Any) {
         print("follow button pressed")
         
@@ -108,7 +110,7 @@ class GroupFeedViewController: UIViewController {
         }
 }
     
-    
+    //segues to about
     @IBAction func aboutButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
         //vc.initData(group: group)
@@ -121,7 +123,7 @@ class GroupFeedViewController: UIViewController {
 //        navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    //segue to member
     @IBAction func membersButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MembersViewController") as! MembersViewController
         //vc.group = self.group
@@ -131,6 +133,7 @@ class GroupFeedViewController: UIViewController {
         showDetailViewController(vc, sender: AnyObject.self)
 //        navigationController?.pushViewController(vc, animated: true)
     }
+    //segue to post
     @IBAction func postButtonPressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
         if let group = group {
@@ -161,7 +164,7 @@ class GroupFeedViewController: UIViewController {
 //        }
 //    }
 }
-
+//table view delegate for messages in group
 extension GroupFeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
