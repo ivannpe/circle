@@ -48,8 +48,17 @@ class messagingViewController: UIViewController {
                 self.tableView.reloadData()
                 print("printing chatMessageArray")
                 print(self.messages)
+                
+                if(self.messages.count > 0) {
+                    DispatchQueue.main.async {
+                        let indexPath = IndexPath(row: self.messages.count-1, section: 0)
+                        self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+                    }
+            }
             }
         }
+        self.tableView.reloadData()
+
     }
 
     @IBAction func sendButtonPressed(_ sender: Any) {

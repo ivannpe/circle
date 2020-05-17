@@ -12,6 +12,8 @@ class messagingTableViewCell: UITableViewCell {
 
     @IBOutlet weak var receiveTextLabel: UILabel!
     @IBOutlet weak var sentTextLabel: UILabel!
+    @IBOutlet weak var receiveView: UIView!
+    @IBOutlet weak var sentView: UIView!
     
     /*
         override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,10 +25,14 @@ class messagingTableViewCell: UITableViewCell {
         func configureCell(senderType: String, content: String) {
             if senderType == "received"{
                 self.receiveTextLabel.text = content
+                self.receiveView.isHidden = false
+                self.sentView.isHidden = true
                 
             }
             if senderType == "sent"{
                 self.sentTextLabel.text = content
+                self.receiveView.isHidden = true
+                self.sentView.isHidden = false
             }
         }
 

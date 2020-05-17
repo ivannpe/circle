@@ -12,6 +12,8 @@ import Firebase
 class MessagePreviewViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var chatArray = [Chat]()
+    var messages = [ChatMessage]()
+    var preview: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
@@ -56,12 +58,23 @@ extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messagePreview") as? messagePreviewTableViewCell {
             //change this when have chat message objects
-            //let preview = self.chatArray[indexPath.row].messages.
-            let preview = ""
+            let chatkey = self.chatArray[indexPath.row].key
+            DataService.instance.REF_CHATS.observe(.value) { (snapshot) in
+                DataService.instance.getAllChatMessages(chatKey: chatkey) { (chatMessageArray) in
+                self.messages = chatMessageArray
+                    let count = self.messages.count
+                    self.preview = self.messages[count-1].content
+
+                    
+            }
+            }
+            //let preview = self.chatArray[indexPath.row].messages[count].value
+            //let preview = ""
             let user = self.chatArray[indexPath.row].members[0]
             print("message preview users")
             print(user)
-            cell.configureCell(user: user, preview: preview, isSelected: false)
+            print(self.preview)
+            cell.configureCell(user: user, preview: self.preview, isSelected: false)
             return cell
         } else {
             return GroupVCCell()

@@ -1283,15 +1283,15 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGd-gP-OjD">
                                                     <rect key="frame" x="20" y="7" width="324" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxR-0J-JDf">
-                                                    <rect key="frame" x="20" y="36" width="324" height="45"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message Preview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxR-0J-JDf">
+                                                    <rect key="frame" x="20" y="24" width="378" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.27781087160000001" green="0.34142917389999999" blue="0.43585008380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1321,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4g3-ge-bpi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3800" y="1142"/>
+            <point key="canvasLocation" x="3800.0000000000005" y="1141.7410714285713"/>
         </scene>
         <!--messagingViewController-->
         <scene sceneID="YbT-0g-F75">
@@ -1360,6 +1360,11 @@
                                                         <constraint firstItem="0Ia-cX-pVC" firstAttribute="top" secondItem="jQ5-Wv-UCT" secondAttribute="top" id="t4s-XL-CEM"/>
                                                         <constraint firstItem="0Ia-cX-pVC" firstAttribute="leading" secondItem="jQ5-Wv-UCT" secondAttribute="leading" constant="8" id="ugJ-LQ-Uhl"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-pn-ZvM">
                                                     <rect key="frame" x="356.5" y="11" width="29.5" height="69"/>
@@ -1378,6 +1383,11 @@
                                                         <constraint firstAttribute="bottom" secondItem="AZf-0t-XUs" secondAttribute="bottom" constant="8" id="qKk-ej-7Ko"/>
                                                         <constraint firstItem="AZf-0t-XUs" firstAttribute="top" secondItem="NJh-pn-ZvM" secondAttribute="top" constant="8" id="tbX-Gj-LXD"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -1395,7 +1405,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="receiveTextLabel" destination="0Ia-cX-pVC" id="nr6-1W-wxg"/>
+                                            <outlet property="receiveView" destination="jQ5-Wv-UCT" id="nAA-cA-Yxf"/>
                                             <outlet property="sentTextLabel" destination="AZf-0t-XUs" id="LK1-Up-X3s"/>
+                                            <outlet property="sentView" destination="NJh-pn-ZvM" id="pS2-q0-V1R"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
