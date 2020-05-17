@@ -12,6 +12,7 @@ import Firebase
 class MessagePreviewViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var chatArray = [Chat]()
+    var user: String = ""
     var messages = [ChatMessage]()
     var preview: String = ""
     override func viewDidLoad() {
@@ -70,11 +71,16 @@ extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSour
             }
             //let preview = self.chatArray[indexPath.row].messages[count].value
             //let preview = ""
-            let user = self.chatArray[indexPath.row].members[0]
+            if self.chatArray[indexPath.row].members[0] == (Auth.auth().currentUser?.email)! {
+                self.user = self.chatArray[indexPath.row].members[1]
+            }
+            if self.chatArray[indexPath.row].members[1] == (Auth.auth().currentUser?.email)! {
+                self.user = self.chatArray[indexPath.row].members[0]
+            }
             print("message preview users")
             print(user)
             print(self.preview)
-            cell.configureCell(user: user, preview: self.preview, isSelected: false)
+            cell.configureCell(user: self.user, preview: self.preview, isSelected: false)
             return cell
         } else {
             return GroupVCCell()

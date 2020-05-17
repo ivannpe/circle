@@ -20,6 +20,7 @@ class messagingViewController: UIViewController {
     var senderType: String = ""
     var messages = [ChatMessage]()
     var chat: Chat?
+    var user: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,13 @@ class messagingViewController: UIViewController {
         //self.messages = self.chat.chatMessageArray
     }
     override func viewWillAppear(_ animated: Bool){
-        userNameTitle.title = self.chat!.members[0]
+        if self.chat!.members[0] == (Auth.auth().currentUser?.email)! {
+            self.user = self.chat!.members[1]
+        }
+        if self.chat!.members[1] == (Auth.auth().currentUser?.email)! {
+            self.user = self.chat!.members[0]
+        }
+        userNameTitle.title = self.user
         
         DataService.instance.REF_CHATS.observe(.value) { (snapshot) in
             DataService.instance.getAllChatMessages(chatKey: self.chat!.key) { (chatMessageArray) in
