@@ -28,6 +28,12 @@
 		0B6DE0202470893200263A57 /* messagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE01F2470893200263A57 /* messagingTableViewCell.swift */; };
 		0B6DE0212470893200263A57 /* messagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE01F2470893200263A57 /* messagingTableViewCell.swift */; };
 		0B6DE0222470893200263A57 /* messagingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE01F2470893200263A57 /* messagingTableViewCell.swift */; };
+		0B6DE0242470A01200263A57 /* MessagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE0232470A01200263A57 /* MessagePreviewViewController.swift */; };
+		0B6DE0252470A01200263A57 /* MessagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE0232470A01200263A57 /* MessagePreviewViewController.swift */; };
+		0B6DE0262470A01200263A57 /* MessagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE0232470A01200263A57 /* MessagePreviewViewController.swift */; };
+		0B6DE0282470A05800263A57 /* messagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE0272470A05800263A57 /* messagePreviewTableViewCell.swift */; };
+		0B6DE0292470A05800263A57 /* messagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE0272470A05800263A57 /* messagePreviewTableViewCell.swift */; };
+		0B6DE02A2470A05800263A57 /* messagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE0272470A05800263A57 /* messagePreviewTableViewCell.swift */; };
 		0B727F8D2460A0BC008EB2BC /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */; };
 		0B727F8E24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
 		0B727F8F24623965008EB2BC /* singleGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */; };
@@ -159,6 +165,8 @@
 		0B4E754B245762250035731D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0B4E754D2458B68F0035731D /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		0B6DE01F2470893200263A57 /* messagingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagingTableViewCell.swift; sourceTree = "<group>"; };
+		0B6DE0232470A01200263A57 /* MessagePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePreviewViewController.swift; sourceTree = "<group>"; };
+		0B6DE0272470A05800263A57 /* messagePreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagePreviewTableViewCell.swift; sourceTree = "<group>"; };
 		0B727F8C2460A0BC008EB2BC /* createGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupViewController.swift; sourceTree = "<group>"; };
 		0B868F51245E6BEF00A75119 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0B86F2EC246DEF6400023AC8 /* ProfileGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -318,8 +326,6 @@
 				12CE701D245F3E8000E64D12 /* Extensions */,
 				124DE0982446A1C000F14B0D /* AppDelegate.swift */,
 				124DE09E2446A1C000F14B0D /* Main.storyboard */,
-				0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */,
-				0B6DE01F2470893200263A57 /* messagingTableViewCell.swift */,
 				124DE09A2446A1C000F14B0D /* SceneDelegate.swift */,
 				0B265D2E2458CFE5009C7C91 /* singleGroupViewController.swift */,
 				124DE09C2446A1C000F14B0D /* ViewController.swift */,
@@ -411,6 +417,10 @@
 			children = (
 				12F64C10247088AE004B4DBA /* createChatViewController.swift */,
 				12F64C1C247095A7004B4DBA /* MemberTableViewCell.swift */,
+				0B6DE0232470A01200263A57 /* MessagePreviewViewController.swift */,
+				0B6DE0272470A05800263A57 /* messagePreviewTableViewCell.swift */,
+				0B049A28245CB9AD00F42AF4 /* messagingViewController.swift */,
+				0B6DE01F2470893200263A57 /* messagingTableViewCell.swift */,
 			);
 			path = Messaging;
 			sourceTree = "<group>";
@@ -719,6 +729,7 @@
 				0B265D2F2458CFE5009C7C91 /* singleGroupViewController.swift in Sources */,
 				127E9350245F884600E37697 /* Message.swift in Sources */,
 				0BA9DFAC245E229A00F2495B /* animationViewController.swift in Sources */,
+				0B6DE0242470A01200263A57 /* MessagePreviewViewController.swift in Sources */,
 				0B4E754A245762170035731D /* CreateAccountViewController.swift in Sources */,
 				127E93632460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
 				127E9354245F887A00E37697 /* Group.swift in Sources */,
@@ -727,6 +738,7 @@
 				0BA5BD3D246658CB00DBA58C /* memberProfileViewController.swift in Sources */,
 				0B265D2D2458B9B6009C7C91 /* newsfeedViewController.swift in Sources */,
 				0B227EF6245FBBB80074A598 /* PostViewController.swift in Sources */,
+				0B6DE0282470A05800263A57 /* messagePreviewTableViewCell.swift in Sources */,
 				12F64C19247091B1004B4DBA /* ChatMessage.swift in Sources */,
 				12CE7024245F554F00E64D12 /* DataService.swift in Sources */,
 				12F64C1524709043004B4DBA /* Chat.swift in Sources */,
@@ -785,7 +797,9 @@
 				127E9360245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0B02446A1C600F14B0D /* CircleTests.swift in Sources */,
 				123F50832463186F0060362C /* AboutPageViewController.swift in Sources */,
+				0B6DE0252470A01200263A57 /* MessagePreviewViewController.swift in Sources */,
 				127E93642460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
+				0B6DE0292470A05800263A57 /* messagePreviewTableViewCell.swift in Sources */,
 				12CE7025245F554F00E64D12 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -820,7 +834,9 @@
 				127E9361245FA66A00E37697 /* GroupVCCell.swift in Sources */,
 				124DE0BB2446A1C600F14B0D /* CircleUITests.swift in Sources */,
 				123F50842463186F0060362C /* AboutPageViewController.swift in Sources */,
+				0B6DE0262470A01200263A57 /* MessagePreviewViewController.swift in Sources */,
 				127E93652460973400E37697 /* String+CurrentTimeInMilliSeconds.swift in Sources */,
+				0B6DE02A2470A05800263A57 /* messagePreviewTableViewCell.swift in Sources */,
 				12CE7026245F554F00E64D12 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

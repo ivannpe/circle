@@ -185,15 +185,63 @@ class DataService {
         REF_CHATS.childByAutoId().updateChildValues(["members": ids])
         handler(true)
     }
-//    func uploadChat(withMessage message: String, forUID uid: String, withChatKey chatKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
-//        if chatKey != nil {
-//            REF_CHATS.child(chatKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
-//            sendComplete(true)
-//        } else {
-//            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
-//            sendComplete(true)
-//        }
-//    }
+    
+    func uploadChat(withMessage message: String, forUID uid: String, withChatKey chatKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
+        if chatKey != nil {
+           REF_CHATS.child(chatKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }
+    }
+    func getAllChats(handler: @escaping (_ chatArray: [Chat]) -> ()) {
+        var chatArray = [Chat]()
+        
+        REF_CHATS.observeSingleEvent(of: .value) { (Snapshot) in
+            guard let Snapshot = Snapshot.children.allObjects as? [DataSnapshot]
+                else { return }
+            
+            for chat in Snapshot {
+                let key = chat.key
+                let members = chat.childSnapshot(forPath: "members").value as! [String]
+                //most recent message object contents
+                
+                let chatInstance = Chat(key: key, members: members)
+                
+                //if(members.contains((Auth.auth().currentUser?.email)!)) {
+                    chatArray.append(chatInstance)
+                //}
+            }
+            
+            handler(chatArray)
+        }
+    }
+    
+    func getAllChatMessages(chatKey: String, handler: @escaping (_ chatMessageArray: [ChatMessage]) -> ()) {
+        var chatMessageArray = [ChatMessage]()
+        
+        REF_CHATS.child(chatKey).child("messages").observeSingleEvent(of: .value) { (Snapshot) in
+            guard let Snapshot = Snapshot.children.allObjects as? [DataSnapshot]
+                else { return }
+            
+            for chatMessage in Snapshot {
+                //let key = chatMessage.key
+                let senderId = chatMessage.childSnapshot(forPath: "senderId").value as! String
+                let content = chatMessage.childSnapshot(forPath: "content").value as! String
+                //most recent message object contents
+                
+                let chatInstance = ChatMessage(content: content, senderId: senderId)
+                
+                //if(members.contains((Auth.auth().currentUser?.email)!)) {
+                    chatMessageArray.append(chatInstance)
+                //}
+            }
+            
+            handler(chatMessageArray)
+        }
+    }
+    
     func getAllGroups(handler: @escaping (_ groupsArray: [Group]) -> ()) {
         var groupsArray = [Group]()
         

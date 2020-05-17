@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class messagingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -15,23 +16,51 @@ class messagingViewController: UIViewController {
     
     @IBOutlet weak var sendButton: UIButton!
     
+    @IBOutlet weak var userNameTitle: UINavigationItem!
+    var senderType: String = ""
+    var messages = [ChatMessage]()
+    var chat: Chat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 100
+        //tableView.rowHeight = 100
         self.tableView.reloadData()
         
         // Do any additional setup after loading the view.
     }
-    func initData(){
+    func initData(chat: Chat){
         //initialize data sent in from the create message thread page
         //initialize the users
+        print("init data in messaging ")
+        self.chat = chat
+        print(self.chat!.members[0])
+        //self.messages = self.chat.chatMessageArray
     }
-    
+    override func viewWillAppear(_ animated: Bool){
+        userNameTitle.title = self.chat!.members[0]
+        
+        DataService.instance.REF_CHATS.observe(.value) { (snapshot) in
+            DataService.instance.getAllChatMessages(chatKey: self.chat!.key) { (chatMessageArray) in
+                
+                self.messages = chatMessageArray
+                self.tableView.reloadData()
+                print("printing chatMessageArray")
+                print(self.messages)
+            }
+        }
+    }
 
     @IBAction func sendButtonPressed(_ sender: Any) {
         //create a message object here based off of text from textInput textfield
+        //let message = textInput
+        DataService.instance.uploadChat(withMessage: textInput.text!, forUID: (Auth.auth().currentUser?.email)!, withChatKey: self.chat?.key) { (success) in
+            if success{
+                print("successfully sent chat message")
+                self.textInput.text = ""
+            }
+        }
     }
     /*
     // MARK: - Navigation
@@ -47,15 +76,26 @@ class messagingViewController: UIViewController {
 
 extension messagingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        print("number of message in thread")
+        print(self.messages.count)
+        return self.messages.count
+
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messagingCell") as? messagingTableViewCell{
             //let email = messages[indexPath.row].senderId
-            //let content = messages[indexPath.row].content
+            let email = self.messages[indexPath.row].senderId
+            let content = self.messages[indexPath.row].content
+            
+            if email == (Auth.auth().currentUser?.email)! {
+                senderType = "sent"
+            }
+            else{
+                senderType = "received"
+            }
 
-           //here is where you input data for cell //cell.configureCell(senderType: email, content: content)
+           cell.configureCell(senderType: senderType, content: content)
 
             return cell
         } else {
@@ -63,3 +103,4 @@ extension messagingViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
