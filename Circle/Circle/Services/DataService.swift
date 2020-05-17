@@ -209,9 +209,9 @@ class DataService {
                 
                 let chatInstance = Chat(key: key, members: members)
                 
-                //if(members.contains((Auth.auth().currentUser?.email)!)) {
+                if(members.contains((Auth.auth().currentUser?.email)!)) {
                     chatArray.append(chatInstance)
-                //}
+                }
             }
             
             handler(chatArray)

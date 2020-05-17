@@ -64,8 +64,9 @@ extension MessagePreviewViewController: UITableViewDelegate, UITableViewDataSour
                 DataService.instance.getAllChatMessages(chatKey: chatkey) { (chatMessageArray) in
                 self.messages = chatMessageArray
                     let count = self.messages.count
-                    self.preview = self.messages[count-1].content
-
+                    if count > 0{
+                        self.preview = self.messages[count-1].content
+                    }
                     
             }
             }
