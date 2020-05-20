@@ -1,5 +1,3 @@
-<img src="media/logocopy.png" height="200" align="center">
-
 # Circle
 ## iOS Final Project - Spring 2020
 ### [Ivanna Pena](https://www.linkedin.com/in/ivannapena/) & [Leena Loo](https://www.linkedin.com/in/leena-loo-113533131/)
