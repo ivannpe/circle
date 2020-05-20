@@ -1,4 +1,4 @@
-<img src="media/logocopy.png" height="250" align="center">
+<img src="media/logocopy.png" height="200" align="center">
 
 # Circle
 ## iOS Final Project - Spring 2020
