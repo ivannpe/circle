@@ -1,5 +1,4 @@
 # Circle
-## iOS Final Project - Spring 2020
 ### [Ivanna Pena](https://www.linkedin.com/in/ivannapena/) & [Leena Loo](https://www.linkedin.com/in/leena-loo-113533131/)
 
 **```Circle```** is a real-time group and private messaging app in Swift for iOS devices. Its goal is to help the NYU community, and other colleges, stay connected in a more casual way than current class discussion boards even after the pandemic ends. This application will allow users to create accounts and profiles if they are students at an accredited university, and interact with other students strictly from their university. This will be done via forums and messaging categorized by different interests, classes, or majors.
